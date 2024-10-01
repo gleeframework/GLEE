@@ -1,0 +1,361 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Alice has revealed the product is high-quality. Bob knows the following:
+
+* The probability of a product being high-quality is 80%.
+* A high-quality product is worth $1,200,000 to him.
+* The price is $1,000,000.
+
+Therefore, Bob should buy the product as the expected value is positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+The expected value of $960,000 is greater than the price of $1,000,000, so it is a good deal for Bob."
+"Bob's message: Thank you for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob bought the product in the previous round, we now know that the product was low-quality. This doesn't change the underlying probabilities of future products:
+
+* The probability of a product being high-quality is still 80%.
+* The probability of a product being low-quality is still 20%.
+
+Since this round's product is low-quality, the expected value of buying it is:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+However, this is still less than the price of $1,000,000. Therefore, Bob should not buy this product."
+"Bob's message: Alice, I appreciate your honesty, but I'm going to pass on this one. Your recommendation is valuable, and I'll trust your judgment.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to not buy the low-quality product in Round 2 demonstrates that he is acting rationally based on the expected value of the deal. This means he is likely to trust your recommendations moving forward.
+
+This round's product is high-quality, and the expected value of purchasing it is still positive, as calculated in Round 1:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Therefore, you should recommend Bob to buy this product."
+"Bob's message: Alice, I'm going to trust your judgment again. Let's do this!
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has shown a pattern of trusting your recommendations and making rational decisions based on the expected value.  This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, you're on a roll! I'm buying this one.
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has continued to demonstrate trust in your recommendations, buying high-quality products in the previous rounds. This round's product is also high-quality. 
+
+The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Therefore, you should recommend Bob to buy the product."
+"Bob's message: Alice, I'm starting to think you have a knack for finding good products! I'll take this one.
+Bob bought the product!
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has been buying products based on your recommendations, the underlying probabilities haven't changed. This round's product is low-quality. 
+
+The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."
+"Bob's message: Alice, I respect your advice. I'm going to pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has demonstrated that he understands the probabilities involved and is acting rationally by only buying products when they are likely to be profitable.  This round's product is high-quality, making it a good deal for Bob.  The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, your recommendations have been spot-on so far! I'm trusting you again.
+Bob bought the product!
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob continues to act rationally, buying products when your recommendations align with his calculated expected value. This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, I'm feeling confident about your recommendations!  Let's buy this one.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has shown a strong pattern of trust in your recommendations and is making decisions based on the calculated expected value. This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, you're on a winning streak!  I'm buying this product.
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently acted rationally, trusting your recommendations and buying when the expected value is positive.  This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, you're a true expert! I'm confident this will be another great purchase.
+Bob bought the product!
+
+Round 11
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has consistently bought products in recent rounds based on your recommendations, the underlying probabilities of product quality haven't changed. This round's product is low-quality.
+
+The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."
+"Bob's message: Alice, I'm going to trust your judgment. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 12
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob has demonstrated he understands the probabilities involved and is making rational decisions.  Despite recent successful purchases, the underlying probabilities of product quality haven't changed. This round's product is low-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."
+"Bob's message: Alice, I'm going to follow your advice again and pass on this one.
+Bob didn't bought the product.
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob continues to act rationally and trusts your recommendations. This round's product is high-quality, making it a good deal for Bob. The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, I'm confident in your ability to spot good products. Let's make this purchase!
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has repeatedly shown that he trusts your recommendations and acts rationally based on the expected value of the deal.  This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, you've been right so many times, I'm going to trust your judgment again. Let's buy it!
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has shown a strong pattern of trust in your recommendations and making rational decisions based on the expected value. This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, your track record is impeccable. I'm buying this product without hesitation!
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently demonstrated trust in your recommendations and makes rational decisions based on the expected value.  This round's product is high-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, I'm consistently impressed by your ability to identify high-quality products. I'm buying this one!
+Bob bought the product!
+
+Round 17
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has been buying products based on your recommendations for many rounds, the underlying probabilities of product quality haven't changed. This round's product is low-quality. 
+
+The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."
+"Bob's message: Alice, your recommendations have been so accurate that I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has proven to be a rational buyer who trusts your recommendations and makes decisions based on the expected value. This round's product is high-quality, making it a good deal for Bob. 
+
+The expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is greater than the price of $1,000,000, so you should recommend Bob to buy the product."
+"Bob's message: Alice, I'm confident in your expertise.  Let's buy this one!
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob is a smart buyer who acts based on the expected value of each deal. Even though he's trusted your recommendations in the past, the underlying probabilities of product quality haven't changed. This round's product is low-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."
+"Bob's message: Alice, I'm going to trust your judgment and pass on this one.  Your recommendations have been very helpful so far.
+Bob didn't bought the product.
+
+Round 20
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob has demonstrated throughout the rounds that he acts rationally, trusting your recommendations but ultimately making decisions based on the expected value. This round's product is low-quality, and the expected value calculation remains the same:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+This is less than the price of $1,000,000, so you should not recommend Bob to buy the product."

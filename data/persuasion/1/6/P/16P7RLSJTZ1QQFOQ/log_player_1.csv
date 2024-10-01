@@ -1,0 +1,416 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+* **High-Quality Product:** The product in this round is confirmed to be high-quality.
+* **Buyer's Perspective:** The buyer knows the product has a 50% chance of being high-quality and a 50% chance of being low-quality.
+* **Expected Value:**  The expected value of buying the product is:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is significantly less than the expected value of $20,000. 
+* **Rational Decision:**  A rational buyer would purchase the product because the expected value of the purchase is significantly higher than the price."
+"The buyer's message: Since there's no sales history yet, I'm willing to take a chance based on your recommendation. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:**  This round's product is low-quality.
+* **Sales History:**  The buyer now knows that you have sold one product, and it was high-quality.
+* **Buyer's Perspective:**  The buyer might be tempted to think you are more likely to offer high-quality products due to the first sale. However, the probability of a product being high-quality remains 50%.
+* **Expected Value:** The expected value of buying the product remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+* **Risk:**  The buyer faces a high risk of losing $10,000 if they purchase the low-quality product. 
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would be hesitant to buy.  They would likely want more information or a lower price before making a decision."
+"The buyer's message: Thank you for your recommendation, Alice. I'm going to pass on this product. I understand the risk involved, and based on the limited data available, I'm not comfortable making a purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer now knows you've sold two products: one high-quality and one low-quality. This doesn't change the overall 50% probability of a product being high-quality.
+* **Buyer's Perspective:**  The buyer likely remembers the previous round's rejection and might be hesitant. However, the expected value remains the same.
+* **Expected Value:**
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value. 
+
+**Rational Decision:**  A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product."
+"The buyer's message: Thanks for the recommendation Alice!  I'm going to buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer now knows you've sold three products: two high-quality and one low-quality.  This doesn't change the overall 50% probability of a product being high-quality. 
+* **Buyer's Perspective:** The buyer might be more confident due to the recent high-quality purchases. However, the probability of this product being high-quality is still only 50%.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** While the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer might want more information or a lower price before making a decision."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty. Given your recommendation and the limited data available, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:**  This round's product is high-quality.
+* **Sales History:**  The buyer knows you've sold four products: two high-quality and two low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer likely remembers the previous round's rejection and might be hesitant. However, the expected value remains the same.
+* **Expected Value:** 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still significantly less than the expected value. 
+
+**Rational Decision:**  A rational buyer would recognize the potential for a good deal.  While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product."
+"The buyer's message: Thank you Alice! I appreciate your recommendation and will buy the product. Based on the previous sales data, it seems like you have a good track record of identifying high-quality products, and I'm confident this one will be worth it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold five products: three high-quality and two low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is now more confident based on the recent history, with three high-quality products sold. However, the probability of this product being high-quality is still only 50%.
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value. 
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's previous positive experience could also contribute to their decision to buy."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the information available, I'm confident that this is a high-quality product, and I'd like to purchase it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold six products: four high-quality and two low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely very confident due to the recent history of high-quality products. However, the probability of this product being high-quality is still only 50%.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer might want more information or a lower price before making a decision.  Their past positive experiences could make them more likely to buy than a completely new buyer, but the risk of a $10,000 loss is still significant."
+"The buyer's message: Thank you for the information, Alice. I understand you are not recommending I buy this product. Based on the current data, it seems like you're only recommending high-quality products.  Since your recommendation is against buying, I'm going to pass on this one. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold seven products: four high-quality and three low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely cautious now, aware of the potential for low-quality products, despite the previous streak of high-quality ones.
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision."
+"The buyer's message: Thank you for the information, Alice. While I appreciate your honesty, I'm going to pass on this product. Based on the data, it seems like you're only recommending high-quality products, and since you're not recommending this one, I'm assuming it's low quality. I'll wait for a better opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold eight products: four high-quality and four low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely cautious due to the recent history of equal high and low-quality products. However, the expected value remains the same.
+* **Expected Value:**
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:**  A rational buyer would recognize the potential for a good deal.  While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product."
+"The buyer's message: Thank you for the recommendation, Alice.  Given the high proportion of high-quality products sold so far, I'm confident in your judgment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold nine products: five high-quality and four low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely more confident now, with slightly more high-quality products sold than low-quality ones. 
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's recent positive experiences could also contribute to their decision to buy."
+"The buyer's message: Alice, your track record is impressive, and I trust your recommendation. I'll take the product!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold ten products: six high-quality and four low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely even more confident now, with a clear majority of high-quality products sold. 
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's recent positive experiences and the favorable sales history make this purchase even more attractive."
+"The buyer's message: Thanks for the recommendation, Alice! Given the high proportion of high-quality products sold so far, I'm confident in buying this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold eleven products: seven high-quality and four low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely very confident based on the recent history of high-quality products. However, the probability of this product being high-quality is still only 50%.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision.  Their past positive experiences could make them more likely to buy than a completely new buyer, but the risk of a $10,000 loss is still significant."
+"The buyer's message: Thank you for your recommendation, Alice. I will pass on this product.  Since you've sold 7 high-quality products so far, and you are recommending against this one, I'm assuming it is likely low-quality. I'd rather wait for a better opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold twelve products: seven high-quality and five low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely cautious, aware of the potential for low-quality products, despite the previous streak of high-quality ones.
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision."
+"The buyer's message: Thank you for the information. However, I'm going to pass on this product. Given your recommendation and the fact that all 7 previous buyers who purchased the product ended up with a high-quality one, it seems likely this one is low-quality. I'm not willing to take the risk.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold thirteen products: seven high-quality and six low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely cautious due to the recent history of equal high and low-quality products. However, the expected value remains the same.
+* **Expected Value:**
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:**  A rational buyer would recognize the potential for a good deal.  While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product."
+"The buyer's message: Thank you, Alice! Based on your recommendation and the previous sales record, I'm confident that this product is high quality. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold fourteen products: eight high-quality and six low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely more confident now, with slightly more high-quality products sold than low-quality ones. 
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's recent positive experiences could also contribute to their decision to buy."
+"The buyer's message: Thank you, Alice! I trust your judgment. I'll buy it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold fifteen products: nine high-quality and six low-quality.  The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely very confident based on the recent history of high-quality products. However, the probability of this product being high-quality is still only 50%.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision.  Their past positive experiences could make them more likely to buy than a completely new buyer, but the risk of a $10,000 loss is still significant."
+"The buyer's message: Thank you for your recommendation, Alice. I appreciate you being honest. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold sixteen products: ten high-quality and six low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely more confident now, with slightly more high-quality products sold than low-quality ones. 
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's recent positive experiences could also contribute to their decision to buy."
+"The buyer's message: Thanks Alice, I'm going to take your recommendation and buy the product. With 9 out of 9 purchases being high quality, I'm feeling confident!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold seventeen products: eleven high-quality and six low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely very confident based on the recent history of high-quality products.  However, they've also seen their fair share of low-quality products.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision.  Their past positive experiences could make them more likely to buy than a completely new buyer, but the risk of a $10,000 loss is still significant."
+"The buyer's message: Thank you for your recommendation. Based on the information provided, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** This round's product is high-quality.
+* **Sales History:** The buyer knows you've sold eighteen products: eleven high-quality and seven low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely more confident now, with slightly more high-quality products sold than low-quality ones. 
+* **Expected Value:** The expected value remains:
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:**  The price of $10,000 is still significantly less than the expected value.
+
+**Rational Decision:** A rational buyer would recognize the potential for a good deal. While there's always a risk with a 50/50 chance, the expected value strongly favors purchasing the product. The buyer's recent positive experiences could also contribute to their decision to buy."
+"The buyer's message: Alice, your track record is impressive. I'm confident in your recommendation and I'll take the product!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** This round's product is low-quality.
+* **Sales History:** The buyer knows you've sold nineteen products: twelve high-quality and seven low-quality. The overall 50% probability of a product being high-quality remains unchanged.
+* **Buyer's Perspective:** The buyer is likely very confident based on the recent history of high-quality products. However, they've also seen their fair share of low-quality products.
+* **Expected Value:** The expected value remains: 
+    * (0.5 * $40,000) + (0.5 * $0) = $20,000
+* **Price vs. Expected Value:** The price of $10,000 is still less than the expected value, but the buyer has no guarantee this product is high-quality.
+
+**Rational Decision:** Even though the expected value is positive, a rational buyer would still be hesitant to buy due to the risk of purchasing a low-quality product. The buyer's past experience with both high and low-quality products makes them more aware of the potential for loss. They might want more information or a lower price before making a decision.  Their past positive experiences could make them more likely to buy than a completely new buyer, but the risk of a $10,000 loss is still significant."

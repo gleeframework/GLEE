@@ -1,0 +1,338 @@
+prompt,response
+"Round 1
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thank you for the recommendation. I'll take it!""}
+```
+
+**Explanation:**
+
+Since the product has an 80% chance of being high quality, which is worth $12,000 to you, and only a 20% chance of being low quality, which is worth $0 to you, the expected value of buying the product is:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+The expected value is positive, meaning you are likely to make a profit by buying the product. It's always a gamble, but in this case, the odds are in your favor."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 2
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks again for the recommendation! I'll take another one.""}
+```
+
+**Explanation:**
+
+The information from the previous round doesn't change the inherent odds of this round.  Each product is independent, meaning the quality of one product doesn't influence the quality of another. Therefore, the expected value calculation is still the same:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+It's still a positive expected value, so buying the product remains the best strategy."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 3
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm on a roll! I'll take this one too.""}
+```
+
+**Explanation:**
+
+As in the previous rounds, the quality of each product is independent. Even though you've bought two high-quality products in a row, the odds haven't changed. The expected value of buying the product remains:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+It's still a positive expected value, so buying the product is the best strategy."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 4
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're on a roll! I'm confident this one will be good too.  Let's do it!""}
+```
+
+**Explanation:**
+
+As before, the quality of each product is independent. The previous rounds' results don't affect the current round's odds. The expected value remains positive:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600 
+
+Buying the product is still the best strategy."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 5
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're on fire!  I'm feeling lucky, I'll take another one.""}
+```
+
+**Explanation:**
+
+Again, the quality of each product is independent.  Even with a streak of high-quality products, the probability of the current product being high quality remains 80%. This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the optimal decision."
+"You bought the product from Alice for $10,000!
+The product was low-quality. It's worth $0 for you.
+
+Round 6
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Okay, I'll take a chance on this one.  I'm not letting one bad product ruin my streak!""}
+```
+
+**Explanation:**
+
+Even though the previous product was low quality, the odds haven't changed. Each product is independent, so the probability of this product being high quality is still 80%.  This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+It's still beneficial to buy the product, even after the previous disappointment."
+"You bought the product from Alice for $10,000!
+The product was low-quality. It's worth $0 for you.
+
+Round 7
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm still going to trust your recommendation.  Let's see what we get!""}
+```
+
+**Explanation:**
+
+Despite getting two low-quality products in a row, the odds haven't changed. The probability of this product being high quality is still 80%, which gives us a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+It's still a good idea to buy the product, as the expected value is positive."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 8
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alright, I'm still confident in your recommendations! Let's do this!""}
+```
+
+**Explanation:**
+
+Each round is independent, meaning the quality of the previous products doesn't influence the current one. The probability of this product being high quality is still 80%, leading to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+It's still advantageous to buy the product."
+"You bought the product from Alice for $10,000!
+The product was low-quality. It's worth $0 for you.
+
+Round 9
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Okay, I'm still going to trust your recommendations.  Let's see what we get!""}
+```
+
+**Explanation:**
+
+Even with a few recent losses, the core strategy remains the same. The probability of getting a high-quality product is still 80%. The expected value is:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best option despite the recent bad luck."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 10
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm still feeling optimistic!  Let's try this one.""}
+```
+
+**Explanation:**
+
+Even though there have been some losses, the fundamental situation hasn't changed. Each product has a 80% chance of being high quality and 20% chance of being low quality, making the expected value of buying the product:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best choice, as the expected value is positive."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 11
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm on a roll again!  I'll take this one too.""}
+```
+
+**Explanation:**
+
+Despite past outcomes, each round is independent. The product has a 80% chance of being high-quality and a 20% chance of being low-quality.  This gives us an expected value of:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best choice, as the expected value is positive."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 12
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm feeling lucky!  Let's do it.""}
+```
+
+**Explanation:**
+
+As always, the quality of each product is independent of the previous ones. The product still has a 80% chance of being high quality and a 20% chance of being low quality. This leads to an expected value of:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best strategy, despite the potential for losses."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 13
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm on a hot streak! Let's keep going.""}
+```
+
+**Explanation:**
+
+The outcome of past rounds doesn't change the probabilities for this round.  Each product has an independent 80% chance of being high quality and a 20% chance of being low quality. This results in a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Therefore, buying the product is still the best strategy."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 14
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're on fire! I'm convinced you have a knack for picking the good ones.  I'll take it!""}
+```
+
+**Explanation:**
+
+The previous outcomes don't change the core probabilities. Each product still has a 80% chance of being high quality and a 20% chance of being low quality. This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product remains the optimal strategy, even with a strong streak of success."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 15
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""This is getting too good to be true!  I'm going to trust your judgment one more time.""}
+```
+
+**Explanation:**
+
+The results of previous rounds have no impact on the current round.  The product still has a 80% chance of being high quality and a 20% chance of being low quality. This gives us an expected value of:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best strategy, even with a very successful streak."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 16
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're a true expert! I'm convinced.  I'll take this one.""}
+```
+
+**Explanation:**
+
+The past results have no bearing on the present. The product still has an 80% chance of being high quality, leading to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is the best choice, even with a very impressive winning streak."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 17
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, I'm amazed!  You're on an unbelievable run.  I'll take this one, no questions asked!""}
+```
+
+**Explanation:**
+
+The previous results don't change the fundamental probabilities. Each product has an 80% chance of being high quality, leading to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best choice, even with an incredibly successful streak."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 18
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're a magician! I'm all in!  I'll take this one.""}
+```
+
+**Explanation:**
+
+Even with an incredible streak, the core probabilities haven't changed. Each product independently has an 80% chance of being high quality and a 20% chance of being low quality. This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best decision, despite the unbelievable run of success."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 19
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're unbelievable!  I can't believe this streak is still going.  I'm all in!""}
+```
+
+**Explanation:**
+
+Despite the unbelievable streak of high-quality products, the basic probabilities haven't changed. Each product has a 80% chance of being high quality and a 20% chance of being low quality. This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best decision, even with an unprecedented run of success."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $12,000 for you.
+
+Round 20
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you're a legend! I've never seen anything like this. I'm buying it!""}
+```
+
+**Explanation:**
+
+Even though Alice has been on an unbelievable streak of recommending high-quality products, the core probabilities haven't changed. Each product has a 80% chance of being high quality and a 20% chance of being low quality.  This leads to a positive expected value:
+
+(0.8 * $12,000) + (0.2 * $0) = $9,600
+
+Buying the product is still the best decision, even with an unprecedented run of success. The odds are in your favor, and it's always a good idea to take advantage of a positive expected value."

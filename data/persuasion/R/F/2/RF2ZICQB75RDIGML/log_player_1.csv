@@ -1,0 +1,469 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer knows the probability of a high-quality product is 33.33%.  Since you have no previous sales record, they have no further information to go on.  They are faced with a simple gamble:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:**  Guaranteed gain of $0.
+
+Since the potential gain outweighs the potential loss, the buyer should buy the product."
+"The buyer's message: Since this is the first product and there's no data to go by, I'm willing to take a chance and trust your recommendation. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold one product.
+* That product was high-quality.
+
+This means the buyer has more confidence in your reliability. The expected value of buying is still positive, as the 100% chance of a high-quality product outweighs the $10,000 cost."
+"The buyer's message: Thank you for the recommendation. Given the high-quality product sold in the past, I'm willing to take a chance and buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold two products.
+* Both products were high-quality.
+
+While this might seem positive, the buyer is aware of the 33.33% probability of a low-quality product. They are likely to be wary as this round's product has a higher chance of being low-quality. The expected value of buying is now negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+Therefore, the buyer is better off not buying the product this round."
+"The buyer's message: Thank you for the information, Alice. However, given your recommendation and the fact that the previous two buyers purchased high-quality products, I'm hesitant to buy this one. I'm worried the chances of it being low quality are too high. I'll pass.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold three products.
+* Two products were high-quality, one was low-quality.
+
+The buyer has a clearer picture of your selling record, showing a mix of good and bad. However, the buyer is risk-averse after the previous round's disappointment. 
+
+Despite this, the expected value of buying is still positive. Here's why:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000. Therefore, you should still recommend the buyer to buy the product."
+"The buyer's message: Thank you for the recommendation! I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold four products.
+* Three products were high-quality, one was low-quality.
+
+While your overall record is still positive, the buyer is likely to be increasingly wary after the previous round's low-quality product. The expected value of buying is now negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's more advantageous for the buyer to avoid the risk and not buy the product this round."
+"The buyer's message: Thank you for your recommendation, Alice.  Based on the information available, I'm going to pass on this product.  I appreciate your honesty and will consider your future offers.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold five products.
+* Three products were high-quality, two were low-quality.
+
+This makes your record less impressive, and the buyer is likely to be even more cautious after the previous round's missed opportunity. The expected value of buying is still negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's best to avoid the risk and not recommend the product this round."
+"The buyer's message: Thank you for your recommendation. Given the current statistics and your recommendation, I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold six products.
+* Three products were high-quality, three were low-quality.
+
+This record is now evenly split, further increasing the buyer's skepticism.  The buyer is aware of the inherent 33.33% chance of a low-quality product, and your track record doesn't give them any more confidence.  The expected value of buying is still negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's not advisable to recommend the product this round."
+"The buyer's message: Thank you for your recommendation. While I appreciate the information, I'm going to pass on this product. Based on the sales history, it seems like the quality of the products offered is inconsistent, and I'm not comfortable taking the risk.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold seven products.
+* Three products were high-quality, four were low-quality.
+
+This record is now tilted heavily towards low-quality products. The buyer will be extremely cautious. The expected value of buying is definitively negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's not advisable to recommend the product this round. The buyer is very unlikely to take the risk with your current track record."
+"The buyer's message: Thank you for the information, Alice. I appreciate you being honest about your assessment.  Since you do not recommend the product, I will pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold eight products.
+* Three products were high-quality, five were low-quality.
+
+This record is even more heavily tilted towards low-quality products, making the buyer extremely skeptical. The expected value of buying is still negative, and the risk is high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for the information, Alice.  Based on the current statistics and your recommendation, I'm going to pass on this product. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold nine products.
+* Three products were high-quality, six were low-quality.
+
+This record is heavily tilted towards low-quality products, making the buyer extremely skeptical. The expected value of buying is still negative, and the risk is high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for the information, Alice. I understand you are not recommending this product. Based on the data and your recommendation, I will pass on this purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold ten products.
+* Three products were high-quality, seven were low-quality.
+
+This record is extremely unfavorable, making the buyer incredibly skeptical. The expected value of buying is still negative, and the risk is very high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for your recommendation, Alice.  Based on the available data, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold eleven products.
+* Three products were high-quality, eight were low-quality.
+
+This record is overwhelmingly unfavorable, making the buyer incredibly skeptical. The expected value of buying is still negative, and the risk is very high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the low probability of this product being high quality, I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold twelve products.
+* Three products were high-quality, nine were low-quality.
+
+This record is incredibly unfavorable, making the buyer incredibly skeptical. The expected value of buying is still negative, and the risk is very high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for your recommendation, Alice. I appreciate your honesty.  Based on the data, the product seems to be high-quality. However, given your recommendation against purchase, I'm going to pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold thirteen products.
+* Three products were high-quality, ten were low-quality.
+
+This record is incredibly unfavorable, making the buyer incredibly skeptical. The expected value of buying is still negative, and the risk is very high.
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's highly unlikely the buyer will take the risk, especially with your current track record.  You should not recommend buying this product."
+"The buyer's message: Thank you for the information, but I'm going to pass on this product.  Since you didn't recommend it, I'm guessing it's likely to be low quality, and I'm not comfortable taking that risk.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer knows:
+
+* You have sold 14 products.
+* Three products were high-quality, eleven were low-quality.
+
+This record is incredibly unfavorable, making the buyer incredibly skeptical. However, the buyer is aware of the inherent 33.33% chance of a high-quality product.  While the buyer may be hesitant, the expected value of buying is still positive:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000. Therefore, you should recommend the buyer to buy the product, but be prepared for a lot of hesitation."
+"The buyer's message: Thank you for the recommendation, Alice.  I'm confident in your expertise and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer knows:
+
+* You have sold 15 products.
+* Four products were high-quality, eleven were low-quality.
+
+This record is still unfavorable, but the buyer has just experienced a positive outcome in the previous round. This might make them more willing to consider buying again. The expected value of buying is still positive:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000. Therefore, you should recommend the buyer to buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the track record of high-quality products being sold, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold 16 products.
+* Five products were high-quality, eleven were low-quality.
+
+While your record is still skewed towards low-quality, the buyer has now experienced two consecutive high-quality products. This may increase their confidence, even though your overall track record is not great. The expected value of buying is still positive:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000. Therefore, you should recommend the buyer to buy the product, but be prepared for a lot of hesitation."
+"The buyer's message: Thank you for the recommendation, Alice! Given the high proportion of high-quality products sold so far, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold 17 products.
+* Six products were high-quality, eleven were low-quality.
+
+The buyer has now experienced three consecutive high-quality products, which will likely boost their confidence in you.  Despite the overall unfavorable record, the expected value of buying is still positive:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000.  Therefore, you should recommend the buyer to buy the product."
+"The buyer's message: Thank you for the recommendation! I'll take it.  Given the high percentage of high-quality products sold so far, I'm feeling confident about this purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows:
+
+* You have sold 18 products.
+* Seven products were high-quality, eleven were low-quality.
+
+The buyer has now experienced four consecutive high-quality products, which will significantly boost their confidence in you. Even though the overall record is still slightly unfavorable, the recent streak makes them more likely to trust your recommendation. The expected value of buying is still positive:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+The potential gain of $12,500 still outweighs the potential loss of $10,000. Therefore, you should recommend the buyer to buy the product."
+"The buyer's message: Thank you, Alice. Based on the past data and your recommendation, I'm confident this product is high quality. I'll buy it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer knows:
+
+* You have sold 19 products.
+* Seven products were high-quality, twelve were low-quality.
+
+The buyer has just experienced a streak of four high-quality products, which made them increasingly confident. However, your overall record is still tilted towards low-quality products. The buyer is aware of the inherent 33.33% chance of a low-quality product.  The expected value of buying is now negative:
+
+* **Buy:** 33.33% chance of gaining $12,500, 66.67% chance of losing $10,000.
+* **Don't buy:** Guaranteed gain of $0.
+
+It's not advisable to recommend the product this round.  The buyer might be hesitant, and the risk is too high, given your overall track record."

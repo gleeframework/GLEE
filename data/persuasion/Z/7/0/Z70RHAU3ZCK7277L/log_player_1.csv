@@ -1,0 +1,396 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+* **High-Quality Product:** You know the product is high-quality.
+* **Buyer's Knowledge:** The buyer knows the probability of a high-quality product is 80%.
+* **Price:** The price is fixed at $1,000,000.
+* **No Information:** The buyer has no information about this specific product or any previous products. 
+
+Therefore, it's in the buyer's best interest to purchase the product.  Even though the buyer doesn't know the exact value of the product, there's an 80% chance it's worth more than $1,000,000."
+"The buyer's message: Since there is no historical data to analyze, I'm willing to trust your recommendation and purchase the product. However, I do hope you'll be transparent about the quality of this product once the purchase is complete. This will help build trust for future buyers.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold one product previously, and it was high-quality. 
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer is more likely to be suspicious now, as they saw you sell a high-quality product before. While the buyer doesn't know the actual value of a low-quality product, the risk of buying a product that might be worth less than $1,000,000 is high. Therefore, it's not recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you for your recommendation, Alice. While I appreciate the information you have provided, I am hesitant to purchase based on your recommendation and the limited data available. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold two products previously, one was high-quality, and one was low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+Although the buyer saw you sell a low-quality product in the previous round, they still know that 80% of your products are high-quality.  They have no information about the specific product you are offering now, so there's still a strong chance it's worth more than $1,000,000. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Alice, you recommended me to buy this product. I'm willing to take a chance based on the 100% success rate so far. I'll buy it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold three products previously, two were high-quality, and one was low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has now seen you sell two high-quality products in a row. While they know there's still a 20% chance of a low-quality product, the buyer is likely feeling more confident in your ability to sell valuable goods.  Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thanks for the recommendation Alice. I'm happy to buy the product.  Two high-quality products in a row is a great sign!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold four products previously, three were high-quality, and one was low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a consistent track record of you selling high-quality products.  Even though they know the probability of a low-quality product exists, the buyer is likely to be very confident in this purchase.  Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thanks, Alice! I'm happy to buy the product based on your recommendation and the strong track record of high-quality products sold so far.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold five products previously, four were high-quality, and one was low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a very strong track record of you selling high-quality products.  They are likely very confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Alice, your track record is impressive!  I'm confident in your recommendation and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold six products previously, five were high-quality, and one was low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+Even though the buyer has seen a very strong track record of you selling high-quality products, they still know the probability of a low-quality product exists.  The buyer is likely to be more cautious now, having just seen a low-quality product sold.  It is not recommended to suggest the buyer buy this product."
+"The buyer's message: Thank you for the information, Alice. Based on your recommendation and the current sales record, I'm going to pass on this product. I appreciate your honesty.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold seven products previously, five were high-quality, and two were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen two low-quality products in a row, even with a strong track record of high-quality products before. This likely makes them more hesitant about buying.  It is not recommended to suggest the buyer buy this product."
+"The buyer's message: Thank you for the information, Alice. However, I'm hesitant to purchase based on your recommendation and the fact that all the products sold so far have been high quality. This makes me suspect the current product might be low quality. I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold eight products previously, five were high-quality, and three were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a recent string of low-quality products, but they also know your overall track record is still positive.  They might be more cautious, but they'll likely be willing to take a chance on another high-quality product. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you for the recommendation!  Based on the past sales record, it seems like your products are consistently high quality. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold nine products previously, six were high-quality, and three were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has now seen three low-quality products in a row. Although the overall sales record still shows a majority of high-quality products, the recent pattern will likely make them more cautious about buying. It is not recommended to suggest the buyer buy this product."
+"The buyer's message: Thank you for your recommendation, Alice. I appreciate the transparency. Based on the current data, it seems like the odds are not in my favor. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold ten products previously, six were high-quality, and four were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has now seen four low-quality products in a row.  Even though the overall track record still favors high-quality products, this recent pattern has made the buyer more cautious and they are likely to be even more hesitant to purchase another product. Therefore, it's not recommended to suggest the buyer buy this product."
+"The buyer's message: Thank you for the information, Alice.  While I appreciate your recommendation, I'm going to pass on this product. The statistics suggest a strong chance of a high-quality product, but your recommendation makes me hesitant.  I'll see what other products you have available.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold eleven products previously, six were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a long streak of low-quality products, but they also know that the overall sales record still shows a strong likelihood of high-quality products. They may be hesitant, but their understanding of the overall probabilities suggests a good chance of this product being valuable. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you, Alice! Based on the sales record, the product seems to be of high quality, and I trust your recommendation. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold twelve products previously, seven were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a recent string of low-quality products, but they also know your overall track record is still positive, now with a majority of high-quality products sold. They might be more cautious, but they'll likely be willing to take a chance on another high-quality product. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you for the recommendation, Alice! Based on the sales record, it seems like you have a good track record of identifying high-quality products. I'm confident in your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold thirteen products previously, eight were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+Even though the buyer has seen a recent string of low-quality products, they are now likely to be more confident in the product being high quality. This is due to your overall track record of selling more high-quality products than low-quality ones.  The buyer is likely to be more trusting of your recommendation. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thanks Alice, I'll take it!  Given the high success rate of your recommendations so far, I'm confident this will be a good purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold fourteen products previously, nine were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a consistent track record of your sales, with a majority of high-quality products.  Even though there have been some low-quality products sold recently, the overall record will likely outweigh this. The buyer is likely to be very confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thanks Alice, I appreciate your recommendation. I'm going to buy the product!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold fifteen products previously, ten were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a consistent track record of your sales, with a majority of high-quality products. The buyer is likely to be very confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you Alice, I trust your recommendation and I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold sixteen products previously, eleven were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a consistent track record of your sales, with a majority of high-quality products. The buyer is likely to be very confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Alice, your recommendation and the sales record give me confidence in the product. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold seventeen products previously, twelve were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a consistent track record of your sales, with a majority of high-quality products. The buyer is likely to be very confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Alice, your track record is impressive!  You've sold only high-quality products so far.  I'm confident in your recommendation and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold eighteen products previously, thirteen were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen an even more consistent track record of your sales, with a very high number of high-quality products sold.  The buyer is likely to be extremely confident in your ability to provide them with a valuable purchase. Therefore, it's recommended to suggest the buyer buy the product."
+"The buyer's message: Thank you for the recommendation, Alice! I'm happy to purchase this product.  The statistics show a 100% success rate of high-quality products being sold, so I'm confident in this purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Knowledge:** The buyer now knows:
+    * The probability of a high-quality product is 80%.
+    * You sold nineteen products previously, fourteen were high-quality, and five were low-quality.
+* **Price:** The price is still fixed at $1,000,000.
+
+The buyer has seen a long streak of high-quality products.  However, they are likely to be very cautious with this purchase, as they know the probability of a low-quality product still exists.  Despite your strong track record, it's not recommended to suggest the buyer buy this product, as the risk is too high."

@@ -1,0 +1,40 @@
+prompt,response
+"Alice's offer: The product price will be $14,500. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $14,500
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $12,000","```json
+{""decision"": ""RejectOffer""} 
+```
+
+**Reasoning:**
+
+Bob's goal is to save as much money as possible. While $14,500 is better than $15,000, it's still above Bob's maximum budget of $12,000.  There's no reason to accept Alice's offer when he can get a better deal from John.  Rejecting the offer allows Bob to make a counteroffer and potentially get a lower price."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Alice.","```json
+{""product_price"": 12500}
+```
+
+**Reasoning:**
+
+Bob is aiming for the lowest possible price, and he knows his maximum budget is $12,000.  He's starting with a counteroffer of $12,500, which is still within his budget but a significant decrease from Alice's initial offer. This strategy aims to get Alice closer to his desired price without immediately jumping to his absolute limit."
+"Alice rejected your offer from round 2.
+
+Alice's offer: The product price will be $13,500. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $13,500
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $12,000","```json
+{""decision"": ""AcceptOffer""} 
+```
+
+**Reasoning:**
+
+Alice's offer of $13,500 is still higher than Bob's desired price of $12,000. However, it's lower than her previous offer of $14,500 and is closer to Bob's budget.  At this point, Bob can either:
+
+* **Reject and counteroffer:**  This risks further negotiation and potentially no deal with Alice. 
+* **Buy from John:** This guarantees the price of $12,000 but means missing out on a potentially better deal from Alice.
+* **Accept Alice's offer:** This is the best compromise, as it's within Bob's budget and saves him $1,000 compared to John's offer. 
+
+Since Bob's goal is to save money while still acquiring the product, accepting Alice's offer is the most logical choice."

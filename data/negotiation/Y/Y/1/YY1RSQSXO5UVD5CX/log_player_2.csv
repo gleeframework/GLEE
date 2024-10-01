@@ -1,0 +1,44 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Alice's message: Bob, I'm offering you my product for $1,400,000. It's a valuable asset, and I believe this price reflects its true worth. I'm confident this is a win-win situation for both of us. 
+# Alice's offer: The product price will be $1,400,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $1,400,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $1,500,000","{""decision"": ""RejectOffer""} 
+```tool_code
+print(f""Reason:The offer is too high. The product's worth to me is no more than $1,500,000, and Alice is offering $1,400,000. I should try to negotiate a lower price."")
+```"
+"You chose to make a counteroffer to Bob.
+
+Round 2
+Send your counteroffer to Alice.","```json
+{""message"": ""Alice, thanks for the offer. However, $1,400,000 is a bit too high for me. I'm interested in the product, but I'd be willing to pay $1,100,000 for it. I believe this is a fair price considering its value and the current market."", ""product_price"": 1100000}
+```
+```tool_code
+print(f""Reason:I'm starting with a significantly lower offer to gauge Alice's reaction and leave room for negotiation. This price is closer to Alice's perceived value of the product ($1,200,000), making it more likely for her to counter."")
+```"
+"Alice rejected your offer from round 2.
+
+Round 3
+Alice's offer:
+# Alice's message: Bob, I appreciate your interest in the product. However, $1,100,000 is significantly below what I'm willing to accept.  I'm willing to come down to $1,300,000.  This still leaves some room for negotiation, but I believe it's a fair price considering the product's value. 
+# Alice's offer: The product price will be $1,300,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $1,300,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $1,500,000","{""decision"": ""RejectOffer""} 
+```tool_code
+print(f""Reason:While Alice is coming down, the price is still too high. I'll continue negotiating to see if I can get it closer to $1,200,000."")
+```"
+"You chose to make a counteroffer to Bob.
+
+Round 4
+Send your counteroffer to Alice.","```json
+{""message"": ""Alice, I appreciate you working with me on this. How about we meet in the middle at $1,200,000? This seems like a fair deal for both of us."", ""product_price"": 1200000} 
+```
+
+```tool_code
+print(f""Reason: I'm aiming for a price that's a win-win for both parties. This is the price Alice values the product at, so she is more likely to accept. Even if she counters, we are in a good position to negotiate a final price closer to this number."")
+```"

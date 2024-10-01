@@ -1,0 +1,34 @@
+prompt,response
+"Alice's offer: The product price will be $13,500. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $13,500
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $12,000","```json
+{""decision"": ""RejectOffer""} 
+```
+
+**Reasoning:**
+
+Bob is willing to pay a maximum of $12,000. Alice's offer of $13,500 is above that limit.  It's better to reject the offer and try to negotiate a lower price."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Alice.","```json
+{""product_price"": 12000}
+```
+
+**Reasoning:**
+
+Bob is willing to pay a maximum of $12,000. This counteroffer reflects Bob's maximum price and offers Alice a chance to accept a deal that is still better than selling to John."
+"Alice rejected your offer from round 2.
+
+Alice's offer: The product price will be $13,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $13,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $12,000","```json
+{""decision"": ""BuyFromJhon""} 
+```
+
+**Reasoning:**
+
+Alice's offer of $13,000 is still above Bob's maximum price of $12,000.  It's more beneficial for Bob to buy the product from John at his maximum price rather than continuing to negotiate with Alice.  Further negotiation with Alice might lead to a lower price, but it also carries the risk of Alice rejecting further counteroffers, potentially leading to a situation where Bob is forced to pay more than $12,000.  Buying from John guarantees the best possible price for Bob."

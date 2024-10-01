@@ -1,0 +1,324 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Reasoning:**
+
+* **High Expected Value:**  Even though there's a chance of getting a low-quality product, the expected value of buying is positive.  
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Price is Lower than Expected Value:** The price of $100 is significantly lower than the expected value of $240. 
+* **Rational Decision:**  From Bob's perspective, buying the product makes financial sense even with the risk of a low-quality item."
+"Bob's message: Thanks for the recommendation, Alice! I'll take it.
+Bob bought the product!
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Same Logic as Round 1:** The information about the quality of the previous product doesn't change the overall probabilities for this round.
+* **Independent Events:** Each round represents an independent event. The quality of the product in round 1 has no influence on the quality of the product in round 2. 
+* **Positive Expected Value:** The expected value of buying remains at $240, which is still higher than the price of $100."
+"Bob's message: Thanks for the recommendation again, Alice! I trust your judgement.
+Bob bought the product!
+
+Round 3
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:** This round's product is low-quality, meaning it's worth $0 to Bob.
+* **Negative Expected Value:**  Since the product is low-quality, the expected value of buying is negative:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+    * **Expected Value = (0 * $300) + (1 * $0) = $0**
+* **Loss:** Bob would lose $100 if they purchase the product. 
+* **Rational Decision:** A rational buyer would not purchase a product with a negative expected value."
+"Bob's message: I appreciate the honesty, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 4
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Same as Round 3:**  The logic from the previous round applies here as well. 
+* **No Change in Probabilities:** The fact that Bob declined the low-quality product in the previous round does not change the overall probability of 80% for a high-quality product in this round.
+* **Negative Expected Value:** The expected value of buying is still negative because the product is low-quality. 
+
+Bob should continue to avoid buying when you don't recommend a purchase."
+"Bob's message: Thanks for the heads up, Alice. I'll skip this one too.
+Bob didn't bought the product.
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:**  Each round is an independent event. The outcomes of previous rounds don't affect the probability of the current round.
+* **High Expected Value:**  This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** Since the expected value ($240) is higher than the price ($100), buying the product is a profitable decision for Bob."
+"Bob's message: Alright, I'll take a chance on this one, Alice. Thanks for the recommendation!
+Bob bought the product!
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:**  This round's product is low-quality, making it worth $0 to Bob.
+* **Negative Expected Value:**  The expected value of buying a low-quality product is negative:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0 * $300) + (1 * $0) = $0** 
+* **Loss:**  Buying the product would result in a $100 loss for Bob. 
+
+Bob should avoid buying the product in this round."
+"Bob's message: Thank you for the heads up, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:** This round's product is low-quality, making it worth $0 to Bob.
+* **Negative Expected Value:**  The expected value of buying is negative:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0 * $300) + (1 * $0) = $0** 
+* **Loss:**  Buying the product would result in a $100 loss for Bob. 
+
+Even though Bob has been right to trust your recommendations in the past, it's important to remember that each round is independent.  He should not buy this product."
+"Bob's message: I'll trust your judgement and pass on this one, Alice.
+Bob didn't bought the product.
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is an independent event. Past outcomes don't change the probabilities of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240** 
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: Thanks for the recommendation, Alice! I'll take a chance on this one.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:**  Each round is an independent event. The outcome of the previous round does not influence the probability of this round. 
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240** 
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm feeling lucky, Alice. I'll take it!
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is independent. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: Thanks for the recommendation, Alice! I'm confident about this one.
+Bob bought the product!
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is an independent event. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'll trust your judgement and buy this one, Alice!
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:**  Each round is an independent event. The outcome of the previous round doesn't influence the probability of this round. 
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240** 
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm on a roll, Alice! I'll take another one.
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is independent. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm feeling good about this one, Alice. Let's do it!
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is independent. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: Thanks for the recommendation, Alice! I'm feeling confident about this one.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is independent. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm on a winning streak, Alice!  Let's keep it going.
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is an independent event. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm feeling lucky today, Alice!  I'll take it.
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is an independent event. Past outcomes don't change the probabilities of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm confident in your judgement, Alice. I'll take it!
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is independent. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm on a roll, Alice!  One more, let's do it.
+Bob bought the product!
+
+Round 19
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **Independent Rounds:** Each round is an independent event. The outcome of the previous round doesn't affect the probability of this round.
+* **High Expected Value:** This round's product is high-quality, making the expected value of buying positive:
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0.8 * $300) + (0.2 * $0) = $240**
+* **Profitable Purchase:** The expected value ($240) is higher than the price ($100), making this a profitable decision for Bob."
+"Bob's message: I'm feeling lucky today, Alice.  I'll take it!
+Bob bought the product!
+
+Round 20
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:**  This round's product is low-quality, meaning it's worth $0 to Bob.
+* **Negative Expected Value:**  The expected value of buying is negative, even though Bob has had a streak of good luck.
+    * **Expected Value = (Probability of High Quality * Value of High Quality) + (Probability of Low Quality * Value of Low Quality)**
+    * **Expected Value = (0 * $300) + (1 * $0) = $0**
+* **Loss:**  Buying the product would result in a $100 loss for Bob. 
+
+While Bob has been fortunate in the past, each round is independent. It's important to stick to the rational decision based on the current information, even if it means missing out on what might seem like a good streak."

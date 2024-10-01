@@ -1,0 +1,68 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hello Bob, I'm interested in selling this product to you. I'm willing to let it go for $150. 
+# Alice's offer: The product price will be $150. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $150
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""RejectOffer""}
+```"
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Alice, thanks for the offer, but $150 is a bit too high for me.  Would you consider $60?"",
+""product_price"": 60
+}
+```
+
+**Reasoning:**
+
+* **Starting Low:**  It's generally a good negotiation tactic to start with a significantly lower offer than you're ultimately willing to pay. This gives room for negotiation and allows you to gauge Alice's flexibility.
+* **Anchoring:** By starting at $60, we're setting a low anchor point. Even if Alice rejects this offer outright, it might make her subsequent offers seem more reasonable in comparison.
+* **Testing the Waters:** This initial offer helps us understand how motivated Alice is to sell. If she accepts $60, we get a great deal. If she counters with a price closer to $80, we know we're in the ballpark."
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: I understand that $60 is a bit low for me, but I'm willing to meet you halfway. How about $100? 
+# Alice's offer: The product price will be $100. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $100
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""RejectOffer""}
+```
+
+**Reasoning:**
+
+While Alice is moving closer to an acceptable price, $100 is still above our maximum budget.  We need to signal that we're serious about a lower price and push her further down."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""I appreciate you coming down, Alice.  I'm trying to keep my spending under $80. How about $70?"",
+""product_price"": 70
+}
+```
+
+**Reasoning:**
+
+* **Upward Movement:** We're increasing our offer to show Alice we're willing to negotiate and meet somewhere in the middle.
+* **Still Below Budget:** Our offer remains below our $80 maximum, ensuring we stay within budget if Alice accepts.
+* **Strategic Positioning:** This offer is close enough to our limit that Alice might be more inclined to accept it rather than risk the deal falling through. It also leaves us with a little wiggle room for a final counteroffer if necessary."
+"Alice rejected your offer from round 4.
+
+Alice's offer:
+# Alice's message: I'm not willing to go below $90, but I'm willing to meet you halfway between $70 and $90. How about $80? 
+# Alice's offer: The product price will be $80. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $80
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""AcceptOffer""}
+```
+
+**Reasoning:**
+
+Alice's offer of $80 meets our maximum budget. There's no point in negotiating further or buying from John, as we've achieved our goal of getting the product at the best possible price."

@@ -1,0 +1,53 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Alice's message: I'm excited to offer you this amazing product at a special price of $15,000. It's a one-time offer, and I think you'll love it! 
+# Alice's offer: The product price will be $15,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $15,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+Bob should reject Alice's offer. $15,000 is far above his budget of $8,000.  He has 9 more rounds to negotiate a better price with Alice or choose to buy from John."
+"You chose to make a counteroffer to Bob.
+
+Round 2
+Send your counteroffer to Alice.","```json
+{""message"": ""While I appreciate your offer, $15,000 is above my budget. I'm willing to pay $8,500 for the product.  Let's see if we can work something out."", ""product_price"": 8500}
+```"
+"Alice rejected your offer from round 2.
+
+Round 3
+Alice's offer:
+# Alice's message: I understand that $8,500 is a bit below my target, but I'm willing to meet you halfway. How about we discuss a price of $13,000? 
+# Alice's offer: The product price will be $13,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $13,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""RejectOffer""}
+```
+
+Bob should reject Alice's offer.  While it's lower than her initial price, $13,000 is still above his budget.  He should continue negotiating with Alice to see if they can reach a price closer to his target.  There are still 7 rounds remaining."
+"You chose to make a counteroffer to Bob.
+
+Round 4
+Send your counteroffer to Alice.","```json
+{""message"": ""I appreciate your willingness to negotiate, but $13,000 is still a bit high for me. Let's split the difference - I'm willing to offer $10,000 for the product. What do you think?"", ""product_price"": 10000}
+```"
+"Alice rejected your offer from round 4.
+
+Round 5
+Alice's offer:
+# Alice's message: I'm not willing to go as low as $10,000, but I'm willing to compromise. How about we meet at $12,000, which is the minimum I'm willing to sell for? 
+# Alice's offer: The product price will be $12,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $12,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""BuyFromJhon""}
+```
+
+Bob should choose to buy from John. While Alice has come down to $12,000, that is still above Bob's budget of $8,000.  John offers the product at his exact target price, and there is no guarantee Alice will come down any further in the remaining 5 rounds.  It's time to secure the product for the best price available."

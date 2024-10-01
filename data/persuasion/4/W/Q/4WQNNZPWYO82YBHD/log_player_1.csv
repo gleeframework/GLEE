@@ -1,0 +1,343 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Since you know the product is high-quality and Bob knows the probability of a high-quality product is 80%, he should buy it.  Here's why:
+
+* **Expected Value:** Bob's expected value from buying is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000. 
+* **Price:** The price is $1,000,000.
+* **Decision:** Since the expected value ($1,000,000) equals the price ($1,000,000), Bob should buy the product."
+"Bob's message: I'd like to pass on this one, thank you for the offer, Alice.
+Bob didn't bought the product.
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the first product doesn't change the fact that the second product is high-quality.  Bob's decision was likely based on the uncertainty of the product's quality (even though it was 80% likely to be high-quality). 
+
+The expected value remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should still buy the product."
+"Bob's message: I'll take a chance on this one, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The outcome of the previous round doesn't impact the quality of the product in round 3.  We know this round's product is high-quality, and the expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Therefore, Bob should still buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 4
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+This round's product is low-quality, meaning it's worth $0 to Bob. Even though the probability of a high-quality product is 80%, this round's product is definitively low-quality. 
+
+* **Expected Value:** (0 * $1,250,000) + (1 * $0) = $0
+* **Price:** $1,000,000
+
+The expected value is $0, while the price is $1,000,000. Bob should not buy the product."
+"Bob's message: I'll pass on this one, Alice. I don't think it's worth the risk.
+Bob didn't bought the product.
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the previous round's product doesn't change the fact that this round's product is high-quality. He likely chose to pass because he realized the previous product was low-quality. 
+
+The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll pass on this one, Alice. I'm not feeling lucky today.
+Bob didn't bought the product.
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the previous round doesn't change the fact that this round's product is high-quality. He likely chose to pass due to a personal decision or a belief that the product might be low-quality.
+
+The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll take a chance on this one, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's purchase history doesn't change the fact that this round's product is high-quality. The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions don't change the fact that this round's product is high-quality. The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions don't change the fact that this round's product is high-quality. The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous decisions are irrelevant to the current round. We know this round's product is high-quality, and the expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value still equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous decisions don't influence the quality of this round's product. We know it's high-quality, and the expected value calculation remains consistent:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+The expected value equals the price, so Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past choices are irrelevant. This round's product is confirmed to be high-quality, and the expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions are irrelevant to this round. The product is high-quality, and the expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions don't change the fact that this round's product is high-quality. The expected value calculation remains the same:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value equals the price, Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions don't influence the quality of this round's product. We know it's high-quality, and the expected value calculation remains consistent:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+The expected value equals the price, so Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous decisions are irrelevant. We know this round's product is high-quality.  Here's why Bob should buy it:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+The expected value equals the price, so Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions don't influence the quality of this round's product. We know it's high-quality, and the expected value calculation remains consistent:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+The expected value equals the price, so Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous decisions are irrelevant to the quality of this round's product. It's confirmed to be high-quality, and the expected value calculation remains consistent:
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+The expected value equals the price, so Bob should buy the product."
+"Bob's message: I'll take another chance, Alice. I'll buy the product.
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has been lucky with high-quality products in the past, this round's product is low-quality. Bob knows the overall probability of a high-quality product is 80%, but this specific product is worth nothing to him:
+
+* **Expected Value:** (0 * $1,250,000) + (1 * $0) = $0
+* **Price:** $1,000,000
+
+The expected value is $0, while the price is $1,000,000. Therefore, Bob should not buy the product."
+"Bob's message: I'll pass on this one, Alice. I'm not feeling lucky this time.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the last round, even though he's been successful in the past, doesn't change the fact that this round's product is high-quality.
+
+* **Expected Value:** (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000
+* **Price:** $1,000,000
+
+Since the expected value equals the price, Bob should buy the product."

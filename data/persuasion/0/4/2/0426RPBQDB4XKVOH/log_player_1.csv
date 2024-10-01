@@ -1,0 +1,279 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Since the buyer knows you have a 50% chance of selling a high-quality product, and they are worth $200 to them, it's in their best interest to buy. Even though there's a 50% chance of getting a low-quality product, the potential gain from a high-quality product outweighs the potential loss from a low-quality one."
+"The buyer's message: I'll take it! Since there's no data yet, I'm trusting your recommendation.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has information: you sold one product, and it was high-quality.  This means the buyer should be more skeptical about the quality of your products. Since there's a 50% chance this product is low-quality, and it's worth nothing to them, it's not a good risk to take."
+"The buyer's message: Thank you for your recommendation, Alice. Based on the limited data, it seems risky to buy without more information. I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold two products: one high-quality, one low-quality.  This reinforces the 50/50 chance they already understood. The potential gain from a high-quality product is still greater than the potential loss from a low-quality one, so it's still a good risk to take."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you have sold three products: two high-quality and one low-quality.  This is starting to shift the buyer's perception towards a higher likelihood of low-quality products.  Since the risk of getting a worthless product is now slightly higher, it's not worth the risk for the buyer."
+"The buyer's message: Thank you for your recommendation, Alice. I will pass on this product. I appreciate your honesty and will keep your recommendations in mind for future purchases.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer has seen a 50/50 split of high and low quality products so far, the potential reward of $200 for a high-quality product is still greater than the potential loss of $0 for a low-quality product.  The buyer should still be willing to take this risk."
+"The buyer's message: Thanks for the recommendation, Alice! I'm confident in your expertise and I'll take the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now knows that you've sold 3 high-quality and 2 low-quality products. This means the buyer might be slightly more confident in the quality of your products, but the inherent 50/50 chance of a high-quality product being worth $200 still makes it a good risk for them."
+"The buyer's message: Thank you for the recommendation.  I'm happy to buy the product. With a 100% track record of high-quality products so far, I'm confident in this purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a 60% (3/5) chance of getting a high-quality product and a 40% (2/5) chance of getting a low-quality product. While the potential gain from a high-quality product is still significant, the increased chance of getting a low-quality product makes the risk too high for the buyer."
+"The buyer's message: Thank you for the information. I understand that you are not recommending the purchase, and given the current statistics and the lack of information about the quality of this product, I will pass on the purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows that you've sold 3 high-quality and 3 low-quality products. This means the buyer is back to a 50/50 chance of getting a high-quality product. However, the buyer is becoming increasingly risk-averse. They have seen a few low-quality products, and they know that the potential loss is significant. The buyer is likely to err on the side of caution and not buy."
+"The buyer's message: Thank you for the information, Alice.  I'm going to pass on this product.  Since you're not recommending it and the record shows only high-quality products sold so far, I'm concerned about the risk of getting a low-quality product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you have sold 3 high-quality and 4 low-quality products.  This means the odds of getting a low-quality product are now higher than getting a high-quality one. The buyer is likely to be very risk-averse at this point, as they have seen several low-quality products in a row. It's not a good risk to take, even though there is still a chance of getting a high-quality product."
+"The buyer's message: Thank you for the recommendation, Alice. I appreciate the honesty, but I will pass on this product.  Given the statistics, I am not confident that this is a high-quality product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows that you've sold 3 high-quality and 5 low-quality products. This means the odds of getting a low-quality product are even higher than before.  The buyer has seen a clear trend of low-quality products being sold, and even though the initial odds were 50/50, this trend is now highly influential.  The buyer is unlikely to take the risk, especially with the potential for a significant loss."
+"The buyer's message: Thank you for the recommendation, Alice. I'll pass on this one.  Since you're not recommending it, I'm guessing it's likely low quality. I'll wait for a better opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer has seen a string of low-quality products, the fundamental odds haven't changed. The buyer knows that there's still a 50% chance of getting a high-quality product, which is worth $200 to them. While they may be hesitant due to the recent trend, the potential reward is still greater than the potential loss."
+"The buyer's message: Alice, you've recommended 4 purchases and all were high-quality. I'm confident in your judgement and will buy this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 6 low-quality products. The buyer is likely to be very cautious. Even though they were recently swayed by a positive track record, the recent string of low-quality products will likely override that.  The buyer is unlikely to take the risk of a low-quality product with such a high probability."
+"The buyer's message: Thank you for the information, Alice. However, I'm hesitant to purchase based on your recommendation. I'll pass for now.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 7 low-quality products. The odds are heavily against them getting a high-quality product. The buyer has seen a clear trend of low-quality products being sold, and they are likely to be highly risk-averse at this point. Even with the potential gain of $200, the risk of losing $100 is too high for them."
+"The buyer's message: Thank you for the information, but I'm going to pass.  Since you're not recommending this product, and all previous sales have been high-quality, I'm guessing this one is low-quality. I'd rather not risk it.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 8 low-quality products. The odds are heavily against them getting a high-quality product. The buyer has seen a clear trend of low-quality products being sold, and they are likely to be highly risk-averse at this point.  Even with the potential gain of $200, the risk of losing $100 is too high for them."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty.  Based on your recommendation and the fact that all previous sales were high-quality, I'm going to pass on this product. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 9 low-quality products. The odds of getting a low-quality product are overwhelmingly high. Even with the potential gain of $200, the risk of losing $100 is simply too much for the buyer to take.  The buyer is likely to be extremely risk-averse at this point, having seen so many low-quality products in a row."
+"The buyer's message: Thank you for the recommendation, Alice. Since you don't recommend it, I'll pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 10 low-quality products. The odds are heavily against them getting a high-quality product. The buyer has seen a clear trend of low-quality products being sold, and they are likely to be highly risk-averse at this point.  Even with the potential gain of $200, the risk of losing $100 is too high for them."
+"The buyer's message: Thank you for your recommendation, Alice.  While the statistics are promising, I'm hesitant to buy without more information about the specific product. I'll pass for now.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 11 low-quality products. The odds are extremely against them getting a high-quality product. The buyer has seen a clear trend of low-quality products being sold, and they are likely to be extremely risk-averse at this point. Even with the potential gain of $200, the risk of losing $100 is simply too much for them to take.  The buyer is likely to be highly unlikely to buy any more products from you."
+"The buyer's message: Thank you for the information, but I'll pass on this one. Since you are not recommending it, and the record shows a 100% success rate for the products sold, I'm assuming the current product is likely low-quality.  I'd rather wait for a better opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now knows you've sold 4 high-quality and 12 low-quality products. The odds of getting a low-quality product are overwhelmingly high. The buyer has seen a clear trend of low-quality products being sold, and they are likely to be extremely risk-averse at this point. Even with the potential gain of $200, the risk of losing $100 is simply too much for them to take.  The buyer is highly unlikely to buy any more products from you."
+"The buyer's message: Thank you for the information, Alice.  I understand you're not recommending the product.  Based on the current statistics and your recommendation, I'm going to pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer has seen a long string of low-quality products, the inherent 50/50 chance of the product being high-quality hasn't changed. The buyer knows that there's still a 50% chance of getting a high-quality product, which is worth $200 to them. While they may be hesitant due to the recent trend, the potential reward is still greater than the potential loss.  
+
+At this point, the buyer might be so risk-averse that they might still decline, but logically, they should be willing to take the risk."
+"The buyer's message: Thank you Alice, I trust your recommendation. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even with a long streak of low-quality products, the buyer knows the inherent probability of a high-quality product is 50%.  The potential reward of $200 is still greater than the potential loss of $0. While the buyer is likely very cautious, they should be willing to take this risk, especially with the previous round resulting in a high-quality product."

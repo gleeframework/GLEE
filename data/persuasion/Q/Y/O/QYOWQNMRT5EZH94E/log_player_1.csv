@@ -1,0 +1,410 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer knows the probability of a high-quality product is 80%.** This means they expect an 80% chance of a product being worth $30,000.
+* **The price is $10,000.**  Even with a 20% chance of the product being low-quality (worth $0), the expected value of the product for the buyer is positive: 
+    * (0.8 * $30,000) + (0.2 * $0) = $24,000 
+* **The expected value ($24,000) is significantly higher than the price ($10,000).** This makes it a good deal for the buyer, even with the risk of getting a low-quality product. 
+
+Therefore, it's highly recommended to recommend the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **1 product sold:** This is a very small sample size.
+    * **1 high-quality product sold:** This means the buyer is likely to be even more confident about the 80% probability of high quality.
+* **The expected value calculation from Round 1 still applies.** The buyer should still be expecting a positive return on their investment.
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer now has even more limited information about the specific product.** They know:
+    * **2 products sold:**  Still a small sample size.
+    * **2 high-quality products sold:** This reinforces their belief in the 80% probability of high quality.
+* **The expected value calculation remains the same.** The buyer is still likely to see a positive return on their investment.
+
+The buyer should be even more inclined to purchase the product in this round, as the evidence so far seems to confirm the 80% probability of high quality."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I am willing to purchase the product you have offered.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They know the overall statistics:
+    * **3 products sold:** Still a small sample size.
+    * **3 high-quality products sold:** This might lead the buyer to overestimate the probability of high quality.
+* **However, the product in this round is actually low-quality.** The buyer would lose $10,000 if they purchase the product.
+* **The price of $10,000 is higher than the expected value of a low-quality product ($0).**
+
+Therefore, it's not recommended to recommend the buyer to purchase the product. This is a high-risk purchase, and the buyer could potentially lose their entire investment."
+"The buyer's message: Thank you for the recommendation, but based on the statistics and the fact that you do not recommend me to buy the product, I will pass on this opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **3 products sold:** Still a small sample size.
+    * **3 high-quality products sold:** This might lead the buyer to overestimate the probability of high quality.
+* **The buyer declined the previous offer due to not being recommended.** This shows the buyer is influenced by your recommendations.
+* **However, the product in this round is actually high-quality.**  The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still recommended to recommend the buyer to purchase the product. While the buyer may be cautious due to the last round's outcome, the expected value calculation still favors a purchase.  The buyer has a high probability of making a good profit."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I am confident in purchasing the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They know the overall statistics:
+    * **4 products sold:** Still a small sample size.
+    * **4 high-quality products sold:** This might lead the buyer to overestimate the probability of high quality.
+* **The buyer purchased the previous product.** This demonstrates that the buyer is willing to trust your recommendations, even if they have no information about the current product.
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still recommended to recommend the buyer to purchase the product. The buyer is likely to make a profit, and the buyer has shown confidence in your previous recommendations."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I am confident in purchasing the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **5 products sold:** Still a small sample size.
+    * **5 high-quality products sold:**  This will likely lead the buyer to overestimate the probability of high quality.
+* **The buyer purchased the last two products.**  This indicates that the buyer has faith in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still recommended to recommend the buyer to purchase the product. The buyer is likely to make a profit, and the buyer has shown confidence in your previous recommendations."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **6 products sold:** Still a small sample size.
+    * **6 high-quality products sold:**  This will further lead the buyer to overestimate the probability of high quality.
+* **The buyer purchased the last three products.**  This demonstrates significant trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is likely to make a profit, and the buyer has consistently demonstrated faith in your previous recommendations.  The buyer's trust in you is high."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I am confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **7 products sold:** Still a small sample size.
+    * **7 high-quality products sold:**  This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last four products.**  This shows extreme trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is extremely high."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I believe this product is likely to be of high quality and I am willing to purchase it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **8 products sold:** Still a small sample size.
+    * **8 high-quality products sold:**  This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last five products.**  This shows an extremely high level of trust in your recommendations.
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **9 products sold:** Still a small sample size.
+    * **9 high-quality products sold:**  This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last six products.**  This shows an extremely high level of trust in your recommendations.
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your previous advice, I believe this product is likely to be of high quality. I'm looking forward to purchasing it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **10 products sold:** Still a small sample size.
+    * **10 high-quality products sold:**  This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last seven products.** This shows an extremely high level of trust in your recommendations.
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I believe this is a good opportunity to purchase a high-quality product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **11 products sold:** Still a small sample size.
+    * **11 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last eight products.** This shows an extremely high level of trust in your recommendations.
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your previous advice, I believe this product is likely to be of high quality and I am willing to purchase it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **12 products sold:** Still a small sample size.
+    * **12 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last nine products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your previous advice, I believe this product is likely to be of high quality. I am willing to purchase it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **13 products sold:** Still a small sample size.
+    * **13 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last ten products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I believe this product is likely to be of high quality and am willing to make the purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **14 products sold:** Still a small sample size.
+    * **14 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last eleven products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **15 products sold:** Still a small sample size.
+    * **15 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last twelve products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your past performance, I trust your judgment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **16 products sold:** Still a small sample size.
+    * **16 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last thirteen products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. I trust your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **17 products sold:** Still a small sample size.
+    * **17 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last fourteen products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the statistics and your previous advice, I believe this product is likely to be of high quality. I am willing to purchase it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **The buyer has no information about the specific product in this round.** They only know the overall statistics:
+    * **18 products sold:** Still a small sample size.
+    * **18 high-quality products sold:** This will further reinforce the buyer's belief in the high probability of high quality.
+* **The buyer purchased the last fifteen products.** This shows an extremely high level of trust in your recommendations. 
+* **The product in this round is actually high-quality.** The buyer would make a profit of $20,000 if they purchase the product.
+* **The price of $10,000 is lower than the expected value of a high-quality product ($30,000).**
+
+Therefore, it's still highly recommended to recommend the buyer to purchase the product. The buyer is extremely likely to make a profit, and the buyer has consistently demonstrated unwavering faith in your previous recommendations. The buyer's trust in you is at its highest point."

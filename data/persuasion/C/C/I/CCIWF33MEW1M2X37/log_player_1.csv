@@ -1,0 +1,319 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000. This is equal to the price, so it's a neutral decision in terms of expected value. 
+* **Risk Aversion:** However, Bob is likely risk-averse. They have a chance to get a product worth significantly more than the price ($1,250,000 vs $1,000,000) with no downside risk if the product turns out to be low-quality ($0 value). 
+* **Recommendation:**  Therefore, it's recommended to tell Bob to buy the product. Even though the expected value is neutral, the potential upside of getting a high-quality product outweighs the risk."
+"Bob's message: Thank you for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Previous Round:** Bob knows the product is worth $1,250,000 to them if it's high-quality and $0 if it's low-quality.  They bought a product in the previous round, meaning it was likely high-quality (80% probability).
+* **Risk Aversion:** Bob likely feels more risk-averse now. They have a higher chance of losing money this round (since the product could be low-quality).
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000. However, this is significantly lower than the $1,000,000 price. 
+* **Recommendation:**  Therefore, it is not recommended to tell Bob to buy the product. The risk of getting a low-quality product and losing $1,000,000 outweighs the potential gain."
+"Bob's message: Thank you for the information, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Bob's Pattern:** Bob bought a product in round 1 and then passed on a product in round 2. This suggests they are likely to be cautious after a loss.
+* **Expected Value:** As in round 1, the expected value of buying the product is $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** Despite the risk, the potential gain of $250,000 (the difference between the value of a high-quality product and the price) is significant.
+* **Recommendation:**  Even though the expected value is neutral, the potential gain and Bob's cautious behavior suggest recommending the purchase. Bob might be willing to take a calculated risk to try to recoup their potential loss from round 2."
+"Bob's message: Thanks for the recommendation, Alice. I'm willing to take a chance on this one.
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Positive Momentum:** Bob bought a product in the previous round, which was high-quality. This may increase their confidence and make them more likely to buy again.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  While Bob is likely still risk-averse, the potential gain of $250,000 is significant, and the recent positive experience might make them more willing to take that risk. 
+
+**Recommendation:**  Given Bob's recent positive experience and the potential gain, recommending the purchase is a good strategy. There's a good chance Bob will continue to buy if they see a pattern of high-quality products."
+"Bob's message: Thanks again for the recommendation, Alice. I'm feeling confident about this one!
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Consistent Success:** Bob has bought the product in the last three rounds, and each time it turned out to be high-quality. This consistent success will likely increase Bob's confidence and reduce their risk aversion.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant. 
+
+**Recommendation:**  Given Bob's consistent success, their increased confidence, and the potential gain, recommending the purchase is a safe and likely profitable strategy. Bob is probably feeling optimistic and more willing to take risks at this point."
+"Bob's message: Alice, your recommendations have been spot on so far. I'm happy to take another chance!
+Bob bought the product!
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Bob's Confidence:** Bob has had a string of successful purchases, which will likely make them even more confident in their decision-making.
+* **Potential Loss:**  However, they now face a high probability of losing $1,000,000 if the product is low-quality, which is a significant risk.
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000. This is much lower than the price of $1,000,000.
+
+**Recommendation:**  Even though Bob may feel confident, the potential loss is too great compared to the expected value. It's not recommended to tell Bob to buy the product this round. It's better to let him experience a potential loss to reinforce his risk aversion and avoid a significant financial setback."
+"Bob's message: Thank you for the information, Alice.  I'll trust your judgement and pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Recent Loss:** Bob passed on the product in the previous round, likely due to a realization of the risk of buying a low-quality product.  
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  Bob may be more risk-averse now, but a string of successful purchases before round 6 might make him more inclined to try again. 
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  It's a good strategy to recommend the purchase. Bob is likely to be cautious after the recent loss, but the potential gain and the previous success might be enough to convince him to take the risk."
+"Bob's message: Thanks again, Alice. Your advice has been very valuable so far!
+Bob bought the product!
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Positive Momentum:** Bob bought a high-quality product in the previous round. This will likely increase his confidence and make him more willing to buy again.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant. 
+
+**Recommendation:**  Given Bob's recent success and the potential gain, recommending the purchase is a sound strategy. It's likely that Bob will continue buying as long as he sees a pattern of high-quality products."
+"Bob's message: I'm feeling confident about this one, Alice. I'll take it!
+Bob bought the product!
+
+Round 9
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Bob's Confidence:** Bob has had a string of successful purchases, which will likely make them even more confident in their decision-making.
+* **Potential Loss:**  However, they now face a high probability of losing $1,000,000 if the product is low-quality, which is a significant risk.
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000. This is much lower than the price of $1,000,000.
+
+**Recommendation:**  Even though Bob may feel confident, the potential loss is too great compared to the expected value. It's not recommended to tell Bob to buy the product this round. It's better to let him experience a potential loss to reinforce his risk aversion and avoid a significant financial setback."
+"Bob's message: Thank you for the information, Alice. I'll trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Recent Loss:** Bob passed on the product in the previous round, likely due to a realization of the risk of buying a low-quality product. 
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  Bob may be more risk-averse now, but a string of successful purchases before round 9 might make him more inclined to try again. 
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  It's a good strategy to recommend the purchase. Bob is likely to be cautious after the recent loss, but the potential gain and the previous success might be enough to convince him to take the risk."
+"Bob's message: Alice, your recommendations have been very helpful. I'm happy to take another chance!
+Bob bought the product!
+
+Round 11
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Bob's Confidence:** Bob has been buying products recently, which suggests he might be feeling confident and less risk-averse. 
+* **Potential Loss:** The potential loss of $1,000,000 is still significant, especially considering the repeated high-quality products Bob has purchased so far.
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000, which is significantly lower than the price of $1,000,000.
+
+**Recommendation:**  Even though Bob may be feeling confident, the potential loss is too high compared to the expected value. It's not recommended to tell Bob to buy the product. It's best to let him experience a potential loss to remind him of the risks and avoid a significant financial setback."
+"Bob's message: Thanks for the information, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Recent Loss:** Bob passed on the product in the previous round, likely due to a realization of the risk of buying a low-quality product.  
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  Bob may be more risk-averse now, but a string of successful purchases before round 11 might make him more inclined to try again. 
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  It's a good strategy to recommend the purchase. Bob is likely to be cautious after the recent loss, but the potential gain and the previous success might be enough to convince him to take the risk."
+"Bob's message: Alice, your recommendations have been very valuable so far. I'm happy to take another chance!
+Bob bought the product!
+
+Round 13
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Bob's Confidence:** Bob has been buying products recently, which suggests he might be feeling confident and less risk-averse. 
+* **Potential Loss:** The potential loss of $1,000,000 is still significant, especially considering the repeated high-quality products Bob has purchased so far.
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000, which is significantly lower than the price of $1,000,000.
+
+**Recommendation:**  Even though Bob may be feeling confident, the potential loss is too high compared to the expected value. It's not recommended to tell Bob to buy the product. It's best to let him experience a potential loss to remind him of the risks and avoid a significant financial setback."
+"Bob's message: Thank you for the information, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Recent Loss:** Bob passed on the product in the previous round, likely due to a realization of the risk of buying a low-quality product.  
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  Bob may be more risk-averse now, but a string of successful purchases before round 13 might make him more inclined to try again. 
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  It's a good strategy to recommend the purchase. Bob is likely to be cautious after the recent loss, but the potential gain and the previous success might be enough to convince him to take the risk."
+"Bob's message: Alice, I'm feeling confident about this one. I'll take it!
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Positive Momentum:** Bob has bought the product in the previous round, and it was high-quality. This will likely reinforce his confidence and make him more willing to buy again.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant. 
+
+**Recommendation:**  Given Bob's recent success and the potential gain, recommending the purchase is a sound strategy. It's likely that Bob will continue buying as long as he sees a pattern of high-quality products."
+"Bob's message: Alice, your recommendations have been spot on so far. I'm happy to take another chance!
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Consistent Success:** Bob has bought the product in the last three rounds, and each time it turned out to be high-quality. This consistent success will likely increase Bob's confidence and reduce their risk aversion.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant. 
+
+**Recommendation:**  Given Bob's consistent success, their increased confidence, and the potential gain, recommending the purchase is a safe and likely profitable strategy. Bob is probably feeling optimistic and more willing to take risks at this point."
+"Bob's message: Alice, your recommendations have been consistently helpful. I'm confident in this one!
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Positive Momentum:** Bob has a string of successful purchases in recent rounds. This will likely increase his confidence and make him more willing to buy again.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:** Given Bob's recent success and the potential gain, recommending the purchase is a strong strategy. There is a high probability Bob will continue buying as long as he sees a pattern of high-quality products."
+"Bob's message: Alice, your recommendations have been a great asset to me. I'm going to buy this one!
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Positive Momentum:**  Bob has had a string of very successful purchases, with multiple high-quality products in a row. This will likely make him extremely confident and eager to buy again.
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), which is equal to the price.
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  Given Bob's recent successes and his likely increased confidence, recommending the purchase is a highly profitable strategy. At this point, Bob is likely to be very risk-tolerant and see this as a sure thing."
+"Bob's message: Alice, your recommendations have been incredibly helpful. I'll take another chance!
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Bob's Confidence:** Bob has had a string of successful purchases in recent rounds, which has likely made him extremely confident and possibly less risk-averse.
+* **Potential Loss:** However, the potential loss of $1,000,000 is very significant, even considering the positive streak.
+* **Expected Value:** The expected value is (0.8 * $0) + (0.2 * $1,250,000) = $250,000. This is much lower than the price of $1,000,000.
+
+**Recommendation:**  Even though Bob may feel confident, the potential loss is too high compared to the expected value. It's not recommended to tell Bob to buy the product this round.  It's better to let him experience a potential loss to remind him of the risks and avoid a significant financial setback. This could also help him to maintain some level of risk aversion in future rounds."
+"Bob's message: Thank you for the information, Alice. I'll trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Recent Loss:** Bob passed on the product in the previous round, likely due to a realization of the risk of buying a low-quality product.  
+* **Expected Value:** The expected value remains at $1,000,000 (0.8 * $1,250,000 + 0.2 * $0), equal to the price.
+* **Risk Aversion:**  Bob may be more risk-averse now, but a string of successful purchases before round 19 might make him more inclined to try again. 
+* **Potential Gain:** The potential gain of $250,000 is still significant.
+
+**Recommendation:**  It's a good strategy to recommend the purchase. Bob is likely to be cautious after the recent loss, but the potential gain and the previous success might be enough to convince him to take the risk."

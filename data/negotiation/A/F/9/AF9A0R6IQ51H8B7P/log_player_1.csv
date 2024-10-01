@@ -1,0 +1,49 @@
+prompt,response
+Send your offer to Bob.,"{""message"": ""Hello Bob, I'm offering you a great deal on this product. I'm willing to sell it for $20,000. I think you'll agree it's a fair price."", ""product_price"": 20000} 
+
+**Reasoning:**
+
+Starting with a high initial offer gives you room to negotiate downwards. While $20,000 is significantly higher than both your minimum and Bob's perceived value, it's a starting point to gauge his interest. This strategy allows you to potentially secure a price closer to your desired outcome."
+"Bob rejected your offer from round 1.
+
+Bob's offer:
+# Bob's message: I appreciate your time and consideration, but $20,000 is a bit out of my budget. I'm willing to pay $15,000 for the product. 
+# Bob's offer: The product price will be $15,000. 
+You have three options:
+(1) Accept Bob's offer, and sell the product for $15,000
+(2) Reject Bob's offer and proceed to the next round, where you will send Bob a counteroffer 
+(3) Sell the product to Jhon for $15,000","{""decision"": ""RejectOffer""}
+
+**Reasoning:**
+
+While Bob's offer matches John's, we can try to negotiate for a better price since there's still room between his offer ($15,000) and his perceived value ($12,000). We haven't explored the full negotiation space yet."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Bob.","```json
+{""message"": ""Bob, I appreciate you countering. I'm willing to come down a bit, how about we meet in the middle at $17,500?"", ""product_price"": 17500} 
+```
+
+**Reasoning:**
+
+* **Meeting in the middle:**  This approach often feels fair to both parties and can help move the negotiation along more smoothly. 
+* **Still above Bob's Value:** The $17,500 offer is still significantly above Bob's perceived value of $12,000, giving you bargaining room if he continues to negotiate. 
+* **Above your guaranteed sale:** This keeps the price well above your guaranteed $15,000 from John, maximizing your potential profit."
+"Bob rejected your offer from round 3.
+
+Bob's offer:
+# Bob's message: I appreciate your willingness to meet in the middle, but I'm still a bit short on budget. How about we try $14,000? 
+# Bob's offer: The product price will be $14,000. 
+You have three options:
+(1) Accept Bob's offer, and sell the product for $14,000
+(2) Reject Bob's offer and proceed to the next round, where you will send Bob a counteroffer 
+(3) Sell the product to Jhon for $15,000","```json
+{""decision"": ""SellToJhon""} 
+```
+
+**Reasoning:**
+
+* **Bob's offer is below John's:** Bob's offer of $14,000 is now less than the guaranteed $15,000 John is offering.
+* **Downward trend:**  Bob's offers have been consistently decreasing, suggesting he may not be willing to go much higher.
+* **No guarantee of a better offer:** Continuing the negotiation with Bob carries the risk of him further lowering his offer or reaching an impasse. 
+
+It's more profitable to take the guaranteed $15,000 from John rather than risk a lower offer from Bob."

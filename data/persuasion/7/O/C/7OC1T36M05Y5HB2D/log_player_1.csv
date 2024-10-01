@@ -1,0 +1,358 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Since Alice has stated the product is high-quality, and Bob knows the probability of a high-quality product is 50%, he should buy the product. Here's why:
+
+* **Expected Value:** The expected value of buying the product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost of the product is $100.
+* **Profit:** Bob expects to make a profit of $150 - $100 = $50.
+
+Therefore, it makes logical sense for Bob to purchase the product in this round."
+"Bob's message: Thanks for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous experience buying a high-quality product should not influence his decision in this round.  The information about each product's quality is independent. 
+
+* **Expected Value:**  The expected value remains the same at $150. 
+* **Cost:**  The cost remains at $100.
+* **Profit:** Bob's expected profit is still $50.
+
+Even though Bob had a good experience in the previous round, he should still use the expected value calculation to make his decision."
+"Bob's message: Alice, you've got a great track record so far! I'm feeling lucky, I'll take it.
+Bob bought the product!
+
+Round 3
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+While Bob might be feeling lucky after two successful purchases, the odds haven't changed.  Alice has stated that this product is low-quality.  
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+It is not recommended for Bob to buy the product in this round. He should remember that the probability of getting a high-quality product is always 50%, regardless of previous rounds."
+"Bob's message: Alice, I appreciate your honesty. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 4
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob is aware of the product's quality being low in this round, it's not recommended to purchase it.  
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+The expected value calculation clearly shows that Bob will likely lose money by buying this product."
+"Bob's message: Alice, you've been right twice in a row. I trust your judgment. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 5
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The previous rounds should not influence Bob's decision in this round. The probability of a high-quality product remains at 50%.
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+Even though Bob has experienced several rounds where he passed on low-quality products, he should stick to the expected value calculation and avoid buying this product."
+"Bob's message: Alice, I'm starting to see a pattern here. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The expected value calculation remains the same as in previous rounds. 
+
+* **Expected Value:**  The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+Bob should continue to avoid buying the product in this round, as the expected value calculation clearly shows that he will likely lose money."
+"Bob's message: Alice, I'm sticking with my strategy. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of a high-quality product is always 50%, regardless of previous rounds.
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Profit:** Bob stands to make a profit of $50 if he buys this high-quality product.
+
+Even though Bob has passed on several low-quality products recently, he should still buy this product based on the expected value calculation."
+"Bob's message: Alice, I trust your judgment. I'm going to take a chance and buy this one.
+Bob bought the product!
+
+Round 8
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's recent purchase of a high-quality product should not influence his decision in this round. The probability of a high-quality product remains at 50%.
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+Bob should not buy the product in this round, as the expected value calculation shows that he is likely to lose money."
+"Bob's message: Alice, I'm following your lead.  I'll pass on this one.
+Bob didn't bought the product.
+
+Round 9
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has had a mixed bag of experiences recently, the expected value calculation remains the same.
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+Bob should not buy the product in this round, as the expected value calculation shows that he is likely to lose money.  He should not be swayed by past successes or failures as the probability of a high-quality product is always 50%."
+"Bob's message: Alice, your advice has been spot on so far. I'm sticking with your recommendations and passing on this one.
+Bob didn't bought the product.
+
+Round 10
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob should continue to use the expected value calculation to make his decisions. The information about each product's quality is independent.
+
+* **Expected Value:**  The expected value remains the same at (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:**  The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+Even though Bob may be confident in your advice, the expected value calculation clearly shows that it's not recommended to buy this product."
+"Bob's message: Alice, your advice has been consistently accurate. I'll trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob has passed on several low-quality products, he should remember that the probability of a high-quality product is always 50% and is independent of past rounds. 
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Profit:** Bob stands to make a profit of $50 if he buys this high-quality product.
+
+Based on the expected value calculation, it's recommended for Bob to buy this product."
+"Bob's message: Alice, you've been right so many times before. I'm taking a chance and buying this one.
+Bob bought the product!
+
+Round 12
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+While Bob might be feeling lucky after buying a high-quality product in the previous round, the odds haven't changed. Alice has stated that this product is low-quality. 
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+It is not recommended for Bob to buy the product in this round. He should remember that the probability of getting a high-quality product is always 50%, regardless of previous rounds."
+"Bob's message: Alice, your advice has been very valuable so far. I'm going to stick with your recommendation and pass on this one.
+Bob didn't bought the product.
+
+Round 13
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob should not buy the product this round.  Even though he has made some good purchases in the past, the expected value calculation still shows that buying this product is risky:
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+The odds haven't changed since the last round, and Bob should continue to base his decisions on the expected value calculation."
+"Bob's message: Alice, I'm trusting your expertise and passing on this one.
+Bob didn't bought the product.
+
+Round 14
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob should not buy the product this round.  The expected value calculation still shows that buying this product is risky:
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+The odds haven't changed since the last round, and Bob should continue to base his decisions on the expected value calculation."
+"Bob's message: Alice, your track record is impressive. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 15
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob should not buy the product this round.  The expected value calculation still shows that buying this product is risky:
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+The odds haven't changed since the last round, and Bob should continue to base his decisions on the expected value calculation."
+"Bob's message: Alice, your advice has been consistently helpful. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob has consistently passed on low-quality products recently, he should remember that the probability of a high-quality product is always 50% and is independent of past rounds. 
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Profit:** Bob stands to make a profit of $50 if he buys this high-quality product.
+
+Based on the expected value calculation, it's recommended for Bob to buy this product."
+"Bob's message: Alice, your advice has been spot on. I'm feeling confident about this one!
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of a high-quality product remains at 50%, regardless of previous rounds. Bob should continue to use the expected value calculation to make his decisions. 
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Profit:** Bob stands to make a profit of $50 if he buys this high-quality product.
+
+Even though Bob has had a mix of experiences recently, it's still recommended for him to buy this product based on the expected value calculation."
+"Bob's message: Alice, you've been consistently accurate, so I'm going to trust your judgment and buy this one.
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite Bob having had some successes in recent rounds, the odds haven't changed.  Each round's product is independent of the previous ones. 
+
+* **Expected Value:**  The expected value remains the same: (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Profit:** Bob expects to make a profit of $150 - $100 = $50.
+
+Bob should stick to the expected value calculation and continue to buy the product in this round."
+"Bob's message: Alice, your track record is fantastic. I'm buying this one!
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Despite Bob's recent string of good purchases, the odds of getting a high-quality product haven't changed. Alice has stated that this product is low-quality.
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $0) + (0.5 * $300) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Loss:** Bob stands to lose $100 if he buys this low-quality product.
+
+It's not recommended for Bob to buy the product in this round. He should remember that the probability of getting a high-quality product is always 50%, regardless of previous rounds."
+"Bob's message: Alice, you've been incredibly helpful with your advice so far. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob has recently passed on a low-quality product, the probability of getting a high-quality product remains at 50%. 
+
+* **Expected Value:** The expected value of buying this product is (0.5 * $300) + (0.5 * $0) = $150.
+* **Cost:** The cost remains at $100.
+* **Potential Profit:** Bob stands to make a profit of $50 if he buys this high-quality product.
+
+Bob should base his decision on the expected value calculation and buy this product.  He should not let past experiences influence his decision-making."

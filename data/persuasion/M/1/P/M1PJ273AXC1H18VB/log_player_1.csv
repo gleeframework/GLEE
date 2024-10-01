@@ -1,0 +1,467 @@
+prompt,response
+"Round 1
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer knows that the product has an 80% chance of being high-quality, worth $2,000,000, and a 20% chance of being low-quality, worth $0. They are being asked to pay $1,000,000.  
+
+In this scenario, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, but **you have revealed that the product is low-quality.**  Therefore, the buyer should not buy the product."
+"The buyer's message: Thank you for the recommendation, but I'm going to pass. I'll wait to see if others buy the product and what their feedback is.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer knows that the product has an 80% chance of being high-quality, worth $2,000,000, and a 20% chance of being low-quality, worth $0. They are being asked to pay $1,000,000.  
+
+The expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, but **you have revealed that the product is low-quality.**  Therefore, the buyer should not buy the product.
+
+It's important to note that the buyer's previous decision and their reason for it don't change the fundamental value proposition of the product.  The product is still low-quality and not worth the asking price."
+"The buyer's message: Thank you for the recommendation. Given that this is the first product and there's no historical data, I'm going to pass for now. I'd like to see if future products are recommended and how they turn out before making a purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer knows the product has an 80% chance of being high-quality, worth $2,000,000, and a 20% chance of being low-quality, worth $0. They are being asked to pay $1,000,000.
+
+The expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, **and you have revealed that the product is high-quality.** Therefore, the buyer should buy the product."
+"The buyer's message: Since there's no sales history, I'm willing to take a chance based on your recommendation. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer now has some information (one product was bought, one product was high-quality), the fundamental value proposition remains the same. 
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation. Given the high-quality product sold previously, I'm confident enough to purchase this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is now aware that 2 out of 3 products sold have been high-quality. However, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thanks, Alice! Given your recommendation and the high proportion of high-quality products sold so far, I'm confident enough to buy.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though the buyer has seen a string of high-quality products, the fundamental value proposition hasn't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is low-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, but **the revealed low-quality makes it a bad deal.**  The buyer should not buy the product."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty, but I'll pass on this one.  Given your recommendation, I'm not confident enough in the product's quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite the previous product being low-quality, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the high proportion of high-quality products sold so far, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer is aware of a mix of high and low-quality products sold, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation.  Based on the high proportion of high-quality products sold so far, I'm confident in your assessment and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer has seen a history of sales, with a clear majority of high-quality products.  However, the fundamental value proposition doesn't change:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you Alice, I appreciate your recommendation and I will purchase the product. I'm confident in your expertise and the track record of high-quality products sold so far.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer's confidence in you and the products is growing due to the consistent history of high-quality sales.  But, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the sales history, it seems like you have a good track record of selling high-quality products. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer's confidence is high due to the consistent track record of high-quality products sold. However, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer has a very strong track record of you selling high-quality products, which makes them more likely to trust your recommendation. However, the fundamental value proposition remains the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the sales record and your recommendation, I am confident this is a high-quality product and I will buy it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is now extremely confident based on the consistent history of high-quality products sold.  Yet, the fundamentals haven't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Alice, you have a 100% success rate so far. I trust your judgment and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is now fully convinced of the high-quality products you sell, but the fundamentals remain the same:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is still:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation, Alice! I'm confident in your judgment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer has seen a string of high-quality products, the fundamental value proposition hasn't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Alice, your recommendation is very convincing! Based on the sales record, it seems like you're only offering high-quality products. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer has seen a string of high-quality products and has developed a strong belief that you are only offering high-quality products.  However, the fundamentals haven't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thanks for the recommendation! I'll take it. Based on the previous sales, it seems like you are offering high-quality products, so I'm confident this one will be good as well.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the buyer has been consistently buying high-quality products and may be expecting this to continue, the fundamental value proposition hasn't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product."
+"The buyer's message: Thank you for the recommendation! Given the consistent record of high-quality products sold, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer's confidence in the product is at an all-time high because of the consistent history of high-quality sales. However, the fundamentals of the situation haven't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is low-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, but **the revealed low-quality makes it a bad deal.**  The buyer should not buy the product."
+"The buyer's message: Thank you for the information, Alice. Based on the current statistics and your recommendation, I believe the risk of purchasing a low-quality product is too high. I will pass on this offer.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer has a history of mostly high-quality products, which has led to a strong belief that you only offer high-quality items. However, the fundamentals haven't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is low-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, but **the revealed low-quality makes it a bad deal.**  The buyer should not buy the product."
+"The buyer's message: Thank you for the information, Alice. However, given your recommendation and the fact that all previous buyers who purchased based on your recommendation received high-quality products, I'm concerned about the quality of this product. I will pass on this purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is now very skeptical due to the recent history of low-quality products, even though they've had positive experiences in the past. However, the fundamentals haven't changed:
+
+* The product has an 80% chance of being high-quality (worth $2,000,000) and a 20% chance of being low-quality (worth $0).
+* The asking price is $1,000,000.
+* **You have revealed that the product is high-quality.**
+
+Therefore, the expected value of the product is:
+
+(0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+
+This is greater than the asking price, and the buyer should buy the product. While their skepticism is understandable, it's important to remember that the product's quality is independent of the previous ones."

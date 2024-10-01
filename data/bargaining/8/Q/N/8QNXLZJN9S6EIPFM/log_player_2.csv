@@ -1,0 +1,30 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Bob gain: 2500 
+# Alice gain: 7500 
+Do you accept this offer?","{""decision"": ""reject""}"
+"You have chosen to reject Alice's offer from round 1.
+Round 2
+Send your offer to divide $10,000.","```json
+{""bob_gain"": 5500, ""alice_gain"": 4500}
+```"
+"Alice rejected your offer from round 2.
+
+Round 3
+Due to inflation, the money you gain is worth 9.75% less than in the first round. The money alice gains is worth 19% less than in the first round.
+Alice's offer:
+# Bob gain: 4000 
+# Alice gain: 6000 
+Do you accept this offer?","```json
+{""decision"": ""accept""}
+``` 
+
+Let's analyze why:
+
+* **Inflation:**  We need to consider the inflation impact.  Even though the offer appears worse than the previous round, the inflation makes it actually more favorable for Bob.
+* **Bob's Perspective:**  His gain is worth 9.75% less than the initial offer. This means he's getting roughly 4000 * 0.9025 = 3610 in terms of Round 1 value. While it's less than his initial offer, it's still a decent gain considering the potential of getting nothing if we keep rejecting.
+* **Alice's Perspective:** Alice's gain is worth 19% less than her initial offer. This means she's getting roughly 6000 * 0.81 = 4860 in terms of Round 1 value. This means she is also losing value from her initial offer.
+* **Risk vs. Reward:** Continuing the game risks further inflation and potentially getting zero. Accepting guarantees a gain, even if it's less than what Bob initially hoped for. 
+
+Therefore, it's strategically wise for Bob to accept this offer, as it minimizes the risk of losing everything to inflation."

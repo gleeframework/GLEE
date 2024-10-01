@@ -1,0 +1,56 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hi Bob, I'm offering this item for sale at $200. I believe it offers excellent value at this price. 
+# Alice's offer: The product price will be $200. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $200
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""RejectOffer""}
+``` 
+Alice's starting offer is way too high. It's much better to negotiate or go with John's offer."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Hi Alice, thanks for the offer, but $200 is too high for me.  I could do $60."",
+""product_price"": 60
+}
+```
+
+**Reasoning:**
+
+* **Starting Low:** We're starting significantly lower than our max budget to give ourselves room to negotiate upwards. 
+* **Anchoring:** By throwing out a low number first, we might influence Alice to consider lower prices than she might have otherwise.
+* **Leaving John as Backup:**  We always have the option to buy from John for $80 if negotiations fail."
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: Hi Bob, thanks for the offer, but $60 is too low for me.  How about $180? 
+# Alice's offer: The product price will be $180. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $180
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+**Reasoning:**
+
+* **Still Too High:** Alice came down slightly, but $180 is still way above both our budget and John's offer.
+* **Room to Negotiate:**  There's a significant gap between our offer and Alice's current price, suggesting we have room to negotiate further. 
+* **John's Offer as Leverage:** We're not desperate yet, as we can always fall back on buying from John at $80."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""I understand you're looking for a better price, Alice. How about we meet in the middle somewhere around $100?"",
+""product_price"": 100
+}
+```
+
+**Reasoning:**
+
+* **Signaling Flexibility:**  We're moving significantly closer to her price, showing we're willing to compromise.
+* **Still Below Budget:**  Our offer is still comfortably below our $80 maximum.
+* **Middle Ground Tactic:**  By suggesting we ""meet in the middle"", we aim to anchor the negotiation closer to a price we find acceptable."

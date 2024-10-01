@@ -1,0 +1,28 @@
+prompt,response
+"Alice's offer: The product price will be $12,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $12,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $10,000","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+Bob should reject Alice's offer.  $12,000 is above Bob's budget, and he can get the same product from John for $10,000.  There's no reason to accept Alice's offer at this point."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Alice.","```json
+{""product_price"": 10000}
+```
+
+Bob should offer Alice his maximum price of $10,000.  This is the price he's willing to pay, and it leaves no room for Alice to counteroffer without losing money."
+"Alice rejected your offer from round 2.
+
+Alice's offer: The product price will be $11,500. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $11,500
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $10,000","```json
+{""decision"": ""BuyFromJhon""}
+```
+
+Bob should choose to buy the product from John. Alice's counteroffer is still above Bob's budget. He's already made his best offer and Alice rejected it. John is offering the product at a price that Bob is comfortable with, so there's no reason to continue negotiating with Alice."

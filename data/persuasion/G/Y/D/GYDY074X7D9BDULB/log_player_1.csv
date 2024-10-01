@@ -1,0 +1,412 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:**  You have confirmed the product is high-quality, which means the buyer will gain a profit of $200,000 if they buy it.
+* **No prior information:** The buyer has no information about your past sales, so they can only rely on the 80% probability of a high-quality product. 
+* **Risk vs. Reward:**  The potential reward ($200,000 profit) outweighs the risk of getting a low-quality product (which has a 20% chance of happening). 
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. Since there's no historical data, I'll trust your expertise and take a chance on this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know this product is low-quality, meaning the buyer will lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:**  The buyer now has a single data point: You sold one product, and it was high-quality. 
+* **No guarantee:** This single data point doesn't guarantee future high-quality products, as the buyer knows there's an 80% chance of a high-quality product and a 20% chance of a low-quality product. 
+* **Risk vs. Reward:**  The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for the information. Since you are not recommending this product, and there is a significant chance of it being low quality, I will pass on this opportunity.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:**  The product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer now knows:
+    * You sold one product, which was high-quality.
+    * You declined to recommend the second product, which the buyer then decided not to purchase.
+* **No guarantee:**  While the first product was high-quality, the buyer knows there's still a 20% chance of getting a low-quality product. The fact that you didn't recommend the second product could suggest a low-quality product, but it's not a guarantee.
+* **Risk vs. Reward:** The risk of losing $1,000,000 far outweighs the potential reward of a $200,000 profit.
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for the information. Based on your recommendation and the sales data, I am not confident in the quality of the product. I will pass on this purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold one product, which was high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **No guarantee:** The buyer is aware of the 80% chance of high-quality and 20% chance of low-quality products. However, the fact that you are recommending this product should be seen as a positive signal.
+* **Risk vs. Reward:** The potential reward of $200,000 profit outweighs the risk of getting a low-quality product, especially considering your recommendation.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Alice, you recommend buying the product, and the statistics show a 100% success rate for high-quality products so far. I'm confident in your recommendation and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold two products, both of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase. 
+* **Positive track record:** The buyer has seen a consistent pattern of you recommending high-quality products. While this doesn't guarantee future success, it's a strong positive signal. 
+* **Risk vs. Reward:** The potential reward of $200,000 profit outweighs the risk of getting a low-quality product, especially considering your recommendation and the positive sales history.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the high proportion of high-quality products sold so far, I'm confident in your assessment and will purchase the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:**  You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold three products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Strong track record:** The buyer has a very strong track record of you recommending high-quality products. This should build trust and confidence in your expertise.
+* **Risk vs. Reward:** The potential reward of $200,000 profit far outweighs the risk of getting a low-quality product, especially with the strong positive history you've established.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you, Alice! I appreciate your recommendation and given the high proportion of high-quality products sold so far, I'm confident in making the purchase.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold four products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Very strong track record:** The buyer has an extremely strong track record of you recommending high-quality products. This should instill a high level of trust in your judgment.
+* **Risk vs. Reward:** The potential reward of $200,000 profit far outweighs the risk of getting a low-quality product, especially with the consistent history of positive outcomes.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the current sales record and your recommendation, I'm confident this is a high-quality product. I'll buy it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold five products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Exceptional track record:** The buyer has an exceptional track record of you recommending high-quality products. This should create a very high level of trust and confidence in your judgment.
+* **Risk vs. Reward:** The potential reward of $200,000 profit far outweighs the risk of getting a low-quality product, especially with the consistent history of positive outcomes. 
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation.  Given the high proportion of high-quality products sold so far, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold six products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Exceptional track record:** The buyer has an exceptional track record of you recommending high-quality products. This should create a very high level of trust and confidence in your judgment.
+* **Risk vs. Reward:** The potential reward of $200,000 profit far outweighs the risk of getting a low-quality product, especially with the consistent history of positive outcomes. 
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Alice, your track record is perfect so far! I'm confident in your recommendation and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold seven products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Exceptional track record:** The buyer has an exceptional track record of you recommending high-quality products. This should create a very high level of trust and confidence in your judgment. 
+* **Risk vs. Reward:** The potential reward of $200,000 profit far outweighs the risk of getting a low-quality product, especially with the consistent history of positive outcomes. 
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Alice, you have a 100% success rate so far, and I trust your judgment. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:**  This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold eight products, all of which were high-quality.
+    * You declined to recommend two products, which the buyer then decided not to purchase.
+* **Exceptional track record:**  While the buyer has seen a consistent pattern of you recommending high-quality products, they also know that the chance of a low-quality product exists (20%). 
+* **Risk vs. Reward:** The risk of losing $1,000,000 far outweighs the potential reward of a $200,000 profit, even with your impressive track record. 
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for the information, Alice. Since you are not recommending the product, and the data shows a 100% success rate for your recommendations, I'm going to pass. I'd rather not risk buying a low-quality product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold eight products, all of which were high-quality.
+    * You declined to recommend three products, which the buyer then decided not to purchase.
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. They are aware of the 20% chance of a low-quality product, but your track record creates a very high level of trust.
+* **Risk vs. Reward:** The potential reward of $200,000 profit still outweighs the risk of getting a low-quality product, especially considering your exceptional track record. 
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation! Based on the sales history, it seems like the products are high quality. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:**  This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold nine products, all of which were high-quality.
+    * You declined to recommend three products, which the buyer then decided not to purchase.
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. However, they are still aware of the 20% chance of a low-quality product.
+* **Risk vs. Reward:** The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.  Even with your impressive track record, the buyer should be cautious. 
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for the information, Alice. Based on your recommendation and the high proportion of high-quality products sold, I'm inclined to believe this product is likely low quality.  I will pass on this purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold nine products, all of which were high-quality.
+    * You declined to recommend four products, which the buyer then decided not to purchase. 
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. However, they are still aware of the 20% chance of a low-quality product.
+* **Risk vs. Reward:** The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.  Even with your impressive track record, the buyer should be cautious. 
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for your recommendation.  Based on the information available, I'm going to pass on this product.  I understand that the odds are in my favor, but I am still not comfortable with the risk of getting a low-quality product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold nine products, all of which were high-quality.
+    * You declined to recommend five products, which the buyer then decided not to purchase. 
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. However, they are still aware of the 20% chance of a low-quality product.
+* **Risk vs. Reward:** The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.  Even with your impressive track record, the buyer should be cautious. 
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for your recommendation, Alice. I understand the risk involved, and I'll pass on this product.  I'd like to see how the next few buyers fare before making another purchase.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:**  This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold nine products, all of which were high-quality.
+    * You declined to recommend six products, which the buyer then decided not to purchase.
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. However, they are still aware of the 20% chance of a low-quality product. 
+* **Risk vs. Reward:**  The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.  Even with your impressive track record, the buyer should be cautious.
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for your recommendation, Alice. Given the low probability of this product being high quality and your recommendation against it, I will pass.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold nine products, all of which were high-quality.
+    * You declined to recommend seven products, which the buyer then decided not to purchase.
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. They are aware of the 20% chance of a low-quality product, but your track record creates a very high level of trust.
+* **Risk vs. Reward:**  The potential reward of $200,000 profit still outweighs the risk of getting a low-quality product, especially considering your exceptional track record. Even though you haven't recommended a product in a while, your past success makes this recommendation trustworthy.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the high proportion of high-quality products sold so far, I'm confident in purchasing the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** This product is low-quality, meaning the buyer would lose $1,000,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold ten products, nine of which were high-quality.
+    * You declined to recommend seven products, which the buyer then decided not to purchase. 
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. However, they are still aware of the 20% chance of a low-quality product.
+* **Risk vs. Reward:** The risk of losing $1,000,000 is significantly higher than the potential reward of a $200,000 profit.  Even with your impressive track record, the buyer should be cautious.
+
+Therefore, it's highly recommended for the buyer to **not** purchase the product."
+"The buyer's message: Thank you for the information. While the sales record shows a 100% success rate for high-quality products, I value your expertise and trust your recommendation. I'll pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold ten products, nine of which were high-quality.
+    * You declined to recommend eight products, which the buyer then decided not to purchase. 
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. They are aware of the 20% chance of a low-quality product, but your track record creates a very high level of trust.
+* **Risk vs. Reward:** The potential reward of $200,000 profit still outweighs the risk of getting a low-quality product, especially considering your exceptional track record. Even though you haven't recommended a product in a while, your past success makes this recommendation trustworthy.
+
+Therefore, it's highly recommended for the buyer to purchase the product."
+"The buyer's message: Thank you, Alice! I'll take it. Your track record is impressive, and I trust your judgement.  
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know this product is high-quality, meaning the buyer would make a profit of $200,000 if they purchase it.
+* **Buyer's knowledge:** The buyer knows:
+    * You sold eleven products, ten of which were high-quality.
+    * You declined to recommend eight products, which the buyer then decided not to purchase. 
+* **Exceptional track record:**  The buyer has seen a consistent pattern of you recommending high-quality products. They are aware of the 20% chance of a low-quality product, but your track record creates a very high level of trust.
+* **Risk vs. Reward:** The potential reward of $200,000 profit still outweighs the risk of getting a low-quality product, especially considering your exceptional track record. Even though you haven't recommended a product in a while, your past success makes this recommendation trustworthy.
+
+Therefore, it's highly recommended for the buyer to purchase the product."

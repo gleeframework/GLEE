@@ -1,0 +1,413 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Since the product is high-quality and Bob knows the probability of a high-quality product is 80%, he should expect a net gain of:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000
+
+The expected value is significantly higher than the price of $1,000,000, making it a good investment for Bob."
+"Bob's message: Thank you for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob now has information about the first round. He knows that while the probability of a high-quality product is 80%, there is a chance of getting a low-quality product, as he experienced in the previous round. 
+
+Given the product is worth nothing to him if it's low-quality, it's not a good risk to take for Bob, even with the 80% chance of a high-quality product. The potential loss outweighs the potential gain."
+"Bob's message: Alice, I appreciate your honesty. Since you're not recommending it, I'll pass on this one.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+While Bob didn't buy the product in round 2, he has gained valuable information. He knows the process is honest and that there's a real chance of getting a low-quality product.  However, the 80% probability of a high-quality product remains, and the expected value calculation still favors buying the product.  
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Thanks for the recommendation, Alice! I'm feeling lucky and will take a chance on this one.
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has now seen a mix of high and low-quality products, but the core information remains unchanged:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+This means the expected value calculation still favors buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, I'm starting to trust your judgment. I'll take this one!
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The situation remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your track record is impressive! I'm confident in your judgment and will purchase this product.
+Bob bought the product!
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The core information remains unchanged despite Bob's positive feedback:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+This means the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you're on a roll! I'm confident enough to buy this one without hesitation.
+Bob bought the product!
+
+Round 7
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has had a string of successful purchases, the core information about the products hasn't changed:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Bob's previous successes don't change the inherent risk of buying a product.  Since the product could be low-quality, it's not a good risk for Bob to take, despite the potential for a high-quality product."
+"Bob's message: Alice, your track record is impressive, but I'm hesitant to go against your recommendation.  I'll pass on this one.
+Bob didn't bought the product.
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob declined the last product, the core information remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Bob's previous decisions shouldn't influence the expected value calculation, which still favors buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, even though your last recommendation was incorrect, I'm still willing to trust your judgment. I'll buy this one.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision in the previous round demonstrates his willingness to continue trusting Alice's judgment, even after a miss. 
+
+The core information about the products remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your judgment has been consistently strong. I'm confident enough to buy this one.
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite a few misses, the core information remains unchanged:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you've been incredibly accurate so far. I trust your judgment and will buy this product.
+Bob bought the product!
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The core information about the products remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your track record is simply remarkable.  I'm confident in buying this product.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite Bob's growing confidence, the core information about the products remains unchanged:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your expertise is undeniable! I'll purchase this product without hesitation.
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite Bob's consistently positive experiences, the core information about the products hasn't changed:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your track record is nothing short of phenomenal! I'm confident in purchasing this product.
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The core information remains consistent:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Bob's positive experiences shouldn't change the fundamental value proposition. The expected value calculation still favors buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you've proven yourself time and time again!  I'm confident in purchasing this product, and I expect another great result.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's confidence in Alice's judgment is growing, but it doesn't change the fundamental information about the products:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+The expected value calculation remains the same, making it a good investment for Bob:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, your success is remarkable!  I'm confident in purchasing this product, and I'm eager to see if you can continue this amazing streak.
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite Bob's consistently positive experiences, the core information about the products remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+The expected value calculation remains the same, making it a good investment for Bob:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you are a legend! I'm happy to buy this product, fully confident in your expertise.
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob is very confident in Alice's judgment, the fundamental information about the products hasn't changed:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+The expected value calculation remains the same, making it a good investment for Bob:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you are simply unbeatable!  I'll buy this product with complete confidence, knowing it's another guaranteed win.
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's confidence in Alice's abilities is at an all-time high, but the core information remains the same:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+This means the expected value calculation is unchanged and still favors buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."
+"Bob's message: Alice, you've earned my complete trust! I'm confident this product will be another guaranteed win.
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has had a long string of successful purchases, the core information about the products remains unchanged:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Bob's past successes don't change the inherent risk of buying a product.  Since the product could be low-quality, it's not a good risk for Bob to take, despite the potential for a high-quality product."
+"Bob's message: Alice, you've been absolutely flawless so far.  I'm going to trust your judgment and pass on this one. I'm confident you wouldn't recommend it if it wasn't a low-quality product.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision in the previous round showcases his trust in Alice's judgment, even after a long streak of success. The core information remains unchanged:
+
+* **The probability of a high-quality product is 80%.**
+* **A high-quality product is worth $3,000,000 to Bob.**
+* **A low-quality product is worth $0 to Bob.**
+
+Therefore, the expected value calculation remains the same, favoring buying the product:
+
+* **Expected value = (0.8 * $3,000,000) + (0.2 * $0) = $2,400,000**
+
+The expected value of $2,400,000 is significantly greater than the $1,000,000 price, making it a good investment for Bob."

@@ -1,0 +1,377 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer knows the probability of a high-quality product is 50%, but they don't know the specific quality of this product.
+* **Expected value:** The buyer's expected value of buying is 0.5 * $400 + 0.5 * $0 = $200. This is greater than the price of $100.
+
+Since the buyer's expected value is higher than the price, it's in their best interest to buy."
+"The buyer's message: Thank you for the recommendation! Since this is the first sale, and I know you know the quality of the product, I trust your advice and will buy it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold one product and it was high quality. This doesn't change their understanding that the probability of a high-quality product is 50%. They still don't know the specific quality of this product.
+* **Expected value:** The buyer's expected value of buying is still 0.5 * $400 + 0.5 * $0 = $200. This is greater than the price of $100.
+
+Since the buyer's expected value is higher than the price, it's still in their best interest to buy."
+"The buyer's message: Thank you for the recommendation, Alice. Given the previous sale of a high-quality product, I am confident enough to purchase this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold two products, both of which were high quality. This might make them *think* the probability of a high-quality product is higher than 50%. However, they don't know the specific quality of this product.
+* **Expected value:** Even if the buyer believes the probability of a high-quality product is higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the recommendation, Alice. I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold three products, two of which were high quality. This might make them *think* the probability of a high-quality product is higher than 50%.  However, they still don't know the specific quality of this product. 
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is higher than 50%, their expected value of buying is still greater than $100. This is because the best-case scenario (high-quality product) gives them a significant profit, making it worthwhile even if the product could be low-quality.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Thanks for the recommendation, Alice!  Since two high-quality products have been sold out of two, I'm confident in buying this one.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold four products, three of which were high quality. This makes them more likely to believe the probability of a high-quality product is greater than 50%. However, they still don't know the specific quality of this product.
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for your recommendation, Alice. Based on the data, it seems like there's a higher chance of getting a low-quality product right now, so I'll pass.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold five products, three of which were high quality. They may be even more inclined to believe the probability of a high-quality product is greater than 50%. However, they still don't know the specific quality of this product.
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the information, but I will pass on this product.  Since you haven't recommended it and the previous buyers all purchased high-quality products, I'm assuming this one is low quality. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold six products, three of which were high quality. They are likely even more skeptical of the product's quality, especially since you haven't recommended it.
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thanks for the information, but I'll pass on this one.  Since you're not recommending it, and the sales history is pretty strong for high-quality products, I'm guessing this one is likely low quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold seven products, three of which were high quality. They are likely very skeptical of the product's quality, especially since you haven't recommended it in the past two rounds. 
+* **Expected value:**  Even though the buyer might be very skeptical, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase, hoping to regain their trust."
+"The buyer's message: Thank you for the recommendation! I'll take it.  It's good to know that so many high-quality products have been sold so far.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold eight products, four of which were high quality. They might be slightly more inclined to believe the probability of a high-quality product is greater than 50% due to your recent recommendation. However, they still don't know the specific quality of this product.
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the recommendation, Alice. Based on the sales record and your recommendation, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold nine products, four of which were high quality. They might be even more skeptical of the product's quality due to your recent lack of recommendation. 
+* **Expected value:** Even though the buyer might be very skeptical, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase, hoping to regain their trust."
+"The buyer's message: Alice, your recommendation history and the fact that all past purchases were high quality makes me confident. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold ten products, five of which were high quality.  They are likely starting to trust you again.
+* **Expected value:** Even though the buyer might be slightly skeptical, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Alice, your recommendation and the sales record are very convincing. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold eleven products, six of which were high quality. Their trust in you is likely growing with each positive purchase. 
+* **Expected value:**  Even though the buyer might have some skepticism, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Thanks Alice, I'll take it! Your recommendations have been perfect so far, so I trust your judgement.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold twelve products, seven of which were high quality. This strengthens their trust in you.
+* **Expected value:** Even though the buyer might have some skepticism, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Thank you for the recommendation. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold thirteen products, eight of which were high quality. This further reinforces their trust in you.
+* **Expected value:** Even though the buyer might have some skepticism, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Thank you, Alice! I'll buy the product. Your recommendations seem to be very accurate, and I'm confident this product is high quality.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold fourteen products, nine of which were high quality. This strengthens their trust in you and might lead them to believe the probability of a high-quality product is even higher than 50%. However, they still don't know the specific quality of this product.
+* **Expected value:**  Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the information. While I appreciate your honesty, I'm going to pass on this one. I'm not comfortable buying a product that you don't recommend, especially with a 50/50 chance of it being low quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold fifteen products, nine of which were high quality. They might be somewhat hesitant after your last non-recommendation, but they still trust you generally. 
+* **Expected value:**  Even though the buyer might have some skepticism, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase, hoping to regain their trust."
+"The buyer's message: Thanks for the recommendation! I trust your judgment and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **High-quality product:** You know the product is high-quality, worth $400 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold sixteen products, ten of which were high quality. This further reinforces their trust in you and your recommendations. 
+* **Expected value:**  Even though the buyer might have some skepticism, the potential reward of a high-quality product is significant.  Their expected value of buying is still likely greater than $100.
+
+It's in the buyer's best interest to buy a product that has a chance of being highly valuable, even if they know it has a chance of being worthless. You should recommend the purchase."
+"The buyer's message: Thank you for the recommendation, Alice! I'll take it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold seventeen products, eleven of which were high quality.  They are likely trusting you and might believe the probability of a high-quality product is even higher than 50%. However, they still don't know the specific quality of this product. 
+* **Expected value:** Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the recommendation. Given the information available, I'm going to pass on this product. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold eighteen products, eleven of which were high quality. They are likely trusting you and might believe the probability of a high-quality product is even higher than 50%. However, they still don't know the specific quality of this product. 
+* **Expected value:** Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."
+"The buyer's message: Thank you for the information, Alice. Since you don't recommend the product, and it's a 50/50 chance, I'm going to pass for now.  Maybe I'll be more interested in future products.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Low-quality product:** You know the product is low-quality, worth $0 to the buyer.
+* **Selling Price:** You're selling it for $100.
+* **Buyer's knowledge:** The buyer now knows you have sold nineteen products, eleven of which were high quality. They are likely trusting you and might believe the probability of a high-quality product is even higher than 50%. However, they still don't know the specific quality of this product. 
+* **Expected value:** Even if the buyer believes the probability of a high-quality product is significantly higher than 50%, their expected value of buying is still less than $100. This is because the worst-case scenario (low-quality product) gives them zero value.
+
+It's not in the buyer's best interest to buy a product they know has a chance of being worthless, even if they think it's a smaller chance. You should not recommend the purchase."

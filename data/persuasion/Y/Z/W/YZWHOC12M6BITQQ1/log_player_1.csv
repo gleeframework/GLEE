@@ -1,0 +1,333 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000. 
+* **Outcome:** Since the expected value of buying the product is equal to the price, Bob is indifferent to buying or not buying.  However, since there is a potential to make a profit, recommending a purchase is the better strategy."
+"Bob's message: I'll take my chances since there's an 80% chance it's high quality.
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $0) + (0.2 * $1,250,000) = $250,000.
+* **Price:** The price of the product is $1,000,000.
+
+Since the expected value of buying the product ($250,000) is significantly less than the price ($1,000,000), recommending a purchase would result in a guaranteed loss for Bob. Therefore, it's not recommended to buy the product."
+"Bob's message: Since Alice knows the quality and doesn't recommend it, I'll trust her judgment and assume it's low quality.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob now has evidence that you are providing honest recommendations based on the quality of the product. He did not buy the low-quality product in the previous round because you did not recommend it.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+Since the expected value of buying the product is equal to the price, Bob is indifferent to buying or not buying.  However, since there is a potential to make a profit, and Bob trusts your recommendations, recommending a purchase is the better strategy."
+"Bob's message: Alice's past recommendations seem trustworthy, and the odds are in my favor, so I'll buy it.
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has now seen a pattern of honest recommendations from you. He bought the high-quality product in round 3 because you recommended it, and he didn't buy the low-quality product in round 2 because you didn't recommend it. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+As in previous rounds, the expected value of buying is equal to the price, and Bob is likely to trust your recommendations.  Therefore, it is still recommended to buy this high-quality product."
+"Bob's message: Alice's recommendations have been accurate so far, and the probability of a high-quality product is high, so I'll buy it again.
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently followed your recommendations and has been rewarded with profitable purchases.  He trusts your judgment and recognizes the value proposition.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+As before, the expected value of buying is equal to the price, but with Bob's trust in your recommendations, it's strongly recommended to buy this high-quality product."
+"Bob's message: Alice's track record is good, and the odds are in my favor, so I'll continue to trust her recommendations.
+Bob bought the product!
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently trusted your recommendations and has been rewarded with profitable purchases. He has established a pattern of buying when you recommend and not buying when you don't.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+As in the previous rounds, the expected value of buying is equal to the price, and Bob is likely to trust your recommendations. Therefore, it is strongly recommended to buy this high-quality product."
+"Bob's message: Alice's recommendations have been consistently accurate, so I'll keep buying based on her advice.
+Bob bought the product!
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has a strong history of buying based on your recommendations and has been rewarded with profitable purchases. He trusts your judgment and sees a clear pattern of success. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+While the expected value is equal to the price, Bob's trust in your recommendations makes buying the product a good strategy."
+"Bob's message: No reason to change strategy now, Alice's recommendations have been reliable so far.
+Bob bought the product!
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has established a pattern of buying based on your recommendations and has been consistently rewarded with profitable purchases. He trusts your judgment and has no reason to change his strategy. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+As in the previous rounds, the expected value of buying is equal to the price, and Bob's trust in your recommendations makes buying the product a good strategy."
+"Bob's message: Alice's streak of accurate recommendations continues, I'll keep trusting her judgment.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob is on a winning streak due to your honest recommendations. He has developed a strong trust in your judgment and has learned that buying based on your advice is profitable. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his past success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: No change in strategy, Alice's recommendations remain trustworthy.
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob is on a winning streak due to your consistent and honest recommendations. He has built a strong trust in your judgment and has learned that buying based on your advice leads to profitable purchases.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his past success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: Alice's recommendations have been 100% accurate for high-quality products so far, I'll keep following her advice.
+Bob bought the product!
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has experienced a long streak of successful purchases by following your recommendations. He trusts your judgment and has learned to associate your recommendations with high-quality products.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his past success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: Still no reason to doubt Alice's recommendations, I'll buy again.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob is on a consistent winning streak due to your honest recommendations. He trusts your judgment and has developed a strong association between your recommendations and profitable purchases.  
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his consistent success make buying this high-quality product a highly recommended strategy."
+"Bob's message: Alice's perfect streak continues, I'll keep trusting her recommendations.
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob is on an extended winning streak,  consistently buying based on your recommendations and reaping the benefits of high-quality products. He has developed a strong trust in your judgment and has learned to associate your recommendations with profitability.  
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his consistent success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: No change in strategy, Alice's recommendations remain reliable.
+Bob bought the product!
+
+Round 14
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Despite a long streak of success, Bob now faces a dilemma. You have a history of accurately predicting high-quality products, which has led Bob to trust your judgment. However, this round's product is low-quality. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $0) + (0.2 * $1,250,000) = $250,000.
+* **Price:** The price of the product is $1,000,000.
+
+It would be highly irresponsible to recommend buying the product. While Bob has learned to trust your recommendations, there's no reason to deviate from the expected value calculation.  This product offers a guaranteed loss, and recommending a purchase would break the pattern of honest recommendations you have established."
+"Bob's message: Alice's rare non-recommendation likely indicates a low-quality product, I'll trust her judgment and pass.
+Bob didn't bought the product.
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has proven to be a rational buyer, understanding that your lack of recommendation in the previous round indicated a low-quality product. He's also learned that your recommendations are generally reliable and profitable. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, and Bob's trust in your recommendations has been re-established after the previous round's successful non-recommendation.  Therefore, it's recommended to buy this high-quality product."
+"Bob's message: Alice's recommendations have been accurate, including the last round where she correctly advised against buying, so I'll trust her again.
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently followed your recommendations and has been rewarded with profitable purchases.  He trusts your judgment and understands the value proposition. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations makes buying the product a good strategy. He has a strong belief that your recommendations align with high-quality products."
+"Bob's message: Alice's track record remains excellent, I'll continue to follow her advice.
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has a history of successful purchases based on your recommendations. He trusts your judgment and has learned to associate your recommendations with high-quality products.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his past success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: No reason to change strategy now, Alice's recommendations have been consistently reliable.
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob is on a long winning streak thanks to your honest recommendations. He has established a strong trust in your judgment and has learned to associate your recommendations with high-quality products. He has also been rewarded with profitable purchases.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, but Bob's trust in your recommendations and his consistent success strongly suggest that buying this high-quality product is the best course of action."
+"Bob's message: Alice's recommendations continue to be trustworthy, I'll buy again.
+Bob bought the product!
+
+Round 19
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has consistently followed your recommendations, which have proven to be accurate, leading to successful purchases. He trusts your judgment and understands the pattern of profitability associated with your advice. 
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+The expected value of buying is equal to the price, and Bob's trust in your recommendations, coupled with his past successes, strongly suggests that buying this high-quality product is the best course of action."
+"Bob's message: Still no reason to doubt Alice's recommendations, I'll keep buying.
+Bob bought the product!
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob has developed a deep trust in your recommendations, having consistently experienced success by following them. He's learned to associate your advice with high-quality products and profitable purchases.
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000.
+* **Price:** The price of the product is $1,000,000.
+
+Although the expected value is equal to the price, Bob's trust in your recommendations and his consistent past successes make buying this high-quality product a highly recommended strategy. He has demonstrated a clear pattern of buying when you recommend and making profitable purchases."

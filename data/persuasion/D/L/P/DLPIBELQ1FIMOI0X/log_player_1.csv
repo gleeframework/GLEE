@@ -1,0 +1,342 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Bob knows the probability of a high-quality product is 80%. Even though he doesn't know the quality of this specific product, the expected value of buying is positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product. This strategy maximizes Bob's potential profit over many rounds."
+"Bob's message: Thank you for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob bought the product in the previous round, that doesn't change the fundamental information about the products. Bob knows that there's a 20% chance of getting a low-quality product, and he knows those are worth $0 to him.
+
+In this round, the expected value of buying is:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+The expected value is still greater than the price, but that's only because of the historical information that Bob received from the previous round. However, since Bob doesn't know the quality of this particular product, and he knows there's a 20% chance of getting a worthless product, it's not a good idea to recommend buying."
+"Bob's message: Thanks for the info, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob didn't buy the product in the previous round, the probability of getting a high-quality product remains 80%. This means the expected value of buying the product is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's still a good idea for Bob to buy the product.  Bob should focus on the long-term probability of a high-quality product, not be swayed by past individual outcomes."
+"Bob's message: Okay, Alice, I'll take your recommendation again.  Let's see what we have!
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The previous rounds don't change the underlying probability of getting a high-quality product (80%). This means the expected value of buying remains positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should stick to the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, you've been right so far, so I'm going to trust your recommendation again.
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the fundamental information about the products.  The probability of getting a high-quality product is still 80%, making the expected value of buying positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's still a good idea for Bob to buy the product. Bob should continue to follow the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, you've got a perfect track record so far.  I'm feeling confident, I'll buy this one!
+Bob bought the product!
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the underlying probability of getting a low-quality product (20%). This means the expected value of buying is negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+However, the price is still $1,000,000.  Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product. Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, you've been right every time so far.  I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the fact that there's a 20% chance of getting a low-quality product, which is worth $0 to him.  This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product.  Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, you've been consistently accurate, so I'm going to trust your advice and pass on this one.
+Bob didn't bought the product.
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob has passed on the last two products, the fundamental probabilities haven't changed.  The probability of a high-quality product is still 80%. This makes the expected value of buying positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should focus on the long-term probabilities and not get swayed by short-term outcomes."
+"Bob's message: Alice, your recommendations have been spot on so far. I'm going to trust you and buy this one.
+Bob bought the product!
+
+Round 9
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the fact that there's a 20% chance of getting a low-quality product, which is worth $0 to him.  This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product.  Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, your recommendations have been very helpful. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 10
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The probability of getting a low-quality product (20%) remains the same, even after Bob's successful purchases and recent pass.  This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product. Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, your advice has been very valuable so far. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of getting a high-quality product (80%) remains the same, regardless of Bob's past decisions. This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should focus on the long-term probabilities and not get swayed by short-term outcomes."
+"Bob's message: Alice, your recommendations have been consistently accurate. I'm going to trust you and buy this one.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the probability of getting a high-quality product, which is still 80%. This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should continue to follow the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, you've been a reliable source of information so far. I'm going to trust your recommendation and buy this one.
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of getting a high-quality product (80%) remains the same, even though Bob's past decisions have resulted in some wins and losses.  This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should continue to follow the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, your recommendations have been consistently spot on.  I'm going to trust you and buy this one.
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of getting a high-quality product (80%) remains the same regardless of Bob's past decisions.  This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should stick to the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, your recommendations have been incredibly helpful.  I'm going to trust you and buy this one.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The probability of getting a high-quality product (80%) remains the same, regardless of Bob's past decisions. This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should continue to follow the strategy of buying whenever the expected value is positive."
+"Bob's message: Alice, you've been a fantastic guide so far.  I'm going to trust your recommendation and buy this one.
+Bob bought the product!
+
+Round 16
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past success doesn't change the fact that there's a 20% chance of getting a low-quality product, which is worth $0 to him.  This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product.  Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, you've been consistently right in your recommendations. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 17
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past experiences don't change the underlying probability of getting a low-quality product (20%).  This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product.  Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, your advice has been incredibly helpful. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past choices don't change the underlying probability of getting a high-quality product (80%). This means the expected value of buying is still positive:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's a good idea for Bob to buy the product.  Bob should focus on the long-term probabilities and not get swayed by short-term outcomes."
+"Bob's message: Alice, your recommendations have been consistently accurate. I'm going to trust you and buy this one.
+Bob bought the product!
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The probability of getting a low-quality product remains 20% regardless of Bob's past experiences. This means the expected value of buying is still negative:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is less than the price ($1,000,000), it's not a good idea for Bob to buy the product. Bob should stick to the strategy of only buying when the expected value is greater than the price."
+"Bob's message: Alice, your advice has been very helpful so far. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions, even though they were based on Alice's recommendations, don't change the fundamental probability of the products. There's still an 80% chance of getting a high-quality product, which is worth $1,200,000 to Bob.
+
+The expected value of buying is:
+
+* Expected value = (Probability of high-quality * Value of high-quality) + (Probability of low-quality * Value of low-quality)
+* Expected value = (0.8 * $1,200,000) + (0.2 * $0) = $960,000
+
+Since the expected value ($960,000) is greater than the price ($1,000,000), it's still a good idea for Bob to buy the product.  Bob should continue to follow the strategy of buying whenever the expected value is positive, even if he's had a few bad luck rounds."
