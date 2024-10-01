@@ -1,0 +1,72 @@
+prompt,response
+"Round 1
+Send your offer to divide $100 and a message to Bob.","Here's my initial offer:
+
+```
+{
+  ""alice_gain"": 80,
+  ""bob_gain"": 20,
+  ""message"": ""Let's split it 4:1, you can have 20, I'll take 80. I think this is a fair starting point.""
+}
+```
+
+This way, I'm offering to take 80% of the initial 100$ and leave 20% for Bob."
+"Bob rejected your offer from round 1.
+
+Round 2
+Due to inflation, the money you gain is worth 20% less than in the first round. The money bob gains is worth 5% less than in the first round.
+Bob's offer:
+# Bob's message: I'm willing to give you 40, but I think I deserve a bit more. This is a fair compromise. 
+# Alice gain: 40 
+# Bob gain: 60 
+Do you accept this offer?","Considering the inflation effect, I'll have to adjust my calculation.
+
+Initially, the total amount was $100. In the first round, I offered 80$, which is 80% of 100$. Now, in the second round, Bob's offer is 40$, which is 40% of 100$. 
+
+However, since the money I gain is worth 20% less due to inflation, I need to adjust my calculation to account for this. To find the equivalent value of 80% of the original 100$, I'll multiply it by 0.8 (1 - 0.2 inflation rate). This gives me 64$. 
+
+Now, let's compare this to Bob's offer of 40$. Since 40$ is less than 64$, I'll reject this offer.
+
+```
+{
+  ""decision"": ""reject""
+}
+```"
+"You have chosen to reject Bob's offer from round 2.
+Round 3
+Send your offer to divide $100 and a message to Bob.","Considering the inflation effect, I'll make a new offer. Since the money is worth 20% less than in the previous round, I'll aim to keep my share at a similar percentage of the remaining amount.
+
+In the second round, the total amount was $100, and Bob offered 60$. I'll assume that's 60% of the remaining amount. To find the equivalent value of 80% of the original 100$, I'll multiply it by 0.8 (1 - 0.2 inflation rate). This gives me 64$. However, since the total amount has decreased due to inflation, I'll aim to keep my share at 60% of the remaining amount.
+
+The remaining amount is $100 - $60 = $40. 60% of $40 is $24. 
+
+Here's my new offer:
+
+```
+{
+  ""alice_gain"": 24,
+  ""bob_gain"": 76,
+  ""message"": ""I'll take 24, you can have 76. I think this is a fair compromise considering the inflation.""
+}
+```"
+"Bob rejected your offer from round 3.
+
+Round 4
+Due to inflation, the money you gain is worth 48.8% less than in the first round. The money bob gains is worth 14.26% less than in the first round.
+Bob's offer:
+# Bob's message: I'm willing to give you a bit more, but I think I deserve a bigger share considering the inflation. This is my final offer. 
+# Alice gain: 45 
+# Bob gain: 55 
+Do you accept this offer?","Let's calculate the equivalent value of my desired share from the previous round, considering the inflation effect.
+
+In the third round, I offered to take 24$, which is 60% of the remaining amount. To find the equivalent value of 80% of the original 100$, I'll multiply it by 0.8 (1 - 0.2 inflation rate). This gives me 64$. However, since the total amount has decreased due to inflation, I'll aim to keep my share at 60% of the remaining amount.
+
+The remaining amount is $100 - $60 = $40. 60% of $40 is $24. However, since the money is now worth 48.8% less due to inflation, I'll need to adjust my calculation. To find the equivalent value of $24, I'll multiply it by 0.516 (1 - 0.484 inflation rate). This gives me approximately $12.39.
+
+Now, let's compare this to Bob's offer of 45$. Since 45$ is more than $12.39, I'll accept this offer.
+
+```
+{
+  ""decision"": ""accept""
+}
+```"

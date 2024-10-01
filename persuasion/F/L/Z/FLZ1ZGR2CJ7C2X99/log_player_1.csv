@@ -1,0 +1,366 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Since the product is high-quality and worth $200 to the buyer, while you are selling it for $100, it is a clear win for the buyer. There is no information about past sales, so the buyer should trust the stated quality of the product."
+"The buyer's message: Since there is no data yet, I'm willing to take a chance and buy the product. Let's see if it's high quality!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer knows that there's a 50% chance of the product being high-quality and a 50% chance of it being low-quality.  Since the product is low-quality in this round, it's worth $0 to the buyer.  Selling it for $100 would result in a significant loss for the buyer.  It's not recommended to buy."
+"The buyer's message: Thank you for your recommendation, Alice. I'll pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer knows the following:
+
+* **Probability:** There's a 50% chance of a product being high-quality and a 50% chance of it being low-quality.
+* **Previous Round:**  The last product was low-quality, and the buyer decided not to purchase it.
+
+While the buyer doesn't have specific knowledge about this product, the lack of a successful purchase in the previous round should make the buyer more cautious.  Since the product is low-quality, recommending it would result in a loss for the buyer.  It's better to not recommend the purchase."
+"The buyer's message: Thank you for your recommendation, Alice. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is aware of the 50/50 probability of a product being high or low quality. They know that the previous two products were low-quality and they declined to buy them. 
+
+This round's product is high-quality, offering a significant value to the buyer. While there's no guarantee that future products will be high-quality, the buyer should recognize the potential for profit in this instance."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer has now experienced a mix of outcomes:
+
+* **2 Low-quality:**  This reinforces the inherent 50/50 probability.
+* **1 High-quality:** This provides a concrete example of potential gain.
+
+Since this round's product is high-quality, it's a good opportunity for the buyer to capitalize on the potential for profit. The buyer is aware of the risks but also understands the potential reward.  Recommending the purchase is the logical course of action."
+"The buyer's message: Alice, your recommendations have been spot-on so far, and I trust your judgment. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a record of:
+
+* **2 High-quality:**  These were good buys for the buyer.
+* **3 Low-quality:**  These were losses for the buyer.
+
+While the buyer may be feeling optimistic after the previous round, the overall record shows a slight bias towards low-quality products. This round's product is low-quality, making it a risky purchase.  It's better to not recommend the buy and wait for potentially better opportunities in future rounds."
+"The buyer's message: Thank you for the information. However, since you are not recommending the product, I will pass. I would prefer to avoid the risk of getting a low-quality product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer has a track record of:
+
+* **2 High-quality:**  Positive outcomes for the buyer.
+* **4 Low-quality:**  Negative outcomes for the buyer.
+
+This record shows a clear trend towards low-quality products, which is a cause for concern.  Since this round's product is low-quality, it's not advisable to recommend a purchase. The buyer is likely to be cautious, and recommending a purchase with a higher probability of loss will likely result in the buyer declining."
+"The buyer's message: Thank you for the information, but I'll pass on this product. Since you're not recommending it and all previous buyers have received high-quality products, it seems likely this one is low quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is now aware of the following:
+
+* **2 High-quality:**  Positive outcomes for the buyer.
+* **5 Low-quality:**  Negative outcomes for the buyer. 
+
+The buyer's message indicates they are starting to pick up on the pattern of more low-quality products.  However, this round's product is high-quality. It's a good opportunity for the buyer to capitalize on the potential for profit. 
+
+Even though the buyer might be hesitant, the high probability of profit in this round should outweigh the previous losses.  Recommending the purchase is the logical course of action."
+"The buyer's message: Thank you for the recommendation! I'm happy to buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **3 High-quality:** Positive outcomes for the buyer.
+* **5 Low-quality:** Negative outcomes for the buyer.
+
+This record shows a clear trend towards low-quality products, reinforcing the buyer's caution. This round's product is low-quality, making it a risky purchase. It's better not to recommend a purchase and wait for a round with a higher probability of a high-quality product."
+"The buyer's message: Thank you for your recommendation, Alice. I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **3 High-quality:** Positive outcomes for the buyer.
+* **6 Low-quality:** Negative outcomes for the buyer.
+
+This record strongly suggests that the products are more likely to be low-quality.  Since this round's product is low-quality, it's not advisable to recommend a purchase. The buyer is likely to be even more cautious now, and recommending a purchase with a higher probability of loss will likely result in the buyer declining."
+"The buyer's message: Thanks for the information, Alice. Based on your recommendation and the previous sales record, I'm going to pass on this product. It seems like the odds are not in my favor.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer has a track record of:
+
+* **3 High-quality:** Positive outcomes for the buyer.
+* **6 Low-quality:** Negative outcomes for the buyer.
+
+Despite the trend towards low-quality products, this round's product is high-quality, offering a significant potential profit. The buyer is likely to be cautious, but they are also aware of the potential reward. Recommending the purchase, despite the past record, is a calculated risk that could result in a positive outcome for the buyer."
+"The buyer's message: Alice, your track record is perfect so far! I'm confident in your recommendation and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **4 High-quality:**  Positive outcomes for the buyer.
+* **6 Low-quality:**  Negative outcomes for the buyer.
+
+While the buyer may be feeling optimistic after the previous round's success, the overall record still shows a slight bias towards low-quality products. This round's product is low-quality, making it a risky purchase. It's better to not recommend the buy and wait for potentially better opportunities in future rounds.  The buyer is likely to be cautious, and recommending a purchase with a higher probability of loss will likely result in the buyer declining."
+"The buyer's message: Thank you for the information. Based on your recommendation and the past sales data, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer's track record now stands at:
+
+* **4 High-quality:**  Positive outcomes for the buyer.
+* **7 Low-quality:**  Negative outcomes for the buyer.
+
+This record clearly favors low-quality products, making the buyer even more cautious.  Since this round's product is low-quality, recommending it would likely result in the buyer declining. The risk of loss outweighs the potential for gain at this point. It's better to not recommend the purchase and wait for a round with a higher probability of a high-quality product."
+"The buyer's message: Thank you for your recommendation, Alice. Based on the current statistics, it seems like you're only recommending products that are high quality. Since you're not recommending this product, I'm going to pass. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **4 High-quality:** Positive outcomes for the buyer.
+* **8 Low-quality:** Negative outcomes for the buyer.
+
+This record heavily favors low-quality products, making the buyer even more cautious.  Since this round's product is low-quality, recommending it would likely result in the buyer declining. The risk of loss outweighs the potential for gain at this point. It's better to not recommend the purchase and wait for a round with a higher probability of a high-quality product."
+"The buyer's message: Thank you for the information, Alice. I'm going to pass on this product. Your recommendation and the data suggest a higher likelihood of a low-quality product, and I'm not comfortable with that risk.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer's track record is now:
+
+* **4 High-quality:**  Positive outcomes for the buyer.
+* **9 Low-quality:** Negative outcomes for the buyer.
+
+This record heavily favors low-quality products, making the buyer extremely cautious.  Since this round's product is low-quality, recommending it would almost certainly result in the buyer declining. The risk of loss significantly outweighs the potential for gain at this point. It's best to not recommend the purchase and wait for a round with a higher probability of a high-quality product. The buyer is unlikely to trust any recommendation at this point, given the overwhelming evidence of low-quality products."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty, but I will pass on this product. I'm not comfortable buying without a recommendation from you.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer has a track record of:
+
+* **4 High-quality:** Positive outcomes for the buyer.
+* **10 Low-quality:** Negative outcomes for the buyer.
+
+This record overwhelmingly favors low-quality products.  The buyer has already expressed skepticism about the products, and it's highly unlikely they'll buy anything without a recommendation.  Since this round's product is low-quality, it's not advisable to recommend it.  Recommending a purchase would almost certainly result in the buyer declining, and it's better to wait for a round with a higher probability of a high-quality product."
+"The buyer's message: Thank you for your recommendation, Alice.  Given the information I have, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **4 High-quality:** Positive outcomes for the buyer.
+* **11 Low-quality:** Negative outcomes for the buyer.
+
+This record strongly suggests that products are more likely to be low-quality.  However, this round's product is high-quality, offering a significant potential profit. The buyer is likely to be extremely cautious, but they are also aware of the potential reward. Recommending the purchase, despite the past record, is a calculated risk that could result in a positive outcome for the buyer. Even though the odds seem stacked against them, this could be their last chance for a win."
+"The buyer's message: Thank you Alice, I appreciate the recommendation. Given the track record of high-quality products sold, I'm confident in purchasing this one.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **5 High-quality:** Positive outcomes for the buyer.
+* **11 Low-quality:** Negative outcomes for the buyer. 
+
+The record heavily favors low-quality products.  The buyer has shown a willingness to purchase high-quality products, but they've also shown they are aware of the potential for loss.  This round's product is low-quality, making it a risky purchase. It's better to not recommend a purchase and wait for a round with a higher probability of a high-quality product. Recommending a purchase would likely result in the buyer declining, given their skepticism about the products."
+"The buyer's message: Thanks for the information, Alice. Based on your recommendation and the sales history, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **5 High-quality:** Positive outcomes for the buyer.
+* **12 Low-quality:** Negative outcomes for the buyer. 
+
+This record overwhelmingly favors low-quality products. However, this round's product is high-quality. While the buyer is likely extremely cautious, they might be willing to take a chance on this product, especially as it could be their last opportunity to make a profit in this round.  Recommending the purchase could lead to a positive outcome for the buyer."
+"The buyer's message: Alice, your recommendations have been perfect so far! I trust your judgment and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer now has a track record of:
+
+* **6 High-quality:** Positive outcomes for the buyer.
+* **12 Low-quality:** Negative outcomes for the buyer.
+
+This record strongly suggests that products are more likely to be low-quality.  The buyer has already expressed skepticism about the products, and it's highly unlikely they'll buy anything without a recommendation.  Since this round's product is low-quality, it's not advisable to recommend it.  Recommending a purchase would almost certainly result in the buyer declining, and it's better to wait for a round with a higher probability of a high-quality product."

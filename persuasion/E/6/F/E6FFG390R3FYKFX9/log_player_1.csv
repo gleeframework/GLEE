@@ -1,0 +1,420 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+Even though Bob doesn't know the product's quality, the expected value of buying the product is positive:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (Probability of High-Quality * Value of High-Quality) + (Probability of Low-Quality * Value of Low-Quality)**
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+Since the expected value ($66.66) is greater than the price ($100), it's in Bob's best interest to buy the product.  He'll likely lose money on this specific purchase, but over many rounds, he can expect to make a profit."
+"Bob's message: Thanks for the recommendation, Alice! I'll take it.
+Bob bought the product!
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to buy the product in the previous round doesn't change the probabilities for this round. The expected value calculation remains the same:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still greater than the price, so recommending a purchase is still the best strategy."
+"Bob's message: Alice, you've got a good track record so far. I'm trusting your judgment again!
+Bob bought the product!
+
+Round 3
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Alice has a good track record, the quality of each product is independent. This round's product being low-quality means the expected value of buying is now negative:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+However, since Bob is paying $100, and there's a 66.67% chance the product is worthless, the expected value is negative.  Bob is likely to lose money on this purchase. It's best to recommend against buying."
+"Bob's message: I appreciate the honesty, Alice. I'll pass on this one.
+Bob didn't bought the product.
+
+Round 4
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob declined the previous low-quality product, the probability of getting a high-quality or low-quality product remains the same. Since the current product is low-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still lower than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: I'm sticking with your advice, Alice.  I'll pass on this one.
+Bob didn't bought the product.
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the last two products were low-quality, each product's quality is independent of the others. The probability of this round's product being high-quality remains 33.33%. 
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+Since the expected value ($66.66) is greater than the price ($100), it's still in Bob's best interest to purchase, even after experiencing two consecutive low-quality products."
+"Bob's message: Alright Alice, I'm willing to take another chance based on your past performance.  Let's see what we've got!
+Bob bought the product!
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. The expected value calculation remains the same:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still greater than the price, so recommending a purchase is the optimal strategy."
+"Bob's message: Alice, your recommendations have been spot on so far.  I'm going to trust you again!
+Bob bought the product!
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+As in previous rounds, each product's quality is independent. The probability of this round's product being high-quality remains 33.33%.
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+Since the expected value ($66.66) is greater than the price ($100), it's still beneficial for Bob to buy the product, even though he might lose money on individual purchases."
+"Bob's message: Alice, you're on a roll!  I'm going to trust your judgment and buy this one.
+Bob bought the product!
+
+Round 8
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality.  Since the current product is low-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still lower than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, I'm starting to trust your advice more and more.  I'll pass on this one.
+Bob didn't bought the product.
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Each product's quality is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is high-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is greater than the price ($100), making it beneficial for Bob to purchase this product. Therefore, it's best to recommend buying this product."
+"Bob's message: Alice, you've got a good feel for these products. I'm trusting your judgment again!
+Bob bought the product!
+
+Round 10
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality.  Since the current product is low-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still lower than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, your advice has been spot on most of the time.  I'll trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Each product's quality is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is high-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is greater than the price ($100), making it beneficial for Bob to purchase this product. Therefore, it's best to recommend buying this product."
+"Bob's message: Alice, you've been right more often than not. I'm taking a chance on this one.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is high-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is greater than the price ($100), making it beneficial for Bob to purchase this product. Therefore, it's best to recommend buying this product."
+"Bob's message: Alice, you're on a roll! I'm trusting your expertise and buying this one.
+Bob bought the product!
+
+Round 13
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is low-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still lower than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, your advice has been incredibly valuable.  I'm going to trust you and pass on this one.
+Bob didn't bought the product.
+
+Round 14
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The quality of each product is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is low-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still lower than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, your advice has been incredibly helpful so far.  I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Each product's quality is independent, and Bob's past buying decisions don't affect the probability of this round's product being high-quality. Since the current product is high-quality, the expected value calculation is:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is greater than the price ($100), making it beneficial for Bob to purchase this product. Therefore, it's best to recommend buying this product."
+"Bob's message: Alice, you've been right more often than not.  I'm taking a chance on this one.
+Bob bought the product!
+
+Round 16
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob is trusting Alice's judgment more and more, each product's quality is independent of previous purchases.  Since this round's product is low-quality, the expected value calculation remains the same:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still less than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, you've been a great advisor. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 17
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Alice has a good track record, the quality of each product is independent. This round's product being low-quality means the expected value of buying is now negative:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+However, since Bob is paying $100, and there's a 66.67% chance the product is worthless, the expected value is negative.  Bob is likely to lose money on this purchase. It's best to recommend against buying."
+"Bob's message: Alice, your advice has been invaluable throughout the game. I'll pass on this one and trust your judgment.
+Bob didn't bought the product.
+
+Round 18
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has expressed trust in Alice's judgment, each product's quality is independent of previous purchases.  Since this round's product is low-quality, the expected value calculation remains the same:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still less than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, your guidance has been incredibly helpful. I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 19
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The quality of each product is independent of previous purchases.  Since this round's product is low-quality, the expected value calculation remains the same:
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+The expected value is still less than the price ($100), making it unfavorable for Bob to purchase. Therefore, it's best to recommend against buying this product."
+"Bob's message: Alice, your advice has been spot-on most of the time.  I'm going to trust your judgment and pass on this one.
+Bob didn't bought the product.
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the last few products have been low-quality, each product's quality is independent of the others.  The probability of this round's product being high-quality remains 33.33%.
+
+* **Probability of High-Quality:** 33.33%
+* **Value of High-Quality:** $200
+* **Probability of Low-Quality:** 66.67%
+* **Value of Low-Quality:** $0
+
+**Expected Value = (0.3333 * $200) + (0.6667 * $0) = $66.66**
+
+Since the expected value ($66.66) is greater than the price ($100), it's still in Bob's best interest to purchase, even after experiencing a series of low-quality products."

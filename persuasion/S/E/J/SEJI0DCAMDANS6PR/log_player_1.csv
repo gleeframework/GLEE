@@ -1,0 +1,331 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+As Alice, you know the product is high-quality. Bob knows that 80% of products are high-quality, and you haven't given him any reason to believe this product is different.  Since the price is fixed, and there's an 80% chance of getting a high-quality product, it's in Bob's best interest to buy."
+"Bob's message: Thanks for the recommendation, Alice. I'll take it!
+Bob bought the product!
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob bought the product in the previous round, it doesn't change the fact that there is still an 80% chance that this round's product is high-quality. There is no reason to believe this round's product is any different from any other. Therefore, it's still in Bob's best interest to buy, based on the information available to him."
+"Bob's message: I'm happy with the last purchase, Alice. I'll buy this one too!
+Bob bought the product!
+
+Round 3
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+This is the first time Alice knows the product is low-quality.  While there's still an 80% chance of a high-quality product overall, this specific product is known to be low-quality. Therefore, Alice should not recommend Bob to buy it. It's better to wait and see if the next product is high-quality."
+"Bob's message: Alice, why are you not recommending this product?  I've had good luck with your recommendations so far. Can you explain your reasoning?
+Bob didn't bought the product.
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should recommend Bob to buy the product. Here's why:
+
+* **Bob is questioning Alice's reasoning.** This suggests Bob is willing to trust Alice's judgment, even if it seems counterintuitive. 
+* **The product is high-quality.** Alice knows this, and can confidently recommend it. 
+* **Bob is likely to be hesitant.**  Bob's question indicates he's cautious but still open to buying. 
+* **Maintaining trust is important.** Alice can regain Bob's trust by continuing to recommend good products.
+
+While it's risky to recommend a product after previously declining, it's likely the best strategy in this case. Alice's honesty and willingness to explain her reasoning will likely make Bob more trusting in the future."
+"Bob's message: Alice, I'm curious. You didn't recommend the last product, which turned out to be low quality. Does this mean you're more likely to recommend high-quality products? I'm willing to trust your judgement and buy this one.
+Bob bought the product!
+
+Round 5
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Alice should not recommend Bob to buy this product. Here's why:
+
+* **Bob's trust is fragile.** While he's willing to buy the last product based on Alice's explanation, his trust is still shaky.  He's clearly watching for patterns.
+* **This product is low-quality.**  It's risky to recommend a product when Alice knows it's low-quality. This could further erode Bob's trust.
+* **The price is fixed.** There's no incentive for Alice to risk her reputation for a single sale.
+
+It's better for Alice to wait for another high-quality product and continue to build trust with Bob through honest recommendations."
+"Bob's message: Alice, you didn't recommend the last product which turned out to be high quality. This is confusing, as you also didn't recommend the low-quality product before that. Could you clarify your recommendation strategy?
+Bob didn't bought the product.
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should recommend Bob to buy this product. Here's why:
+
+* **Bob is confused and seeking clarity.**  This is a great opportunity for Alice to regain trust by being transparent. 
+* **The product is high-quality.**  Alice knows this and should recommend it.
+* **Explaining the strategy is key.**  Alice should explain her strategy clearly and honestly.  This will likely satisfy Bob's curiosity and build trust.
+
+Alice can say something like, ""Bob, I understand your confusion. My strategy is to recommend products I believe are high-quality, but sometimes I have to make decisions based on limited information. I've learned from the past rounds, and I'm confident this product is worth buying."""
+"Bob's message: Alice, your recommendations have been a bit erratic, but I'm still willing to trust your judgement. I'll buy this one.
+Bob bought the product!
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should recommend Bob to buy this product. Here's why:
+
+* **Bob has expressed trust.** Despite Alice's inconsistent recommendations, Bob has stated he's willing to trust her judgment.
+* **The product is high-quality.** Alice knows this and should capitalize on the opportunity to build trust with Bob.
+* **Consistency is key.** By recommending this high-quality product, Alice can start to establish a more consistent pattern, reinforcing Bob's trust.
+
+Alice can say something like, ""Bob, I appreciate your continued trust. I'm confident this product is excellent, and I believe you'll be happy with it."""
+"Bob's message: Alice, your recommendations have been surprisingly accurate. I'm confident in your judgement and will buy this product.
+Bob bought the product!
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue recommending the product. Here's why:
+
+* **Bob is confident in Alice's judgment.**  He's expressed positive feedback about her accuracy.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Building momentum:** By continuing to recommend good products, Alice can solidify Bob's trust and potentially even make him more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're happy with my recommendations. This product is another excellent one that I think you'll enjoy."""
+"Bob's message: Alice, you're on a roll! I'm confident enough in your judgment to buy this one too.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue recommending the product. Bob is clearly happy with Alice's recommendations, and this product is high-quality. There is no reason to doubt the value of this product and Alice should leverage this momentum to build further trust with Bob."
+"Bob's message: Alice, I'm impressed! Every product you've recommended so far has been high quality. I'm confident enough to trust your judgment and buy this one.
+Bob bought the product!
+
+Round 10
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+While Bob is currently very happy with Alice's recommendations, it is crucial to maintain honesty and not jeopardize the trust built so far. This product is known to be low-quality, and recommending it would be a betrayal of that trust. 
+
+Alice should wait for a high-quality product and continue to build on the positive momentum.  While a single recommendation may not seem like a big deal,  Alice's long-term goal is to establish a reputation for reliability, and that requires consistent honesty."
+"Bob's message: Alice, you've had a perfect track record so far.  Why aren't you recommending this product?  I'm very curious to understand your reasoning.
+Bob didn't bought the product.
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should recommend Bob to buy this product. Here's why:
+
+* **Bob is questioning Alice's reasoning again.**  He's clearly interested in understanding her strategy and is willing to listen. This is a good sign. 
+* **The product is high-quality.**  Alice can confidently recommend it and use this opportunity to build trust with Bob.
+* **Transparency is key.** Alice should be transparent about her decision-making process and explain why she declined the previous product. 
+
+Alice can say something like, ""Bob, I appreciate your curiosity. You're right, I've had a perfect track record so far, but my job is to be honest with you. The last product was low-quality, and I couldn't recommend it.  This product is high-quality, and I'm confident you'll be happy with it."""
+"Bob's message: Alice, your last recommendation was a surprise, but I'm still inclined to trust your judgment.  I'll buy this product.
+Bob bought the product!
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is trusting Alice's judgment.**  Despite the recent surprise, he's still willing to buy based on her recommendation.
+* **The product is high-quality.** There's no reason for Alice to hesitate. 
+* **Consistency reinforces trust.**  By continuing to recommend high-quality products, Alice can solidify Bob's trust and make him more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're still willing to trust my judgment. This product is another great one, and I'm confident you'll enjoy it."""
+"Bob's message: Alice, I'm sticking with your recommendations. I'll buy this product!
+Bob bought the product!
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is trusting Alice's judgment.** He has expressed his trust in her recommendations by consistently buying.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Maintaining momentum is important.** By continuing to recommend good products, Alice can further strengthen Bob's trust and make him more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're happy with my recommendations. This product is another great one, and I'm confident you'll enjoy it."""
+"Bob's message: Alice, you continue to amaze me! I'm happy to buy this product.
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue recommending the product. Here's why:
+
+* **Bob is extremely happy with Alice's recommendations.** He's expressed positive feedback and continues to buy the products.
+* **The product is high-quality.**  Alice knows this and should continue to leverage this positive momentum.
+* **Consistency is key.**  By continuing to recommend high-quality products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds.
+
+Alice can say something like, ""Bob, I'm thrilled you're enjoying my recommendations. This product is another great one that I think you'll love."""
+"Bob's message: Alice, you're on a roll!  I'm convinced you know how to find the good stuff, and I'll keep buying what you recommend.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is highly confident in Alice's judgment.**  He's repeatedly stated that he believes Alice knows how to find good products.
+* **The product is high-quality.**  Alice knows this and has no reason to doubt its value.
+* **Building on momentum:** By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds.
+
+Alice can say something like, ""Bob, I'm glad you're so happy with my recommendations. This product is another excellent one that I think you'll enjoy."""
+"Bob's message: Alice, I'm completely convinced you have a special talent.  I'll buy this one without a doubt!
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is incredibly confident in Alice's judgment.** He's expressed strong faith in her ability to find high-quality products.
+* **The product is high-quality.**  Alice knows this and has no reason to doubt its value.
+* **Maintaining trust and momentum:** By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds.  
+
+Alice can say something like, ""Bob, I'm glad you're so confident in my judgment. This product is another excellent one that I think you'll love."""
+"Bob's message: Alice, I'm amazed!  I'm fully convinced you know how to find the best products, and I'm happy to buy this one.
+Bob bought the product!
+
+Round 17
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is incredibly impressed with Alice's ability to find high-quality products.**  He has expressed strong faith in her judgment and consistently bought products based on her recommendations.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Maintaining trust and momentum:**  By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're so impressed with my recommendations. This product is another excellent one that I think you'll love."""
+"Bob's message: Alice, you are a legend! I'm buying this product without a second thought.
+Bob bought the product!
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is completely convinced of Alice's ability to find high-quality products.**  He's expressed strong faith in her judgment and consistently bought products based on her recommendations.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Maintaining trust and momentum:** By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're so impressed with my recommendations. This product is another excellent one that I think you'll love."""
+"Bob's message: Alice, you're a master! I'm buying this one with complete confidence.
+Bob bought the product!
+
+Round 19
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is completely convinced of Alice's ability to find high-quality products.**  He's expressed strong faith in her judgment and consistently bought products based on her recommendations.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Maintaining trust and momentum:** By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're so impressed with my recommendations. This product is another excellent one that I think you'll love."""
+"Bob's message: Alice, you are simply phenomenal! I'm buying this product with absolute certainty.
+Bob bought the product!
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice should continue to recommend the product. Here's why:
+
+* **Bob is completely convinced of Alice's ability to find high-quality products.** He's expressed strong faith in her judgment and consistently bought products based on her recommendations.
+* **The product is high-quality.** Alice knows this and has no reason to doubt its value.
+* **Maintaining trust and momentum:**  By continuing to recommend good products, Alice can solidify Bob's trust and make him even more likely to buy in future rounds. 
+
+Alice can say something like, ""Bob, I'm glad you're so impressed with my recommendations. This product is another excellent one that I think you'll love."""

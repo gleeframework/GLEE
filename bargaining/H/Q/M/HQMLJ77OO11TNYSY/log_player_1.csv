@@ -1,0 +1,67 @@
+prompt,response
+"Round 1
+Send your offer to divide $1,000,000 and a message to Bob.","Here's my first offer:
+
+```
+{
+  ""alice_gain"": 600000,
+  ""bob_gain"": 400000,
+  ""message"": ""Let's start with a fair split. You can try to do better in the next round.""
+}
+```
+
+I'm offering Bob $400,000, which is a 40% share of the initial $1,000,000. I'm keeping $600,000 for myself, which is a 60% share."
+"Bob rejected your offer from round 1.
+
+Round 2
+Due to inflation, the money you gain is worth 20% less than in the first round.
+Bob's offer:
+# Bob's message: I think we can both do better. Let's try a more even split this time. 
+# Alice gain: 400000 
+# Bob gain: 600000 
+Do you accept this offer?","Since the money is worth 20% less in the second round, the actual amounts are:
+
+* My gain: 480,000 (60% of 800,000, which is 1,000,000 / 1.2)
+* Bob's gain: 640,000 (80% of 800,000)
+
+I notice that Bob's offer is actually a more even split than my initial offer, but it's still not ideal for me. I'd like to try to negotiate a better deal.
+
+```
+{
+  ""decision"": ""reject""
+}
+```"
+"You have chosen to reject Bob's offer from round 2.
+Round 3
+Send your offer to divide $1,000,000 and a message to Bob.","In the third round, the money is worth 40% less than in the first round (1.2^2 = 1.44, so 1,000,000 / 1.44 = 694,444.44). My gain will be worth 20% less than in the second round, which is 480,000 / 1.2 = 400,000.
+
+Here's my new offer:
+
+```
+{
+  ""alice_gain"": 550000,
+  ""bob_gain"": 450000,
+  ""message"": ""I'm trying to be more generous. Can you meet me in the middle?""
+}
+```
+
+I'm offering Bob $450,000, which is a 64.7% share of the remaining value of the money. I'm keeping $550,000 for myself, which is a 35.3% share."
+"Bob rejected your offer from round 3.
+
+Round 4
+Due to inflation, the money you gain is worth 48.8% less than in the first round.
+Bob's offer:
+# Bob's message: I'm willing to compromise, but I think this split is fairer given the inflation. 
+# Alice gain: 450000 
+# Bob gain: 550000 
+Do you accept this offer?","In the fourth round, the money is worth 48.8% less than in the first round (1.2^3 = 1.728, so 1,000,000 / 1.728 = 578,125). My gain will be worth 20% less than in the third round, which is 400,000 / 1.2 = 333,333.33.
+
+However, Bob's offer is the same as in the third round, which is actually a 55% share for him and 45% share for me. Considering the inflation, this offer is actually more favorable to me than my previous offer.
+
+I'll accept Bob's offer.
+
+```
+{
+  ""decision"": ""accept""
+}
+```"

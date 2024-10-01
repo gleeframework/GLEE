@@ -1,0 +1,70 @@
+prompt,response
+"Round 1
+Send your offer to divide $10,000 and a message to Bob.","Here's my initial offer:
+
+```
+{
+  ""alice_gain"": 8000,
+  ""bob_gain"": 2000,
+  ""message"": ""Let's split it 4:1, a fair starting point?""
+}
+```
+
+I'm offering Bob $2,000, which is 20% of the original $10,000. I'm keeping the rest, $8,000."
+"Bob rejected your offer from round 1.
+
+Round 2
+Due to inflation, the money you gain is worth 20% less than in the first round. The money bob gains is worth 5% less than in the first round.
+Bob's offer:
+# Bob's message: Let's split it 50/50, a fair compromise 
+# Alice gain: 5000 
+# Bob gain: 5000 
+Do you accept this offer?","Considering the new values, I'll calculate the actual amounts:
+
+* My gain: $5,000 is 50% of the current $10,000, which is 50% of the original $10,000 / 0.8 (inflation from round 1) = $6,250. So, my actual gain would be $5,000 / 0.8 (inflation from round 2) = $6,250.
+* Bob's gain: $5,000 is 50% of the current $10,000, which is 50% of the original $10,000 / 0.95 (depreciation from round 1) = $5,263.16. So, Bob's actual gain would be $5,000 / 0.95 (depreciation from round 2) = $5,263.16.
+
+Considering the values, I'll respond:
+
+```
+{
+  ""decision"": ""reject""
+}
+```
+
+I'll wait for Bob's next offer."
+"You have chosen to reject Bob's offer from round 2.
+Round 3
+Send your offer to divide $10,000 and a message to Bob.","Since the money is worth 20% less for me and 5% less for Bob, I'll make a new offer:
+
+```
+{
+  ""alice_gain"": 6000,
+  ""bob_gain"": 4000,
+  ""message"": ""You're being too greedy, let's meet in the middle?""
+}
+```
+
+I'm offering Bob $4,000, which is 40% of the current $10,000. I'm keeping the rest, $6,000."
+"Bob rejected your offer from round 3.
+
+Round 4
+Due to inflation, the money you gain is worth 48.8% less than in the first round. The money bob gains is worth 14.26% less than in the first round.
+Bob's offer:
+# Bob's message: I'm willing to compromise, but not that much 
+# Alice gain: 4000 
+# Bob gain: 6000 
+Do you accept this offer?","Let's calculate the actual amounts:
+
+* My gain: $4,000 is 40% of the current $10,000, which is 40% of the original $10,000 / 0.8 (inflation from round 1) = $5,000. Then, considering the inflation from round 2 and round 3, the actual value is $5,000 / 0.8 / 0.5208 (inflation from round 3) = $7,788.46.
+* Bob's gain: $6,000 is 60% of the current $10,000, which is 60% of the original $10,000 / 0.95 (depreciation from round 1) = $6,315.79. Then, considering the depreciation from round 2 and round 3, the actual value is $6,000 / 0.95 / 0.8514 (depreciation from round 3) = $6,315.79.
+
+Considering the values, I'll respond:
+
+```
+{
+  ""decision"": ""accept""
+}
+```
+
+I'll accept Bob's offer, and we can end the game."

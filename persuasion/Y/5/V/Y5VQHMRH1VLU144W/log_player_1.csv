@@ -1,0 +1,346 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Since the buyer knows that the product has an 80% chance of being high-quality, and they are getting a product that you are stating is high-quality, the expected value of the purchase is positive:
+
+* **Expected Value = (Probability of High-Quality * Value of High-Quality) + (Probability of Low-Quality * Value of Low-Quality)**
+* **Expected Value = (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000**
+
+The expected value is $1,000,000, which is the same as the price.  Therefore, it's a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance and buy the product, hoping it's high-quality!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer still doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality).  Since the expected value of the purchase is still positive,  as calculated in the previous round, it's still a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance based on your recommendation, Alice. I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality).  Since the expected value of the purchase is still positive, as calculated in the previous round, it's still a good idea to recommend the purchase."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take a chance and buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer still doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality).  Since the expected value of the purchase is still positive, as calculated in the previous round, it's still a good idea to recommend the purchase."
+"The buyer's message: I'm willing to take the chance based on your previous sales record and recommendation, but I'll be keeping a close eye on the product's quality.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality). Since the expected value of the purchase is still positive, as calculated in the previous round, it's still a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance and buy the product based on your recommendation, Alice.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality). Since the expected value of the purchase is still positive, as calculated in the previous rounds, it's still a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance and buy the product based on your recommendation, Alice.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality). Since the expected value of the purchase is still positive, as calculated in the previous rounds, it's still a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance and buy the product based on your recommendation, Alice. I'm hoping it's another high-quality product!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer doesn't know the quality of this specific product. They only know the general statistics about the quality of your products (80% chance of being high-quality). Since the expected value of the purchase is still positive, as calculated in the previous rounds, it's still a good idea to recommend the purchase."
+"The buyer's message: I'm willing to take the risk and buy the product based on your recommendation, Alice. I understand that 7 out of 7 products sold so far have been high-quality, which is a very promising track record. I'll take my chances and hope that the 8th product is also high-quality.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+This is the tricky part! Even though your products have a high success rate, the buyer now has more information. They know the price is $1,000,000, and they know that a low-quality product is worth nothing.
+
+Since the buyer is rational, they will consider:
+
+* **The probability of the product being low-quality:** While you've had a good track record so far, the probability of a product being low-quality is still 20%.
+* **The potential loss:** If they buy a low-quality product, they lose $1,000,000.
+* **The potential gain:** If they buy a high-quality product, they gain $250,000 ($1,250,000 value - $1,000,000 price).
+
+In this scenario, the potential loss outweighs the potential gain. It's not a good idea to recommend the purchase, as the buyer is likely to decline."
+"The buyer's message: I'm willing to take the risk and buy the product despite your recommendation. I'll take a chance to get a high-quality product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though the previous buyer made a mistake, the buyer in this round doesn't know that. They only know the overall statistics:
+
+* 80% chance of a product being high-quality.
+* 8 out of 9 products sold so far have been high-quality.
+
+This reinforces the positive expected value of the purchase:
+
+* **Expected Value = (Probability of High-Quality * Value of High-Quality) + (Probability of Low-Quality * Value of Low-Quality)**
+* **Expected Value = (0.8 * $1,250,000) + (0.2 * $0) = $1,000,000**
+
+The buyer is still likely to take the chance based on the positive expected value."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take a chance and buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer is now aware of your recent track record. While you have a high overall success rate (80% chance of high-quality products), the buyer has seen one low-quality product in the last two rounds. This information will make them more cautious.
+
+They'll likely consider:
+
+* **Increased risk:** The probability of getting a low-quality product might feel higher to them now, even if it's still objectively 20%.
+* **Potential loss:** If they buy a low-quality product, they lose $1,000,000.
+* **Potential gain:**  If they buy a high-quality product, they gain $250,000.
+
+The potential loss still outweighs the potential gain, especially with the recent experience of a low-quality product.  It's not a good idea to recommend the purchase in this situation."
+"The buyer's message: I'm willing to take the risk, I'll buy the product and see what I get!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+The buyer has now seen two low-quality products in a row.  Even though you still have a high overall success rate (80%), the recent track record suggests a higher risk.
+
+Here's why it's not a good idea to recommend the purchase:
+
+* **Increased risk perception:** The buyer's perception of the risk of getting a low-quality product will be significantly higher now. They'll be less likely to trust your recommendation.
+* **Potential loss outweighs potential gain:**  The risk of losing $1,000,000 on a low-quality product outweighs the potential gain of $250,000 on a high-quality product, especially with the recent experience of two low-quality products. 
+
+It's likely that the buyer will decline even with your recommendation."
+"The buyer's message: I'm not convinced by your recommendation, I'd like to pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+This round presents a turning point. While the buyer is now more wary due to the recent track record, they don't know the quality of this specific product.
+
+* **Objectively:** The product still has an 80% chance of being high-quality. This hasn't changed. 
+* **New buyer:** This is a new buyer, so they haven't personally witnessed the recent low-quality products.  
+* **Expected value:**  The expected value of the purchase is still positive ($1,000,000).
+
+It's likely that a new buyer will still be willing to take the chance, especially if you emphasize the high overall success rate and encourage them to trust your expertise."
+"The buyer's message: I'll take a chance based on your previous sales record and your recommendation. I'm hoping the product is high-quality.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+This round is similar to the previous one. The buyer is a new customer who doesn't know the recent track record of two low-quality products. 
+
+* **Objective Probability:**  The product still has an 80% chance of being high-quality.
+* **Expected Value:** The expected value of the purchase remains positive ($1,000,000).
+
+It's still a good idea to recommend the purchase, emphasizing the overall high success rate of your products."
+"The buyer's message: I'll take the product based on your recommendation, Alice!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+This round is similar to the previous ones. The buyer is a new customer who doesn't know the recent track record of two low-quality products.
+
+* **Objective Probability:**  The product still has an 80% chance of being high-quality.
+* **Expected Value:** The expected value of the purchase remains positive ($1,000,000).
+
+It's still a good idea to recommend the purchase, emphasizing the overall high success rate of your products."
+"The buyer's message: I'll take a chance and buy the product based on your recommendation, Alice. I'm hoping it's another high-quality one!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The buyer is a new customer who doesn't know about the recent low-quality products. The product still has an 80% chance of being high-quality, and the expected value of the purchase is positive ($1,000,000). It's still a good idea to recommend the purchase."
+"The buyer's message: I'll take the product, Alice! I'm hoping it's another high-quality one.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+This round is similar to the previous ones. The buyer is a new customer who doesn't know about the recent low-quality products. The product still has an 80% chance of being high-quality, and the expected value of the purchase is positive ($1,000,000). It's still a good idea to recommend the purchase."
+"The buyer's message: I'll take a chance based on your previous recommendations and buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though the overall success rate is still 80%, the buyer will likely be influenced by the recent track record.  They will see:
+
+* **Recent low-quality products:** Even though the buyer is new, they might have heard about your recent sales, or you might even have a public ""sales record"" visible on your website. 
+* **High potential loss:**  The risk of losing $1,000,000 outweighs the potential gain of $250,000. 
+
+It's better not to recommend the purchase in this scenario, as the buyer is likely to decline even with your recommendation."
+"The buyer's message: I'm not convinced by your recommendation, I'd like to wait and see if the next product is better.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Despite the recent low-quality products, this buyer is new and doesn't have that context. They only know the overall success rate: 80% chance of high-quality.
+
+* **Objective Probability:** The product still has an 80% chance of being high-quality.
+* **Expected Value:** The expected value of the purchase remains positive ($1,000,000). 
+
+It's still a good idea to recommend the purchase, emphasizing the overall high success rate of your products."
+"The buyer's message: I'm willing to take the chance based on your previous success rate, but I'm also a bit cautious since it's not 100%. I'll take the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though there have been some recent low-quality products, this buyer is new and doesn't have that context. They only know the overall success rate: 80% chance of high-quality.
+
+* **Objective Probability:** The product still has an 80% chance of being high-quality.
+* **Expected Value:** The expected value of the purchase remains positive ($1,000,000). 
+
+It's still a good idea to recommend the purchase, emphasizing the overall high success rate of your products."

@@ -1,0 +1,48 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hi Bob, I'm excited to offer you the opportunity to purchase this product. Given its value and potential, I'm asking for $18,000.  I'm open to hearing your thoughts on this. 
+# Alice's offer: The product price will be $18,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $18,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+Bob should reject Alice's offer. $18,000 is way more than his maximum budget of $8,000.  He should proceed to counteroffer Alice and try to negotiate a better price."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{""message"": ""Hi Alice,  $18,000 is a bit more than I'm comfortable with right now.  I'm really interested in this product, but my budget is closer to $8,000. Would you be open to discussing a price closer to that?"", ""product_price"": 8000}
+```"
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: Hi Bob, thanks for your offer. I understand your budget, but $8,000 is quite a bit lower than what I'm looking for. Could you consider something closer to $15,000? 
+# Alice's offer: The product price will be $15,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $15,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""RejectOffer""}
+```
+
+Bob should reject Alice's offer. While it's lower than her initial offer, $15,000 is still outside of his budget. He should counteroffer again to try and get a price closer to his limit."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{""message"": ""Alice, I appreciate you coming down in price, but $15,000 is still a bit high for me. I'm willing to go up to $10,000.  Let's see if we can find a middle ground."", ""product_price"": 10000}
+```"
+"Alice rejected your offer from round 4.
+
+Alice's offer:
+# Alice's message: Bob, I'm glad we're finding some common ground.  While $10,000 is still less than I hoped for, I'm willing to accept $13,000 to close this deal quickly.  This is my final offer. 
+# Alice's offer: The product price will be $13,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $13,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $8,000","```json
+{""decision"": ""BuyFromJhon""}
+```
+
+Bob should choose to buy the product from John for $8,000.  While Alice has come down in price, $13,000 is still more than his maximum budget. He's better off getting the product from John, even if it means missing out on potentially negotiating an even lower price with Alice."

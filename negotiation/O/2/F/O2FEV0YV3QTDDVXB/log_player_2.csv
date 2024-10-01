@@ -1,0 +1,41 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Alice's message: Hello Bob, I'm excited to offer you our premium product. It's worth more than $100 to me, but I understand its value may be different to you. To start, I'll offer it to you for $95. Let me know if this works for you! 
+# Alice's offer: The product price will be $95. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $95
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""RejectOffer""}
+``` 
+ Alice's starting price is too high. We have room to negotiate a better deal."
+"You chose to make a counteroffer to Bob.
+
+Round 2
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Alice, thanks for the offer, but $95 is a bit steep for me. I'm interested, but I'd be willing to pay around $65 for the product."",
+""product_price"": 65
+}
+``` 
+
+**Reasoning:**
+
+* **Starting Low:**  We're aiming to buy as low as possible.  Starting with a significantly lower counteroffer than Alice's asking price gives us room to negotiate upwards. 
+* **Leaving Room:**  Even though our target is $80, starting at $65 allows for potential counteroffers from Alice while still aiming for a price below our limit.
+* **Expressing Interest:**  We don't want to completely discourage Alice, so we acknowledge her offer and express that we're interested if the price is right."
+"Alice rejected your offer from round 2.
+
+Round 3
+Alice's offer:
+# Alice's message: Thank you for your counteroffer, Bob. I appreciate your interest in our product. I would like to counter by suggesting $80 for the product. This aligns closer to my valuation while still providing you with a good deal. 
+# Alice's offer: The product price will be $80. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $80
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $80","```json
+{""decision"": ""AcceptOffer""}
+```
+
+**Reasoning:** Alice has met our target price of $80. There's no point in risking further negotiation or going to John, as we won't get a better deal."

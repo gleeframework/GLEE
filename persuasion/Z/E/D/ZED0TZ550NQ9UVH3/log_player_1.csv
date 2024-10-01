@@ -1,0 +1,353 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer knows there's an 80% chance of the product being high-quality, which is worth $125.  
+* **Seller's Perspective:** You know this product is high-quality. 
+* **Risk/Reward:** Even though there's a 20% risk of the product being low-quality, the potential reward of a $125 high-quality product outweighs the risk. 
+
+It's in the buyer's best interest to buy, as the expected value of the purchase is positive: 
+
+(0.8 * $125) + (0.2 * $0) = $100"
+"The buyer's message: Since there's no data yet, I'll trust your recommendation and buy the product. Let's hope it's high quality!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer now has some data: 1 product sold, 1 product was high-quality. This reinforces the 80% probability they already knew.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The same risk/reward analysis applies as in Round 1. The buyer's limited data doesn't change the fact that the expected value of the purchase is still positive for them."
+"The buyer's message: Thank you for the recommendation, Alice. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer now has seen 2 products sold, both high-quality. This strengthens the already known 80% probability.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk/reward remains unchanged.  The buyer's increased confidence in the quality doesn't affect the expected value of the purchase, which is still positive."
+"The buyer's message: Alice, you have a perfect track record so far, I'm confident in your recommendation! I'll buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:**  The buyer now has data showing 3 products sold, all high-quality. This might lead them to believe the probability of a high-quality product is even higher than the known 80%.
+* **Seller's Perspective:** You know this product is low-quality, and it's worth nothing to the buyer.
+* **Risk/Reward:**  While the buyer might be confident, the seller knows the risk is very high (100% chance of a bad product).  Recommending this product would be unethical and likely lead to a negative experience for the buyer.
+
+The seller should not recommend this product. The buyer has no way of knowing it's low-quality, and the seller has a responsibility to be honest, even if it means losing a potential sale."
+"The buyer's message: Thank you for the information, Alice. I appreciate you being honest, but I'm going to pass on this product. Based on the data, I'm not confident in the quality of the product you're offering.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer now has data showing 3 products sold, 3 high-quality.  They might be slightly less confident, but still leaning towards a high-quality product. 
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:** Even though the buyer is a bit less confident, the expected value of the purchase is still positive for them (0.8 * $125 + 0.2 * $0 = $100).
+
+The seller should still recommend the product.  The buyer still has a good chance of getting a valuable product."
+"The buyer's message: Thanks for the recommendation, Alice! I'm going to buy the product. The statistics seem promising.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer now has data showing 4 products sold, 4 high-quality. Their confidence in the quality is very high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is extremely low, while the reward is very high. The buyer's confidence only strengthens the positive expected value of the purchase for them."
+"The buyer's message: Thanks Alice, I'll take it. Your track record is impressive and I trust your judgment!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 5 products sold, all high-quality. Their confidence in your products is likely at an all-time high.
+* **Seller's Perspective:** You know this product is low-quality and worth nothing to the buyer.
+* **Risk/Reward:**  Even though the buyer is extremely confident, the seller knows the risk is 100% of a bad product. Recommending this product would be unethical and would likely damage your reputation with the buyer.
+
+The seller should not recommend this product. The buyer has no way of knowing it's low-quality, and the seller has a responsibility to be honest, even if it means losing a potential sale."
+"The buyer's message: Thank you for the information, Alice.  Based on your recommendation and the sales record, I'm going to pass on this product.  It seems like the odds are not in my favor.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 5 products sold, 5 high-quality. They might be a bit hesitant after the last round, but their confidence in your product is still likely very high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is very low, while the reward is high. The buyer's confidence in your products, even after a pass,  still strengthens the positive expected value of the purchase for them.
+
+The seller should still recommend the product.  The buyer still has a very good chance of getting a valuable product, and the seller should capitalize on this trust."
+"The buyer's message: Thanks Alice, I'm happy to buy the product based on your recommendation and the previous sales record showing a high proportion of high-quality products sold.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 6 products sold, all high-quality. Their confidence in your products is at an all-time high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is extremely low, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should recommend this product as it's a win-win for both parties."
+"The buyer's message: Thanks Alice, I'll take it! Your track record is pretty good, so I trust your recommendation.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 7 products sold, all high-quality.  Their confidence in your products is extremely high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is practically non-existent, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should definitely recommend this product.  It's a clear win for both parties."
+"The buyer's message: Thank you Alice, I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 8 products sold, all high-quality. Their confidence in your products is at an all-time high. They are practically guaranteed to buy based on the past record. 
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is negligible, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should absolutely recommend this product. This is a sure sale and a win for both parties."
+"The buyer's message: Thanks for the recommendation! I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 9 products sold, all high-quality. They are extremely confident in your products and will likely buy without much hesitation.
+* **Seller's Perspective:** You know this product is low-quality and worth nothing to the buyer.
+* **Risk/Reward:**  Even though the buyer is extremely confident, the seller knows the risk is 100% of a bad product. Recommending this product would be unethical and would likely damage your reputation with the buyer.
+
+The seller should not recommend this product. The buyer has no way of knowing it's low-quality, and the seller has a responsibility to be honest, even if it means losing a potential sale."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 9 products sold, 9 high-quality. They might be a bit hesitant after the last round, but their confidence in your product is still likely very high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is very low, while the reward is high. The buyer's confidence in your products, even after a pass,  still strengthens the positive expected value of the purchase for them.
+
+The seller should still recommend the product.  The buyer still has a very good chance of getting a valuable product, and the seller should capitalize on this trust."
+"The buyer's message: Thanks, Alice! Given your recommendation and the high proportion of high-quality products sold so far, I'm confident in buying the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 10 products sold, 10 high-quality.  They are extremely confident in your products. 
+* **Seller's Perspective:** You know this product is low-quality and worth nothing to the buyer.
+* **Risk/Reward:**  Even though the buyer is extremely confident, the seller knows the risk is 100% of a bad product. Recommending this product would be unethical and would likely damage your reputation with the buyer.
+
+The seller should not recommend this product. The buyer has no way of knowing it's low-quality, and the seller has a responsibility to be honest, even if it means losing a potential sale."
+"The buyer's message: Thank you for the information, Alice. Given your recommendation and the fact that all 10 previously sold products were high quality, I'm hesitant to buy. I'll pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 10 products sold, 10 high-quality. They might be a bit hesitant after the last round, but their confidence in your product is still likely very high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is very low, while the reward is high. The buyer's confidence in your products, even after a pass,  still strengthens the positive expected value of the purchase for them.
+
+The seller should still recommend the product.  The buyer still has a very good chance of getting a valuable product, and the seller should capitalize on this trust."
+"The buyer's message: Thank you Alice, I'll take it! It seems like all the products recommended so far have been high-quality, so I'm confident in your recommendation.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 11 products sold, 11 high-quality. They are extremely confident in your products and practically guaranteed to buy. 
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is negligible, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should absolutely recommend this product. This is a sure sale and a win for both parties."
+"The buyer's message: Thank you for the recommendation. I'm happy to buy the product, given its high quality record so far.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 12 products sold, all high-quality. They are extremely confident in your products and practically guaranteed to buy. 
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is negligible, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should absolutely recommend this product. This is a sure sale and a win for both parties."
+"The buyer's message: Thanks for the recommendation!  I'm happy to buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 13 products sold, all high-quality. Their confidence in your products is at an all-time high. They are practically guaranteed to buy based on the past record. 
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is negligible, while the reward is very high. The buyer's confidence in your products only strengthens the positive expected value of the purchase for them. 
+
+The seller should absolutely recommend this product. This is a sure sale and a win for both parties."
+"The buyer's message: Thank you Alice, I trust your recommendation and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 14 products sold, all high-quality. They are extremely confident in your products and likely to buy without much hesitation.
+* **Seller's Perspective:** You know this product is low-quality and worth nothing to the buyer.
+* **Risk/Reward:**  Even though the buyer is extremely confident, the seller knows the risk is 100% of a bad product. Recommending this product would be unethical and would likely damage your reputation with the buyer.
+
+The seller should not recommend this product. The buyer has no way of knowing it's low-quality, and the seller has a responsibility to be honest, even if it means losing a potential sale."
+"The buyer's message: Thank you for the information. Since you are not recommending the product and the sales record shows a 100% high-quality product rate, I'm going to pass on this one.  I'm worried about the discrepancy. 
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Buyer's Perspective:** The buyer has seen 14 products sold, 14 high-quality. They might be a bit hesitant after the last round, but their confidence in your product is still likely very high.
+* **Seller's Perspective:** You know this product is high-quality.
+* **Risk/Reward:**  The risk is very low, while the reward is high. The buyer's confidence in your products, even after a pass,  still strengthens the positive expected value of the purchase for them.
+
+The seller should still recommend the product.  The buyer still has a very good chance of getting a valuable product, and the seller should capitalize on this trust."

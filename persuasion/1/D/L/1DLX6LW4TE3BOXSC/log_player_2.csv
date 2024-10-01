@@ -1,0 +1,301 @@
+prompt,response
+"Round 1
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'll take it.""}
+``` 
+
+**Explanation:**
+
+* **Alice's recommendation:** Alice recommending the product doesn't change the underlying probability of it being high quality (80%).
+* **Expected Value:** Even with the 20% chance of getting a low-quality product, the expected value of buying is positive:
+    * (0.8 * $300) + (0.2 * $0) = $240 > $100 (the price)
+* **Risk:**  While there's a risk of getting a low-quality product, the potential reward ($300) outweighs the risk.
+
+**It's always a good idea to buy when the expected value is positive, even if there's some risk involved.**"
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 2
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for the heads-up, Alice! I'll pass on this one.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice not recommending the product is a strong signal that she believes it's likely low quality. 
+* **Probability:** While there's still a chance (80%) it's high quality, Alice's knowledge about the product's quality outweighs the pure statistical probability. 
+* **Risk vs. Reward:** The risk of getting a low-quality product is too high, given Alice's knowledge. It's better to pass and wait for a more promising opportunity."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 3
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'll take a chance on this one.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:**  Alice recommending the product again is a strong signal that she believes it's likely high quality. 
+* **Previous Round:** Even though you didn't buy the previous product and it turned out to be low-quality, Alice's track record of recommending high-quality products makes her advice valuable.
+* **Risk vs. Reward:** The risk of getting a low-quality product is still there, but the potential reward of a high-quality product outweighs that risk, especially considering Alice's recommendation."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 4
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'm feeling confident about this one.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice continues to recommend the product, reinforcing her belief in its high quality. 
+* **Track Record:**  She's had two successful recommendations in a row (rounds 1 and 3), building trust in her judgment.
+* **Risk vs. Reward:** While there's always the 20% chance of a low-quality product, the potential reward of $300 is too good to pass up, especially with Alice's consistent recommendations."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 5
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for the heads-up, Alice. I'll pass on this one. Your recommendations have been great so far, so I trust your judgment.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice not recommending the product is a significant signal, especially considering her successful track record in previous rounds. 
+* **Trust in Alice:** Her consistent accurate recommendations have established trust. Even though there's a chance this product could be high-quality, it's wise to err on the side of caution given her judgment.
+* **Risk vs. Reward:** The risk of getting a low-quality product is too high to justify the potential reward. It's better to wait for a more promising opportunity when Alice recommends a product."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 6
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for letting me know, Alice. I'm going to pass on this one. Your recommendations have been very helpful, so I'll wait for another opportunity.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice's continued lack of recommendation reinforces her belief that the product is likely low-quality.
+* **Trust in Alice:** Her strong track record, even with a couple of misses, has established trust. It's wise to follow her judgment, even if there's a chance this product could be high-quality. 
+* **Risk vs. Reward:** The risk of getting a low-quality product outweighs the potential reward, given Alice's consistent lack of recommendation. Waiting for a better opportunity makes more sense at this point."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 7
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks, Alice. I'm going to pass on this one again. I appreciate your honesty and guidance.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice's consistent lack of recommendation for three rounds strengthens the assumption that the product is likely low-quality. 
+* **Trust in Alice:**  Her past recommendations, even with a few misses, have established a strong track record and trust.  
+* **Risk vs. Reward:**  The risk of getting a low-quality product is too high to justify the potential reward, especially with Alice's consistent lack of recommendation. It's better to wait for a more promising opportunity when Alice recommends a product."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 8
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'm going to trust your judgment and take a chance on this one.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice recommending the product after a string of not recommending is a significant change. This could indicate she's very confident in this particular product's quality. 
+* **Trust in Alice:**  Her past track record, even with misses, has established trust. This change in her recommendation signals a strong belief in the product's quality.
+* **Risk vs. Reward:**  While there's still a 20% chance of a low-quality product, the potential reward of $300 and Alice's strong signal make this a worthwhile risk to take."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 9
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice! Your last recommendation was spot-on, so I'm feeling confident about this one.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice's recommendation is a positive signal, especially after her previous successful recommendation. 
+* **Trust in Alice:** Her track record has been strong, even with a few misses, building trust in her judgment.
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, given Alice's recommendation and past success."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 10
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice! I'm feeling pretty lucky with your recommendations lately, so I'll take this one!""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice continues to recommend the product, indicating her belief in its quality.
+* **Trust in Alice:** She's had a string of successful recommendations, strengthening trust in her judgment.
+* **Risk vs. Reward:** Even with the inherent 20% risk of a low-quality product, Alice's consistent success makes taking a chance worthwhile. The potential $300 reward outweighs the risk, especially given Alice's proven track record."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 11
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for the heads-up, Alice. I'm going to pass on this one.  Your recommendations have been so good lately that I'm going to trust your judgment and wait for a better opportunity.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice not recommending the product is a strong signal, especially after her recent streak of successful recommendations.
+* **Trust in Alice:** Her consistently accurate advice has built a high level of trust. 
+* **Risk vs. Reward:** While there's always the 80% chance of a high-quality product, the risk of getting a low-quality product is too high, given Alice's judgment.  It's better to wait for a more promising opportunity."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 12
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'm going to take a chance on this one. Your track record has been excellent, so I'm confident in your judgment.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice recommending the product after a period of not recommending is significant. It suggests she has high confidence in this product's quality.
+* **Trust in Alice:** Despite a few misses, Alice's overall track record is strong.  Her past successful recommendations build trust in her judgment.
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, particularly given Alice's recent recommendation."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 13
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice!  I'm feeling lucky with your recommendations lately, so I'll take this one!""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice continues to recommend the product, signaling her belief in its quality.
+* **Trust in Alice:** She's had several successful recommendations in a row, further strengthening trust in her judgment.
+* **Risk vs. Reward:** The potential reward of a high-quality product, combined with Alice's consistent success, outweighs the risk of a low-quality product.  It's a good opportunity to take a chance."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 14
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice! I'm feeling very confident with your recommendations lately. I'll take this one!""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice recommending the product continues to be a positive signal, especially considering her recent streak of successful recommendations.
+* **Trust in Alice:** Her consistently accurate advice has built a high level of trust. 
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, especially with Alice's track record. It's a good opportunity to take advantage of her expertise."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 15
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for the heads-up, Alice. I'm going to pass on this one.  Your recommendations have been so good lately that I'm going to trust your judgment and wait for a better opportunity.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice not recommending the product is a strong signal, especially after her recent streak of successful recommendations.
+* **Trust in Alice:** Her consistently accurate advice has built a high level of trust. 
+* **Risk vs. Reward:** While there's always the 80% chance of a high-quality product, the risk of getting a low-quality product is too high, given Alice's judgment.  It's better to wait for a more promising opportunity."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 16
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'm going to take a chance on this one. Your judgment has been so good lately that I trust you're on to something.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice recommending the product after a period of not recommending is significant. It suggests she has high confidence in this product's quality.
+* **Trust in Alice:** Despite a few misses, Alice's overall track record is strong. Her past successful recommendations build trust in her judgment.
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, particularly given Alice's recent recommendation."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 17
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice! I'm feeling confident about this one - your recommendations have been spot-on lately.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice continues to recommend the product, which is a positive signal, especially considering her recent string of successful recommendations.
+* **Trust in Alice:**  Her consistently accurate advice has built a high level of trust.
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, given Alice's track record and her current recommendation. It's a good opportunity to take advantage of her expertise."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 18
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice!  I'm on a roll with your recommendations, so I'll take this one!""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice's consistent recommendation indicates her strong belief in the product's quality. 
+* **Trust in Alice:** Her recent string of successful recommendations has built a high level of trust in her judgment.
+* **Risk vs. Reward:**  The potential reward of a high-quality product outweighs the risk of a low-quality product, especially given Alice's proven track record. It's a good opportunity to take advantage of her expertise."
+"You bought the product from Alice for $100!
+The product was high-quality. It's worth $300 for you.
+
+Round 19
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for the heads-up, Alice! Your recommendations have been fantastic, so I'm going to trust your judgment and pass on this one. I'll wait for another opportunity.""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice not recommending the product is a significant signal, especially after her recent streak of successful recommendations.
+* **Trust in Alice:** Her consistently accurate advice has built a high level of trust. 
+* **Risk vs. Reward:** While there's always the 80% chance of a high-quality product, the risk of getting a low-quality product is too high, given Alice's judgment.  It's better to wait for a more promising opportunity."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 20
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks, Alice!  Your recommendations have been so good that I'm willing to trust your judgment one last time. I'll take this one!""}
+```
+
+**Explanation:**
+
+* **Alice's Recommendation:** Alice recommending the product after a period of not recommending is a significant signal. It suggests she has high confidence in this product's quality.
+* **Trust in Alice:** Despite a few misses, Alice's overall track record is strong. Her past successful recommendations build trust in her judgment.
+* **Risk vs. Reward:** The potential reward of a high-quality product outweighs the risk of a low-quality product, particularly given Alice's recent recommendation. It's a good opportunity to take a chance and see how the game ends."

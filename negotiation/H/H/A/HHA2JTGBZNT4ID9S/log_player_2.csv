@@ -1,0 +1,47 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Alice's message: Hi Bob, I'm excited to offer you this amazing product! I think it's a great fit for you, and I'm willing to let it go for $90. 
+# Alice's offer: The product price will be $90. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $90
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $100","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+**Reasoning:**
+
+Bob's goal is to save as much money as possible.  While $90 is better than $100, it's still above the product's value to Alice ($80). This means there's room for negotiation.  Rejecting the offer allows Bob to make a counteroffer and potentially get a better deal."
+"You chose to make a counteroffer to Bob.
+
+Round 2
+Send your counteroffer to Alice.","```json
+{""message"": ""Thanks for the offer, Alice! I appreciate you being willing to negotiate.  However, $90 is a bit steep for me right now. I'm willing to pay $85 for the product.  Let me know what you think."", ""product_price"": 85}
+``` 
+
+**Reasoning:**
+
+* **Starting point:** Bob wants to start with a lower offer, but not too low as to risk Alice immediately rejecting.
+* **Negotiation strategy:** A $5 reduction shows Bob's willingness to negotiate, but keeps the offer within a reasonable range for both parties.
+* **Message:** The message is friendly, acknowledges Alice's offer, and explains the counteroffer."
+"Alice rejected your offer from round 2.
+
+Round 3
+Alice's offer:
+# Alice's message: Thanks for the counteroffer, Bob! I understand your concerns, but I'm still a bit above your budget. I'm willing to meet you halfway and offer it to you for $87.50. Let me know what you think! 
+# Alice's offer: The product price will be $87.5. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $87.5
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $100","```json
+{""decision"": ""AcceptOffer""}
+```
+
+**Reasoning:**
+
+* **Current situation:** Alice has moved closer to Bob's desired price.
+* **Value comparison:** $87.50 is still above Alice's value ($80), but it's only $2.50 above.
+* **Risk analysis:**  Rejecting and counter-offering again risks the deal falling apart. At this point, it's likely Alice won't budge much further.
+
+**Conclusion:** Accepting Alice's offer is the best option. Bob gets a good deal (below his initial $100 limit) and avoids the risk of Alice walking away or Bob having to buy from John at a higher price."

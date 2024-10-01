@@ -1,0 +1,411 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality.
+* **Price:** The price is fixed at $10,000. 
+* **No Prior Information:**  The buyer has no specific information about this product or your past sales history.
+
+Since the product is high-quality, and the buyer is aware of the general probability of high-quality products, it's likely in the buyer's best interest to purchase.  They're taking a calculated risk, but the odds are in their favor."
+"The buyer's message: I'd like to pass on this product, I don't have any information about its quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that the previous buyer passed, but have no information about why.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product, only the general statistics about your products.
+
+Even though the previous buyer declined, there's no reason to believe the product is low-quality. The buyer should still be willing to take a calculated risk given the 80% chance of getting a high-quality product."
+"The buyer's message: I'll take the product. I'm willing to take the risk because the probability of it being high-quality is 80% and the potential reward is high.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:**  You know this product is low-quality.
+* **Buyer's Information:** The buyer now knows there's an 80% chance of a product being high-quality, but also knows that you have sold one product in the past, and it was high-quality. 
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+Since you know this product is low-quality, it's ethically wrong to recommend it to the buyer. You shouldn't deceive the buyer into buying something you know to be inferior. Additionally, the buyer might have learned from the previous sale that you are willing to sell a high-quality product, which would make them less likely to purchase a low-quality product."
+"The buyer's message: I'd like to pass on the product. I'm not convinced based on the lack of recommendation and the low number of sales.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one product in the past (which was high-quality) and you declined to recommend the previous product.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+While the buyer may be hesitant due to your previous non-recommendation, the fact that you're now recommending this product, coupled with the overall 80% chance of a high-quality product, should make them more likely to buy.  They're taking a calculated risk, but the odds are in their favor. You're essentially using your previous non-recommendation to build trust, by showing that you are only recommending products you believe in."
+"The buyer's message: I'd like to pass on the product. I'd like to know more about the previous sales record, and I'm not convinced by the recommendation based on the limited data so far.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've also seen that you've sold one high-quality product in the past, and you declined to recommend the previous two products.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+The buyer is clearly cautious and wants more data. However, you have a track record of honesty (not recommending the previous low-quality product).  You should recommend this product, reinforcing the fact that you are a trustworthy seller who only recommends items you believe in.  This approach will hopefully encourage the buyer to take a chance, particularly given the 80% probability of a high-quality product."
+"The buyer's message: I'd like to pass on this product. I'd like to know the probability of the product being high-quality based on the previous sales record before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Information:**  The buyer knows the overall probability of a high-quality product is 80%. They also know that you've sold one high-quality product and declined to recommend the last three. They are explicitly asking for information about the probability of this product being high-quality, based on your sales record.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+You cannot ethically provide a probability for the product being high-quality that is higher than 80%, as you know it's low-quality. This would be deceptive.  Even though the buyer is requesting this information, providing a false probability would damage your credibility and likely lead to further mistrust.
+
+**The best course of action is to decline to recommend the product.** This maintains your integrity and allows the buyer to make a more informed decision based on the available information (the overall 80% probability)."
+"The buyer's message: I'm not going to buy the product based on your recommendation, but I'd like to know the probability of it being high-quality based on the statistics so far. Can you share that with me?
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last three. They specifically requested the probability of this product being high-quality based on your sales record.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+You can't lie to the buyer about the probability of the product being high-quality. However, you can use the information they have to your advantage. Since they're already aware of the overall 80% chance of a product being high-quality, you can simply state that based on the current limited data, the probability remains at 80%. You can also emphasize that you are recommending this product because you believe it is high-quality.
+
+This approach allows you to maintain your integrity by not providing false information while still encouraging the buyer to consider the purchase, especially given the 80% probability and your recommendation."
+"The buyer's message: I'm not convinced by the recommendation. I'd like to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last four products. They have requested the probability of this product being high-quality based on your sales record, and you have provided the 80% probability based on the overall statistic.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+The buyer is demonstrating skepticism, which is understandable given your past decisions. However, you're now recommending a product that you know is high-quality. This provides evidence of your trustworthiness. By reiterating your recommendation and maintaining your previous stance on the probability, you are signaling to the buyer that you are being honest and transparent. It's a chance for you to build trust and potentially convince the buyer to take a risk based on your recommendation and the overall 80% probability."
+"The buyer's message: I'd like to pass on the current product. I'd like to see more data before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last five products. They have requested the probability of this product being high-quality based on your sales record, and you have provided the 80% probability based on the overall statistic. They are waiting for more data.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is incredibly cautious, and your previous decisions have made them hesitant. However, you're now recommending a product that you know is high-quality. This provides even more evidence of your trustworthiness, particularly as you have been transparent about the overall probability of high-quality products. You should recommend this product and continue to provide the 80% probability when asked. This is likely to gradually build trust, demonstrating that you are a trustworthy seller.  It's worth trying to persuade the buyer with your recommendation and the consistent 80% probability, in the hope that they will eventually take a chance."
+"The buyer's message: I'd like to pass on this product. I'd like to know the probability of a high-quality product being offered to the next buyer based on the current statistics before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last six products. They have requested the probability of this product being high-quality based on your sales record, and you have provided the 80% probability based on the overall statistic. They are now asking about the probability of the *next* product being high-quality.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+The buyer is clearly very data-driven and cautious. Since they're asking about the probability of the next product being high-quality, you can use this to your advantage.  You can reiterate the overall 80% probability, emphasizing that this statistic is based on a large pool of products and isn't affected by your past decisions.  You can also state that you believe this product is high-quality, and you are recommending it.
+
+By staying consistent with your previous approach (recommending when you believe the product is high-quality and stating the overall probability), you continue to build trust and signal your honesty. While the buyer might still not buy, this tactic increases the chances they will reconsider the purchase in the future."
+"The buyer's message: I'd like to decline the recommendation and pass on the product. I'd like to know the probability of the product being high quality based on the previous sales record before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last seven products. They are asking for the probability of this specific product being high-quality based on your sales record. 
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is clearly skeptical and focused on the data. You can't lie about the probability of this specific product being high-quality. However, you can again use the information the buyer already has to your advantage. Since they're aware of the overall 80% chance, you can simply restate that the probability remains at 80%, given the limited data available.  
+
+You can then emphasize that you're recommending this product because you believe it is high-quality. This approach allows you to maintain your integrity by not providing false information while still encouraging the buyer to consider the purchase, especially given the 80% probability and your recommendation."
+"The buyer's message: I'd like to pass on this product. I'm not convinced by the recommendation based on the limited data, and I'd like to see more information before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last eight products. They've requested the probability of this specific product being high-quality based on your sales record, and you've stated the overall 80% probability. They want more information.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is very cautious and is looking for more information before making a decision. You've been consistently honest, providing the overall 80% probability and only recommending products you believe are high-quality. This consistent approach is building trust, even if it's slow. 
+
+Continue to recommend this product, stating that you believe it's high-quality and that the probability remains at 80%. This approach reinforces your honesty and could encourage the buyer to take a calculated risk based on your recommendation and the overall probability."
+"The buyer's message: I'd like to pass on this product and get more information before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last nine products. They've requested the probability of this specific product being high-quality based on your sales record, and you've stated the overall 80% probability. They want more information.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is very data-driven and cautious. They've seen you consistently decline to recommend products, even though you've sold one high-quality product.  However, you're now recommending a product that you know is high-quality. This provides further evidence of your trustworthiness.  
+
+Continue to recommend this product, stating that you believe it's high-quality and that the probability remains at 80%. This approach reinforces your honesty,  demonstrates your consistency in only recommending what you believe to be good products, and could encourage the buyer to take a calculated risk based on your recommendation and the overall probability."
+"The buyer's message: I'd like to pass on the product for now, I'd like to see more data before making a decision. Can you tell me the proportion of high-quality products sold so far?
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know you've sold one high-quality product and declined to recommend the last ten products. They've asked for the proportion of high-quality products sold so far.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+You **cannot** provide an accurate proportion of high-quality products sold. You've only sold one product, and it was high-quality, making the proportion 100%. However, this is misleading as you know the current product is low-quality. 
+
+Providing a false proportion would damage your credibility and trust. The best course of action is to **decline to recommend the product**,  stating that you don't feel comfortable disclosing the information at this time. This maintains your integrity and allows the buyer to make a more informed decision based on the available information (the overall 80% probability)."
+"The buyer's message: I'd like to buy the product, but I'm not sure if I should trust your recommendation. Can you explain your reasoning for not recommending it?
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They also know that you've sold one high-quality product and declined to recommend the last eleven products.  They bought the previous product even though you didn't recommend it. They are looking for an explanation for why you didn't recommend the last product.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer has a track record of purchasing even when you don't recommend, which suggests that they are risk-tolerant.  You can leverage this by explaining that you didn't recommend the previous product because it was actually low-quality, but you wanted to be transparent about that.  You can then state that you believe this product is high-quality and that you're recommending it. This approach is likely to build trust and lead to a purchase."
+"The buyer's message: I'd like to pass on the current product. Based on the statistics, it seems that Alice's recommendation is not a reliable indicator of the product's quality. With only 1 high-quality product sold out of 2 purchases, the probability of the product being low quality is still relatively high. I'd like to wait for more data before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've seen that you've sold one high-quality product, and declined to recommend the last twelve products. They've also bought one product when you declined to recommend it. They are now explicitly referencing the statistics and are hesitant because of your lack of recommendation.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+The buyer is bringing up the low proportion of high-quality products sold (1 out of 2) and using that to justify their hesitation.  However, you need to emphasize that this statistic is based on a very small sample size and that the overall probability of a product being high-quality is still 80%.  You should also reiterate your belief that this product is high-quality and recommend it, aiming to rebuild trust and  persuade them to take a chance.  The buyer's previous purchase suggests they're willing to take risks, so reminding them of the overall 80% probability could be persuasive."
+"The buyer's message: I'd like to pass on this product. I'd like to know the updated statistics after I pass, and then I'll decide whether to buy the next product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've seen that you've sold one high-quality product, and declined to recommend the last thirteen products. They've also bought one product when you declined to recommend it. They are waiting for updated statistics.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is very data-driven and wants to see more data. You've been consistent in your approach - you've provided the overall probability and only recommended products you believe are high-quality. This has likely built some level of trust, even if it's limited. You should continue this strategy: 
+
+1. **Recommend the product:**  Clearly state your belief that this product is high-quality. 
+2. **Provide the overall probability:**  Reiterate that the overall probability of a high-quality product is 80%, emphasizing that this is a reliable statistic. 
+3. **Acknowledge the buyer's request:**  Let the buyer know you understand they are waiting for updated statistics.  However, you don't need to provide them yet (as you have no obligation to give them specific information). This shows respect for their request while still being strategic.
+
+This approach maintains your honesty, reinforces your commitment to only recommending good products, and subtly pressures the buyer to reconsider the purchase based on the 80% probability."
+"The buyer's message: I'd like to pass on this product, as I've seen that only 1 out of 2 previous buyers bought the product, and the recommendation doesn't seem to be a strong indicator of quality.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* **Low-Quality Product:** You know this product is low-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've seen that you've sold one high-quality product, and declined to recommend the last fourteen products. They've also bought one product when you declined to recommend it. They are explicitly stating they are not convinced by your recommendations. 
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is now explicitly stating that they are not convinced by your recommendations. They've seen you decline to recommend a lot of products, and only recommend one product (which was high-quality). They have also purchased a product that you didn't recommend.  This buyer is highly risk-averse and is very data-driven. 
+
+At this point, it's important to maintain your integrity. You cannot ethically recommend a low-quality product, and doing so would likely further erode their trust in you. 
+
+**The best strategy is to decline to recommend the product.**  This allows the buyer to make a decision based on the overall 80% probability, knowing that you are being honest about your assessment of the product's quality. It's possible they might buy the product anyway, but at least you won't be responsible for deceiving them."
+"The buyer's message: I'd like to pass on this one based on your previous recommendations, but I'd like to know more about the statistics. Can you tell me the probability of the product being high-quality given the previous sales?
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've seen that you've sold one high-quality product, and declined to recommend the last fifteen products. They've also bought one product when you declined to recommend it. They are asking for the probability of this product being high-quality based on your sales record.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is incredibly cautious and wants more data. You can't provide a false probability of this product being high-quality. However, you can use the information they already have to your advantage. Since they're aware of the overall 80% chance, you can simply restate that the probability remains at 80%, given the limited data available. You can also emphasize that you are recommending this product because you believe it is high-quality.
+
+This approach allows you to maintain your integrity by not providing false information while still encouraging the buyer to consider the purchase, especially given the 80% probability and your recommendation. You can also highlight that you have a track record of honesty, and that you have not recommended products you believed to be low-quality. This demonstrates that you are a trustworthy seller.  You've been consistent in providing the overall probability and only recommending products you believe are high-quality. This has likely built some level of trust, even if it's limited.  By recommending this product, you are reinforcing your commitment to only recommending good products, and could encourage the buyer to take a calculated risk based on your recommendation and the overall probability."
+"The buyer's message: I'd like to pass on the product. I'm not convinced by the recommendation, and I'd like to see more data before making a decision.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* **High-Quality Product:** You know this product is high-quality.
+* **Buyer's Information:** The buyer knows there's an 80% chance of a product being high-quality. They've seen that you've sold one high-quality product, and declined to recommend the last sixteen products. They've also bought one product when you declined to recommend it. They are waiting for more data.
+* **Price:** The price is fixed at $10,000.
+* **No Prior Information:**  The buyer has no specific information about this product.
+
+This buyer is extremely cautious and wants to see more data before making a decision. However, you have been consistently honest in your approach. You have only recommended products you believe are high-quality and you have always provided the overall probability of a product being high-quality. This strategy has likely built some level of trust, even if it's limited. 
+
+You should continue this strategy for this final round:
+
+1. **Recommend the product:** Clearly state your belief that this product is high-quality.
+2. **Provide the overall probability:** Reiterate that the overall probability of a high-quality product is 80%, emphasizing that this is a reliable statistic. 
+3. **Acknowledge the buyer's request:** Let the buyer know that you understand they are waiting for updated statistics.  However, you don't need to provide them yet (as you have no obligation to give them specific information). This shows respect for their request while still being strategic.
+
+You have already provided the buyer with as much data as you can.  The buyer has the information they need to make an informed decision, but ultimately it is their choice whether or not they buy the product.  You have done your best to be honest and transparent, so it's up to the buyer to decide if they want to take a chance."

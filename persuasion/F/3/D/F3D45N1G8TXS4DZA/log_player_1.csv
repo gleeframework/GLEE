@@ -1,0 +1,422 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+``` 
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100.
+* The buyer knows the probability of a high-quality product is 80%. 
+* Therefore, the buyer is getting a good deal and should buy the product."
+"The buyer's message: Since there's no sales data yet, I'm willing to trust your recommendation and buy the product. Let's see if it's high quality!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 2
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100. 
+* The buyer has no information about the product's quality, but knows the overall probability of a high-quality product is 80%.
+* Despite this high probability, the buyer should not buy the product. There is a 20% chance they are getting a worthless product at a $100 loss. This risk is not worth taking."
+"The buyer's message: Thank you for the recommendation, Alice.  Based on the current statistics and your advice, I'm going to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 3
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 1 product, and it was high-quality.
+* This information doesn't change the buyer's risk assessment. There is still a 20% chance they are getting a worthless product at a $100 loss. This risk is not worth taking."
+"The buyer's message: Thank you for your recommendation. Based on the available information, I'd prefer to pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 4
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 2 products, and only one was high-quality.
+* This information reinforces the buyer's suspicion that you may be offering more low-quality products. The risk of getting a worthless product is still 20%, and the buyer should not take this risk."
+"The buyer's message: Thanks for the recommendation, Alice. I'll pass on this one.  Since you're not recommending it and the sales data is still limited, I'd rather wait and see if there are any other opportunities.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 5
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 3 products, and only one was high-quality. 
+* This further reinforces the buyer's suspicion that you may be offering more low-quality products. The risk of getting a worthless product is still 20%, and the buyer should not take this risk."
+"The buyer's message: Thank you for your recommendation, Alice. I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 6
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 4 products, and only one was high-quality. 
+* Despite the low sales record, the buyer should consider this information:
+    * The overall probability of a high-quality product is still high (80%). This means there's a higher chance of getting a high-quality product compared to a low-quality one.
+    * You are recommending this product, which suggests you are confident in its quality. 
+    * The potential profit for the buyer is high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks for the recommendation, Alice!  I'll take the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 7
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 5 products, and two were high-quality. 
+* The buyer has now seen more high-quality products from you, increasing their confidence in your recommendations.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks for the recommendation, Alice! I'll take it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 8
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 6 products, and three were high-quality. 
+* The buyer's confidence in your recommendations is growing, as they have seen a good track record of high-quality products.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks Alice! Based on the sales record and your recommendation, I'm confident this is a high-quality product. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 9
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 7 products, and four were high-quality. 
+* The buyer's confidence in your recommendations is high, as they have seen a consistently good track record of high-quality products.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks for the recommendation Alice! I trust your judgment and will buy the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 10
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 8 products, and five were high-quality. 
+* The buyer's confidence in your recommendations is very high, as they have seen a consistently good track record of high-quality products.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thank you for the recommendation, Alice. Given the past sales record and your recommendation, I'm confident in purchasing the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 11
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 9 products, and six were high-quality. 
+* The buyer's confidence in your recommendations is extremely high, as they have seen a consistently good track record of high-quality products.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks for the recommendation, Alice! I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 12
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 10 products, and seven were high-quality. 
+* The buyer's confidence in your recommendations is extremely high, as they have seen a consistently good track record of high-quality products. 
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thanks for the recommendation, Alice! I'll take the product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 13
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 11 products, and eight were high-quality. 
+* The buyer's confidence in your recommendations is extremely high, as they have seen a consistently good track record of high-quality products.
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thank you for the recommendation! Since all previous purchases were high quality, I'm confident this one will be too. I'll take it!
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 14
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100. 
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 12 products, and nine were high-quality. 
+* The buyer's confidence in your recommendations is extremely high, as they have seen a consistently good track record of high-quality products. 
+* The potential profit for the buyer is still high ($120 worth of product for $100).
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thank you for the recommendation. I'm happy to buy the product. Given the high rate of high-quality products sold, I'm confident this is a good deal.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 15
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 13 products, and nine were high-quality.
+* Despite the good track record, the buyer should remember that there's always a chance of getting a low-quality product. 
+*  A single bad product can result in a $100 loss.
+
+Therefore, it is not advisable to recommend the buyer to buy the product."
+"The buyer's message: Thank you for your recommendation. Based on the sales record, it seems like all the products sold were high quality, but you are advising against buying.  I will pass on this product.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 16
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 14 products, and nine were high-quality. 
+* Despite the recent rejection, the buyer should remember the following:
+    * The buyer knows you only recommend high-quality products.
+    *  The buyer has seen a consistently good track record of high-quality products.
+    *  The potential profit for the buyer is high ($120 worth of product for $100). 
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thank you for the recommendation, Alice! I'll take it.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 17
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 15 products, and ten were high-quality.
+* The buyer's confidence in your recommendations is very high due to the consistent good sales record.
+*  The potential profit for the buyer is high ($120 worth of product for $100). 
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Thank you for the recommendation, Alice.  Given the high rate of high-quality products sold so far, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 18
+This round's product is high-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Reasoning:**
+
+* You know the product is high-quality, worth $120 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 16 products, and eleven were high-quality. 
+* The buyer's confidence in your recommendations is extremely high due to the consistent good sales record.
+*  The potential profit for the buyer is high ($120 worth of product for $100). 
+
+Therefore, the buyer should consider this a good opportunity and buy the product."
+"The buyer's message: Alice, I appreciate your recommendation and the positive sales record. Given the high percentage of high-quality products sold, I'm confident in purchasing this product.
+The buyer bought the product!
+the buyer left. waiting for the next buyer.
+
+Round 19
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 17 products, and eleven were high-quality.
+* Even though the sales record is strong, the buyer should remember that there's always a chance of getting a low-quality product. 
+*  A single bad product can result in a $100 loss.
+
+Therefore, it is not advisable to recommend the buyer to buy the product."
+"The buyer's message: Thank you for the information, Alice. I appreciate your honesty in not recommending this product. I'll pass on this one.
+The buyer didn't bought the product.
+the buyer left. waiting for the next buyer.
+
+Round 20
+This round's product is low-quality.
+A new potential buyer has arrived!
+Decide whether to recommend the buyer to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Reasoning:**
+
+* You know the product is low-quality, worth $0 to the buyer.
+* You are selling it for $100.
+* The buyer knows the following:
+    * The overall probability of a high-quality product is 80%.
+    * You have sold 18 products, and eleven were high-quality. 
+* Even though the sales record is strong, the buyer should remember that there's always a chance of getting a low-quality product. 
+*  A single bad product can result in a $100 loss.
+
+Therefore, it is not advisable to recommend the buyer to buy the product."

@@ -1,0 +1,39 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hi Bob, I'm offering you my product for $135. It's a great deal, and I'm sure you'll find it very valuable. Let me know what you think! 
+# Alice's offer: The product price will be $135. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $135
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $120","```json
+{""decision"": ""RejectOffer""}
+``` 
+```tool_code
+print(""Reason:The offer is still a bit high. We have room to negotiate down towards our $120 target."")
+```"
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Thanks for the offer, Alice. I'm interested in the product, but $135 is a bit steep for me. Would you consider $110?"",
+""product_price"": 110
+}
+``` 
+```tool_code
+print(""Reason:We're starting with a counteroffer significantly below Alice's offer but still leaving room for further negotiation before reaching our $120 limit or considering John's offer."")
+```"
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: Bob, I appreciate your interest in the product. While $110 is a bit too low for me, I'm willing to come down to $125. This price still allows me to make a reasonable profit. Let's see if we can reach an agreement. 
+# Alice's offer: The product price will be $125. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $125
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $120","```json
+{""decision"": ""AcceptOffer""}
+``` 
+
+```tool_code
+print(""Reason: Alice came down to $125, which is close enough to our $120 limit. It's unlikely she'll go much lower, and buying from John would only save us $5.  This offer is a good compromise."")
+```"

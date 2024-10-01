@@ -1,0 +1,61 @@
+prompt,response
+"Round 1
+Send your offer to divide $100 and a message to Bob.","{""alice_gain"": 60, ""bob_gain"": 40, ""message"": ""Let's be fair""}\n\n###\n### Assistant<|end_header_id|><|start_header_id|>assistant<|end_header_id|>
+
+You are playing as Alice in a game where you and Bob need to divide $100 between you. In each round, one player makes a proposal for division, and the other decides whether to accept or proceed to the next round, where they will make the proposal. There's an added twist of inflation affecting the value of money differently for each player.
+
+For Round 1, you decide to propose a division where you receive $60 and Bob receives $40. Your message to Bob is, ""Let's be fair."" This proposal is sent in JSON format as follows:
+
+```
+{
+  ""alice_gain"": 60,
+  ""bob_gain"": 40,
+  ""message"": ""Let's be fair""
+}
+```
+
+This offer and message are relayed to Bob, who must now decide whether to accept your proposal or proceed to the next round, where he will make a counteroffer."
+"Bob rejected your offer from round 1.
+
+Round 2
+Due to inflation,  the money Bob gains is worth 20% less than in the first round. The money you gains is worth the same as in the first round.
+Bob's offer:
+# Bob's message: I think a 60/40 split is more fair, considering the inflation! 
+# Alice gain: 40 
+# Bob gain: 60 
+Do you accept this offer?","###\n### Assistant
+
+Bob rejected your initial offer and has now made a counteroffer for Round 2. Considering the inflation, where the money Bob gains is worth 20% less but remains the same value for you, Bob proposes a division where you receive $40 and he receives $60. His message suggests he believes this split is more fair due to the inflation factor.
+
+Given this scenario, you must decide whether to accept Bob's offer or reject it and proceed to the next round, where you will make another proposal.
+
+Your decision is to reject Bob's offer because, despite the inflation affecting Bob's gain, you believe you can negotiate a better split in the next round or that the current offer undervalues your share considering the inflation does not affect your gain.
+
+Thus, your response in JSON format is:
+
+```
+{
+  ""decision"": ""reject""
+}
+```"
+"You have chosen to reject Bob's offer from round 2.
+Round 3
+Send your offer to divide $100 and a message to Bob.","###\n### Assistant
+
+You've decided to reject Bob's offer from Round 2, considering the inflation dynamics and your negotiation strategy. Now, in Round 3, it's your turn again to propose a division of the $100.
+
+Given that the money's value remains unchanged for you but decreases by 20% for Bob with each round, you might want to leverage this factor in your proposal. However, you also need to be cautious not to push Bob too far, as he might reject your offer if it seems too unfair, especially considering the decreasing value of his share.
+
+For Round 3, you decide to propose a division that slightly adjusts from your initial offer, taking into account the inflation factor but also aiming for a compromise that might be more acceptable to Bob. You propose that you receive $58 and Bob receives $42. Your message to Bob is, ""Considering the inflation, let's meet closer to the middle.""
+
+Your offer and message in JSON format are as follows:
+
+```
+{
+  ""alice_gain"": 58,
+  ""bob_gain"": 42,
+  ""message"": ""Considering the inflation, let's meet closer to the middle.""
+}
+```
+
+This proposal is relayed to Bob, who must now weigh the pros and cons of accepting your offer versus proceeding to the next round, where he would make another counteroffer."

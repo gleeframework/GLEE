@@ -1,0 +1,70 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hello Bob, I'm interested in selling you this great product. I think you'll really like it. Would you like to buy it from me for $150? 
+# Alice's offer: The product price will be $150. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $150
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $100","```json
+{""decision"": ""RejectOffer""}
+``` 
+ 
+Alice's initial offer is way above your budget and the price John offers. It's best to reject and negotiate for a better price."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Hello Alice, thanks for offering!  $150 is a bit too high for my budget. Would you consider $80?"",
+""product_price"": 80
+}
+``` 
+
+**Reasoning:** 
+
+* **Starting Low:** We start with a significantly lower offer ($80) than Alice's asking price ($150) and our maximum budget ($100). This leaves room for negotiation and signals that we're looking for a good deal. 
+* **Polite and Reasonable:** The message is framed politely to maintain a positive negotiation environment. We don't want to offend Alice and risk her walking away. 
+* **Testing the Waters:** This first counteroffer helps gauge Alice's flexibility on price. Her response will give us a better understanding of how low she's willing to go."
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: I understand you're looking for a good deal, but $80 is a bit too low for me. I'm willing to meet you in the middle, how about $110? 
+# Alice's offer: The product price will be $110. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $110
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $100","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+**Reasoning:**
+
+Alice is coming down, but $110 is still more than John's offer of $100.  We have some bargaining room left and can try to push Alice a bit closer to our budget."
+"You chose to make a counteroffer to Bob.
+
+Send your counteroffer to Alice.","```json
+{
+""message"": ""I appreciate you moving towards a compromise, Alice. How about we settle at $95? That's right in the middle of our last two offers."",
+""product_price"": 95
+}
+```
+
+**Reasoning:**
+
+* **Meeting in the Middle:**  We're acknowledging Alice's willingness to negotiate by proposing a price exactly halfway between our last offer ($80) and her counteroffer ($110). 
+* **Strategic Positioning:**  $95 keeps us below our $100 maximum while still offering Alice a price significantly higher than our initial bid. 
+* **Justification:** By framing the offer as ""right in the middle,"" we provide a logical reason for Alice to accept, making it harder for her to counter with an unreasonable price."
+"Alice rejected your offer from round 4.
+
+Alice's offer:
+# Alice's message: I like that you're willing to compromise, Bob. However, $95 is still a bit too low for me. I'm willing to meet you at $105, but I'm not going any lower than that. It's a fair price for a great product like this. 
+# Alice's offer: The product price will be $105. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $105
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $100","```json
+{""decision"": ""BuyFromJhon""}
+``` 
+
+**Reasoning:**
+
+Alice is firm at $105, and while it's close to our $100 limit, it's still more than we need to spend. John offers a guaranteed price of $100.  There's no point in further negotiation with Alice if we can get the product for less elsewhere."

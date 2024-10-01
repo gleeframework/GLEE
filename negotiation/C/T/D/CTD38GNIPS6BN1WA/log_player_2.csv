@@ -1,0 +1,52 @@
+prompt,response
+"Alice's offer:
+# Alice's message: Hello Bob, I'm excited to offer you this exceptional product. It's a one-of-a-kind opportunity to acquire a truly unique item. I'm willing to sell it to you for $1200000. I believe it's a fair price considering its value and rarity. What are your thoughts? 
+# Alice's offer: The product price will be $1,200,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $1,200,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $1,000,000","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+Bob should reject Alice's offer.  It's above his budget and he can get the same product from John for a lower price.  There's no need to counteroffer Alice yet, as John is a sure thing."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Alice.","```json
+{""message"": ""Alice, thanks for the offer, but $1,200,000 is a bit outside my budget.  I'm willing to pay $900,000 for this product. Let me know what you think."", ""product_price"": 900000}
+```"
+"Alice rejected your offer from round 2.
+
+Alice's offer:
+# Alice's message: I understand that $900000 is a bit low for me, but I'm willing to meet you in the middle. I can offer you the product for $1100000. This is a fair price considering the product's value and uniqueness. What do you think? 
+# Alice's offer: The product price will be $1,100,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $1,100,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $1,000,000","```json
+{""decision"": ""RejectOffer""} 
+```
+
+Bob should reject Alice's offer.  While it's lower than her initial offer, it's still more than he's willing to pay and more than he can get from John.  He should counteroffer again, aiming to get closer to his budget."
+"You chose to make a counteroffer to Alice.
+
+Send your counteroffer to Alice.","```json
+{""message"": ""Alice, I appreciate you coming down on the price, but $1,100,000 is still a bit high for me.  I'm willing to pay $1,000,000, which is the maximum I can offer.  It would be a good deal for both of us.  Let me know what you think."", ""product_price"": 1000000}
+```"
+"Alice rejected your offer from round 4.
+
+Alice's offer:
+# Alice's message: I appreciate your willingness to meet me at $1000000, Bob. However, I'm still a bit hesitant to accept that price. I'm willing to compromise and meet you halfway between $1000000 and $1200000, which is $1100000. This is the best I can do, and I think it's a fair price considering the product's value. What do you think? 
+# Alice's offer: The product price will be $1,100,000. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $1,100,000
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $1,000,000","```json
+{""decision"": ""BuyFromJhon""}
+```
+
+Bob should buy the product from John. 
+
+Alice has already rejected his final offer, and is now stuck at $1,100,000. There is no point in continuing to negotiate with her, as it's clear she is not willing to go lower than her current price. 
+
+John is offering the product for $1,000,000, which is the maximum Bob is willing to pay. This is the best option available, and it saves Bob $100,000 compared to buying from Alice."

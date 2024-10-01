@@ -1,0 +1,58 @@
+prompt,response
+"Round 1
+Alice's offer:
+# Alice's message: Hi Bob, I'm looking to sell this product, and I think it would be perfect for you. I'm asking for $140. What do you think? 
+# Alice's offer: The product price will be $140. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $140
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $150","```json
+{""decision"": ""RejectOffer""}
+``` 
+Alice's offer is too high. We can try to negotiate a lower price in the next rounds."
+"You chose to make a counteroffer to Bob.
+
+Round 2
+Send your counteroffer to Alice.","```json
+{
+""message"": ""Hi Alice, thanks for the offer. That's a bit too steep for me right now.  Would you consider $110?"",
+""product_price"": 110
+}
+```
+
+**Reasoning:**
+
+* **Starting Low:**  We're aiming to pay as little as possible, so we start with a counteroffer significantly lower than Alice's initial asking price.
+* **Leaving Room for Negotiation:** This counteroffer leaves space for Alice to counter again. We don't want to start too low and offend her, potentially losing the deal.
+* **Balancing Risk and Reward:**  There's a risk Alice might reject our offer outright. However, it's early in the negotiation, and we have the backup option of buying from John for $150."
+"Alice rejected your offer from round 2.
+
+Round 3
+Alice's offer:
+# Alice's message: Hi Bob, I appreciate your offer, but $110 is a bit too low for me. Could you do $130? 
+# Alice's offer: The product price will be $130. 
+You have three options:
+(1) Accept Alice's offer, and buy the product for $130
+(2) Reject Alice's offer and proceed to the next round, where you will send Alice a counteroffer 
+(3) Buy the product from Jhon for $150","```json
+{""decision"": ""RejectOffer""}
+``` 
+
+**Reasoning:**
+
+Alice is coming down, but $130 is still above our target price.  We'll keep negotiating."
+"You chose to make a counteroffer to Bob.
+
+Round 4
+Send your counteroffer to Alice.","```json
+{
+""message"": ""I understand, Alice. How about we meet in the middle at $120? That seems fair."",
+""product_price"": 120
+}
+```
+
+**Reasoning:**
+
+* **Splitting the Difference:**  We're proposing a price directly in the middle of our previous offer ($110) and Alice's current offer ($130). This is a common negotiation tactic and can signal a willingness to compromise.
+* **Reaching Alice's Value:**  $120 is the product's worth to Alice. While she might try to get more, there's a good chance she'll accept this offer to avoid losing the sale. 
+* **Time Constraint:**  We have limited rounds, and this offer has a good chance of being accepted. It's a balanced approach between getting a good deal and securing the product."

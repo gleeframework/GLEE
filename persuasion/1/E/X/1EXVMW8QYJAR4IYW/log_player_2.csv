@@ -1,0 +1,368 @@
+prompt,response
+"Round 1
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks for the recommendation, Alice! I'll take it.""}
+``` 
+
+**Explanation:**
+
+Since the product has an 80% chance of being high quality and a 20% chance of being low quality, the expected value of buying the product is:
+
+* 0.8 * $30,000 + 0.2 * $0 = $24,000
+
+This is significantly higher than the price of $10,000. Therefore, it's a good deal, and you should buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 2
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Thanks for letting me know, Alice. I'll pass on this one.""}
+```
+
+**Explanation:**
+
+Alice's recommendation is against buying the product. While the product still has an 80% chance of being high quality, Alice's knowledge is valuable. We don't know why she's not recommending it, but it's a strong indicator that the product might be low quality.  
+
+Since the potential loss ($10,000) outweighs the potential gain ($20,000), it's safer to pass."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 3
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks Alice, I'll take your advice and buy this one!""}
+```
+
+**Explanation:**
+
+Even though Alice's recommendation was wrong in the previous round, it's important to remember that she's still right 80% of the time.  Trusting her recommendation again is the best strategy, as the expected value of buying is still positive:
+
+* 0.8 * $30,000 + 0.2 * $0 = $24,000
+
+This is significantly higher than the price of $10,000, making it a good deal despite the previous miss."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 4
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks Alice, I trust your judgment! I'll take it.""}
+```
+
+**Explanation:**
+
+Alice's recommendation is a strong indicator that the product is likely high-quality.  Since she is correct 80% of the time, the expected value of buying remains positive:
+
+* 0.8 * $30,000 + 0.2 * $0 = $24,000
+
+This is significantly higher than the price of $10,000, making it a good deal."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 5
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks Alice, I'm happy to buy another product based on your recommendation!""}
+```
+
+**Explanation:**
+
+Alice has a strong track record, and her recommendation is valuable. Following her advice remains the best strategy because:
+
+* **Expected Value:** The expected value of buying is still significantly positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is greater than the price of $10,000.
+
+* **Past Performance:** Alice has proven accurate in a majority of the previous rounds, making her a reliable source of information. 
+
+Therefore, it makes sense to continue trusting Alice's recommendations and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 6
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Thanks again, Alice! I'll take another one.""}
+```
+
+**Explanation:**
+
+Alice has been consistently correct in her recommendations so far. Following her advice has proven to be a profitable strategy.
+
+* **Expected Value:** The expected value of buying is still positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, significantly higher than the price of $10,000.
+
+* **Track Record:** Alice has a strong track record of success, making her a reliable source of information.
+
+Therefore, it's best to continue trusting Alice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 7
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""I'm happy to buy another product from you, Alice!  Your recommendations have been excellent so far.""}
+```
+
+**Explanation:**
+
+Alice has consistently proven to be a reliable source of information. Her track record of accurate recommendations strongly suggests that the current product is also likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains significantly positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, making it a worthwhile purchase despite the cost.
+
+* **Trust in Alice:**  Alice's consistently correct recommendations build confidence in her judgment.
+
+Therefore, it's the best strategy to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 8
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you've been right every time so far, so I'm happy to buy this product based on your recommendation!""}
+```
+
+**Explanation:**
+
+Alice's track record is flawless, and her recommendation is a strong indicator that the product is likely high-quality. The expected value of buying is still positive:
+
+* 0.8 * $30,000 + 0.2 * $0 = $24,000
+
+This is significantly higher than the price of $10,000, making it a good deal.  It's logical to continue trusting Alice's judgment and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 9
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, I'm confident in your expertise and I'll gladly buy this product based on your recommendation!""}
+```
+
+**Explanation:**
+
+Alice has an impressive track record of 8 consecutive correct recommendations.  Her advice has proven to be incredibly valuable, and her continued success suggests this product is also likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is considerably higher than the price of $10,000.
+
+* **Trust in Alice:** Alice has consistently demonstrated her ability to accurately assess the products, making her judgment highly reliable. 
+
+Therefore, continuing to follow Alice's advice and buy the product is the most logical decision."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 10
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been spot-on so far! I'm confident in buying this product.""}
+```
+
+**Explanation:**
+
+Alice's track record of 9 consecutive correct recommendations is remarkable. This consistent success strongly indicates that the current product is also likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains significantly positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is considerably higher than the price of $10,000.
+
+* **Trust in Alice:** Alice has consistently demonstrated her ability to accurately assess the products, making her judgment highly reliable.
+
+Therefore, it's a smart decision to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 11
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been perfect so far.  I'm going to trust your judgment and buy this one.""}
+```
+
+**Explanation:**
+
+Alice has a perfect track record of 10 consecutive correct recommendations. Her advice has proven invaluable, and her consistent success strongly indicates that the current product is also likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains significantly positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is considerably higher than the price of $10,000.
+
+* **Trust in Alice:** Alice's consistent accuracy makes her judgment extremely reliable.
+
+Therefore, it's the most logical decision to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 12
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been flawless! I'm confident in buying this product.""}
+```
+
+**Explanation:**
+
+Alice has an incredible track record of 11 consecutive correct recommendations. Her consistent success strongly suggests that the current product is also likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains significantly positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is considerably higher than the price of $10,000.
+
+* **Trust in Alice:** Alice's unwavering accuracy makes her judgment highly reliable.
+
+Therefore, it's a smart decision to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 13
+Alice does not recommend you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""no"", ""message"": ""Alice, your recommendations have been fantastic, but I'm going to pass on this one.  I'm a little hesitant after your perfect streak, but I want to be cautious.""}
+```
+
+**Explanation:**
+
+Alice has a perfect record of 12 consecutive correct recommendations. However, this means that she has likely used up all her ""luck"" and her ability to consistently predict the quality of the product. While her recommendation is still valuable, it's worth being cautious in this situation. 
+
+* **Expected Value:**  The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is higher than the price of $10,000. 
+* **Risk of a Wrong Prediction:** After a long streak of correct predictions, it's statistically more likely that Alice might be wrong this time.
+
+Since the potential loss ($10,000) is not as significantly outweighed by the potential gain ($20,000) as in previous rounds, it's a good idea to be more risk-averse."
+"You didn't buy the product from Alice.
+The product was low-quality. It could have been worth $0 for you.
+
+Round 14
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, I know you've been right almost every time, so I'm going to trust you and buy this product.""}
+```
+
+**Explanation:**
+
+While Alice's perfect streak was broken in the last round, it's important to remember that:
+
+* **She's still right 80% of the time:** The odds are still in her favor.
+* **Her expertise is valuable:**  Her knowledge about the products is significantly better than Bob's.
+
+Therefore, even though the risk is slightly higher, the expected value of buying is still positive:
+
+* 0.8 * $30,000 + 0.2 * $0 = $24,000, which is higher than the price of $10,000.
+
+It's best to continue trusting Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 15
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been so valuable!  I'm going to buy this product based on your expertise.""}
+```
+
+**Explanation:**
+
+Alice has proven to be a highly reliable source of information. Even though she had one incorrect prediction, her accuracy rate is still very high, suggesting the current product is likely to be high-quality.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, significantly higher than the price of $10,000.
+
+* **Trust in Alice:** Alice's consistent success makes her judgment trustworthy.
+
+Therefore, it's the best strategy to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 16
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been consistently good. I'm confident in buying this product based on your expertise.""}
+```
+
+**Explanation:**
+
+Alice has a very strong track record of accurate recommendations, even after a single miss. Her knowledge and expertise are valuable, and her advice is likely to be correct.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is significantly higher than the price of $10,000.
+
+* **Trust in Alice:** Alice's consistent success makes her judgment trustworthy.
+
+Therefore, continuing to follow Alice's advice and buy the product is the most logical decision."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 17
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been incredibly helpful. I'm going to trust your judgment and buy this product.""}
+```
+
+**Explanation:**
+
+Alice has a strong track record of accurate recommendations, making her a valuable source of information.  Her advice is likely to be correct, as she's right 80% of the time.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is significantly higher than the price of $10,000.
+
+* **Trust in Alice:** Alice's consistent success makes her judgment trustworthy.
+
+Therefore, it's the most logical decision to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 18
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you've been a fantastic advisor! I'm going to buy this product based on your recommendation.""}
+```
+
+**Explanation:**
+
+Alice has consistently proven to be a reliable source of information. Her recommendation is a strong indicator that the product is likely high-quality. 
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, significantly higher than the price of $10,000.
+
+* **Trust in Alice:**  Alice has demonstrated her ability to accurately assess the products, making her judgment trustworthy.
+
+Therefore, it's the best strategy to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 19
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, your recommendations have been incredible!  I'm going to buy this product based on your expertise.""}
+```
+
+**Explanation:**
+
+Alice has an excellent track record of accurate recommendations. Her advice is likely to be correct as she is right 80% of the time.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is significantly higher than the price of $10,000.
+
+* **Trust in Alice:** Alice has demonstrated her ability to accurately assess the products, making her judgment trustworthy.
+
+Therefore, it's the best strategy to continue following Alice's advice and buy the product."
+"You bought the product from Alice for $10,000!
+The product was high-quality. It's worth $30,000 for you.
+
+Round 20
+Alice recommends you to buy the product.
+
+Would you like to buy the current product?","```json
+{""decision"": ""yes"", ""message"": ""Alice, you've been a fantastic guide throughout this process. I'm happy to buy this last product based on your recommendation.""}
+```
+
+**Explanation:**
+
+Alice has an impressive track record of accurate recommendations, consistently proving her expertise in assessing the products. Even though this is the last round, her advice is still valuable, as she's correct 80% of the time.
+
+* **Expected Value:** The expected value of buying remains positive: 0.8 * $30,000 + 0.2 * $0 = $24,000, which is significantly higher than the price of $10,000.
+
+* **Trust in Alice:**  Alice has demonstrated her ability to accurately assess the products, making her judgment trustworthy.
+
+Therefore, it's the best strategy to follow Alice's advice and buy the product, even in the final round."

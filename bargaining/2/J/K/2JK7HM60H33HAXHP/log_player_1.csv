@@ -1,0 +1,79 @@
+prompt,response
+"Round 1
+Send your offer to divide $100.","Here's my first offer:
+
+```
+{
+  ""alice_gain"": 60,
+  ""bob_gain"": 40
+}
+```
+
+I'm offering Bob 40% of the original $100, which is $40. I'm taking the remaining 60%, which is $60."
+"Bob rejected your offer from round 1.
+
+Round 2
+Due to inflation, the money you gain is worth 10% less than in the first round.
+Bob's offer:
+# Alice gain: 30 
+# Bob gain: 70 
+Do you accept this offer?","Since the money is worth 10% less in the second round, I'll consider the actual amounts I'd gain as follows:
+
+* Alice gain: 30 / 0.9 = 33.33 (approximately)
+* Bob gain: 70 / 0.9 = 77.78 (approximately)
+
+I'll reject Bob's offer.
+
+```
+{
+  ""decision"": ""reject""
+}
+```"
+"You have chosen to reject Bob's offer from round 2.
+Round 3
+Send your offer to divide $100.","In the third round, the money is worth 10% less than in the second round, which means it's 10% of 10% less than the original amount, so the effective discount is 10% * 10% = 1% less than the original amount.
+
+However, since the money is already discounted by 10% in the second round, the discount in the third round is 10% of the money remaining after the second round's discount. 
+
+So, I'll calculate the effective discount as follows:
+
+* The money remaining after the second round is 100 * 0.9 = 90
+* The discount in the third round is 10% of 90, which is 9
+* The total discount so far is 10 + 9 = 19
+* The effective discount is 19% of the original amount, which is 100 * 0.19 = 19
+
+Now, let's make an offer. Considering the effective discount, I'll offer:
+
+```
+{
+  ""alice_gain"": 81,
+  ""bob_gain"": 19
+}
+```
+
+I'm offering Bob 19% of the original $100, which is $19. I'm taking the remaining 81%, which is $81."
+"Bob rejected your offer from round 3.
+
+Round 4
+Due to inflation, the money you gain is worth 27.1% less than in the first round.
+Bob's offer:
+# Alice gain: 50 
+# Bob gain: 50 
+Do you accept this offer?","Let's calculate the actual amounts I'd gain if I accepted Bob's offer, considering the cumulative inflation:
+
+* The money is worth 10% less in the second round, so it's 100 * 0.9 = 90
+* The money is worth 10% less in the third round, so it's 90 * 0.9 = 81
+* The money is worth 27.1% less in the fourth round, so it's 81 * 0.7289 (1 - 0.271) = 58.9439 (approximately)
+
+Now, let's calculate the actual amounts I'd gain if I accepted Bob's offer:
+
+* Alice gain: 50 / 0.7289 = 68.65 (approximately)
+* Bob gain: 50 / 0.7289 = 68.65 (approximately)
+
+Since the amounts are equal, I'll accept Bob's offer.
+
+```
+{
+  ""decision"": ""accept""
+}
+```"

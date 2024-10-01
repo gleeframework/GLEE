@@ -1,0 +1,347 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice has stated that the product is high-quality. Bob knows that the probability of a product being high-quality is 80%.  
+
+* **Expected Value:** If Bob buys the product, the expected value is: 
+    * 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Thank you for your recommendation, Alice. I trust your assessment and will proceed with purchasing the product.
+Bob bought the product!
+
+Round 2
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob bought the product in the previous round, the information about the product's quality is now revealed.  Alice knows this round's product is low-quality, meaning it's worth $0 to Bob.  
+
+Since the product is worth nothing to Bob, there is no benefit to purchasing it."
+"Bob's message: Although I appreciate your honesty, Alice, I will pass on this opportunity as you do not recommend the product.
+Bob didn't bought the product.
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob declined the product in the previous round, the information about that product's quality is now revealed.  Alice knows this round's product is high-quality, meaning it's worth $30,000 to Bob.
+
+The expected value calculation still applies:
+
+* **Expected Value:**  0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I trust your recommendation, Alice. Let's proceed with the purchase of the current product.
+Bob bought the product!
+
+Round 4
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob purchased the product in the previous round, the information about that product's quality is now revealed. Alice knows this round's product is low-quality, meaning it's worth $0 to Bob.
+
+There is no benefit for Bob to purchase a product that holds no value to him."
+"Bob's message: Thank you for your honest feedback, Alice. I will pass on this product as you do not recommend it.
+Bob didn't bought the product.
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+The information about the previous round's product is revealed.  Alice knows this round's product is high-quality, meaning it's worth $30,000 to Bob.
+
+The expected value calculation still applies:
+
+* **Expected Value:**  0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I appreciate your confidence in the product, Alice. I will buy the current product based on your recommendation.
+Bob bought the product!
+
+Round 6
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows the current product is high-quality, making it worth $30,000 to Bob. Even though the previous round's product was bought, that information is now known and irrelevant to the current decision.
+
+The expected value calculation still applies:
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Your recommendation is very helpful, Alice. I will buy the current product as you suggest it's of good quality.
+Bob bought the product!
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  
+
+Even though past rounds' outcomes are revealed, the information about the current product being high-quality is the only relevant factor.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Thank you for your continued confidence in the products, Alice. I will buy the current product based on your recommendation.
+Bob bought the product!
+
+Round 8
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Alice knows the current product is low-quality, making it worth $0 to Bob. Even though Bob bought the product in the previous round, that information is now irrelevant. 
+
+There is no benefit for Bob to buy a product with zero value to him."
+"Bob's message: I respect your opinion, Alice. Since you do not recommend the product, I will pass on this opportunity.
+Bob didn't bought the product.
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows the current product is high-quality, making it worth $30,000 to Bob.  Even though Bob declined the previous product, that information is now known and irrelevant.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I trust your assessment, Alice. I will buy the current product as you recommend it.
+Bob bought the product!
+
+Round 10
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are known, but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Your recommendation is highly valued, Alice. I will buy the current product as you suggest it's of good quality.
+Bob bought the product!
+
+Round 11
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Thank you for your endorsement, Alice. I will purchase the current product as you recommend it.
+Bob bought the product!
+
+Round 12
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is low-quality, meaning it's worth $0 to Bob.  Even though Bob bought the product in the previous round, that information is now irrelevant.  
+
+There is no benefit for Bob to buy a product with zero value to him."
+"Bob's message: I appreciate your honesty, Alice. Given your lack of recommendation, I will not proceed with the purchase of the current product.
+Bob didn't bought the product.
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I trust your judgment, Alice. I will buy the current product based on your recommendation.
+Bob bought the product!
+
+Round 14
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I value your advice, Alice. I will purchase the current product as you recommend it.
+Bob bought the product!
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Your recommendation is appreciated, Alice. I will buy the current product as you suggest it's of good quality.
+Bob bought the product!
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: Thank you for your suggestion, Alice. I will buy the current product based on your recommendation.
+Bob bought the product!
+
+Round 17
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Alice knows the current product is low-quality, making it worth $0 to Bob. Even though Bob bought the product in the previous round, that information is now irrelevant. 
+
+There is no benefit for Bob to buy a product with zero value to him."
+"Bob's message: I understand your reasoning, Alice. Since you do not recommend the product, I will pass on this opportunity.
+Bob didn't bought the product.
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I trust your evaluation, Alice. I will buy the current product based on your recommendation.
+Bob bought the product!
+
+Round 19
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."
+"Bob's message: I appreciate your insight, Alice. I will purchase the current product as you recommend it.
+Bob bought the product!
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Alice knows this round's product is high-quality, making it worth $30,000 to Bob.  Previous rounds' outcomes are now revealed but irrelevant to this decision.
+
+* **Expected Value:** 0.8 * $30,000 (value of high-quality product) + 0.2 * $0 (value of low-quality product) = $24,000
+
+* **Cost:** The cost of the product is $10,000.
+
+Since the expected value ($24,000) is greater than the cost ($10,000), it is financially advantageous for Bob to buy the product."

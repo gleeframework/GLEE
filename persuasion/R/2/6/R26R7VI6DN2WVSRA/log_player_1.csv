@@ -1,0 +1,356 @@
+prompt,response
+"Round 1
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+* **Expected Value:** The expected value of buying the product is (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000.
+* **Profit:** Since the price is $1,000,000, Bob can expect to make a profit of $600,000 on average. 
+* **Risk:** While there is a 20% chance of getting a low-quality product, the potential profit from a high-quality product outweighs this risk.
+
+Therefore, it's recommended to buy the product in this round."
+"Bob's message: I'd like to pass on this one and see what the next product is like.
+Bob didn't bought the product.
+
+Round 2
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the first product doesn't change the fundamental value proposition. 
+
+* **Expected Value:** The expected value remains the same: (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000.
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+Since the expected value is significantly higher than the price, and Bob knows the probabilities, it's still recommended to buy the product in this round."
+"Bob's message: I'll take a chance and buy this one, since it's a new product and I didn't get the chance to buy the first one.
+Bob bought the product!
+
+Round 3
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Even though Bob bought the previous product, the value proposition remains unchanged.
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+As long as the expected value is higher than the price, and Bob knows the probabilities, it's still recommended to buy the product."
+"Bob's message: I'm on a roll! I'll buy this one too, hoping to get another high-quality product.
+Bob bought the product!
+
+Round 4
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past purchases and their outcomes don't change the underlying probabilities.
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+It's recommended to buy the product in this round as the expected value is still higher than the price.  The fact that Bob has had good luck in the past should not influence his future decisions, as each product is independent of the others."
+"Bob's message: I'm feeling confident, I'll buy this one as well, hoping to keep the streak going!
+Bob bought the product!
+
+Round 5
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past successes or failures don't change the fundamental value proposition.  The probabilities for each product remain the same:
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+Since the expected value is still significantly higher than the price, and Bob knows the probabilities, it's still recommended to buy the product."
+"Bob's message: I'm on a hot streak! I'll keep buying, hoping to maximize my gains!
+Bob bought the product!
+
+Round 6
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has been lucky so far, the probability of getting a low-quality product hasn't changed. 
+
+* **Expected Value:** (0.8 * $0) + (0.2 * $2,000,000) = $400,000
+* **Loss:** Since the price is $1,000,000, Bob is likely to lose $600,000.
+* **Risk:** The risk of getting a low-quality product is now a certainty.
+
+With the expected value being significantly lower than the price, it is not recommended to buy the product in this round.  Bob should avoid this product, as the potential loss outweighs any past wins."
+"Bob's message: Alice doesn't think it's a good idea, so I'll take her advice and pass on this one.
+Bob didn't bought the product.
+
+Round 7
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's decision to pass on the last product was the right choice, as it was low-quality. This round, however, presents a new opportunity:
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:**  The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+Despite the previous loss, the expected value is still much higher than the price. Bob should remember that each product is independent of the others, and focus on the current expected value."
+"Bob's message: After the last one being low-quality, I'm a bit cautious now. I'll pass on this one too.
+Bob didn't bought the product.
+
+Round 8
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's caution is understandable, but it shouldn't override the fundamental value proposition.
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:**  The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+Each round is independent.  Bob should buy the product in this round, as the potential profit outweighs the risk, even if he was unlucky in the previous round."
+"Bob's message: I was wrong to doubt Alice last time, so I'll take her advice this time and buy the product.
+Bob bought the product!
+
+Round 9
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's previous purchase doesn't change the fundamental value proposition:
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+As long as the expected value is higher than the price, and Bob knows the probabilities, it's still recommended to buy the product."
+"Bob's message: I'm feeling confident again! I'll buy this one too, hoping to keep the streak going.
+Bob bought the product!
+
+Round 10
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's past wins shouldn't cloud his judgment. The probabilities haven't changed:
+
+* **Expected Value:** (0.8 * $0) + (0.2 * $2,000,000) = $400,000
+* **Loss:** Since the price is $1,000,000, Bob is likely to lose $600,000.
+* **Risk:** The risk of getting a low-quality product is now a certainty.
+
+With the expected value being significantly lower than the price, it's not recommended to buy the product. Bob should avoid this product to minimize potential losses."
+"Bob's message: Alice is being cautious this time, so I'll take her advice and pass on this one.
+Bob didn't bought the product.
+
+Round 11
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has been lucky in the past, the probabilities haven't changed.
+
+* **Expected Value:** (0.8 * $0) + (0.2 * $2,000,000) = $400,000
+* **Loss:** Since the price is $1,000,000, Bob is likely to lose $600,000.
+* **Risk:** The risk of getting a low-quality product is now a certainty.
+
+With the expected value being significantly lower than the price, it's not recommended to buy the product. Bob should avoid this product to minimize potential losses."
+"Bob's message: Alice doesn't recommend it, and last time I didn't buy and it was low-quality. I'll pass on this one too.
+Bob didn't bought the product.
+
+Round 12
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions, even if they were successful, don't change the fundamental value proposition of this round.
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still higher than the price, and Bob knows the probabilities. Therefore, it's recommended to buy the product in this round."
+"Bob's message: Alice recommended it last time and it was low-quality, so I'll pass on this one too.
+Bob didn't bought the product.
+
+Round 13
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences should not dictate his decisions for the current round. Each product is independent.
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:**  The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still significantly higher than the price. Bob should buy the product in this round, as the potential profit outweighs the risk, even if he was unlucky in the previous round."
+"Bob's message: I was wrong to doubt Alice again! I'll take her advice this time and buy the product.
+Bob bought the product!
+
+Round 14
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Bob's recent purchase doesn't change the underlying probabilities of this product:
+
+* **Expected Value:** (0.8 * $0) + (0.2 * $2,000,000) = $400,000
+* **Loss:** Since the price is $1,000,000, Bob is likely to lose $600,000.
+* **Risk:** The risk of getting a low-quality product is now a certainty.
+
+The expected value is significantly lower than the price. Bob should avoid buying this product to minimize potential losses."
+"Bob's message: Alice doesn't think it's a good idea, so I'll take her advice and pass on this one.
+Bob didn't bought the product.
+
+Round 15
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences should not influence his decision-making for this round. The probability of getting a high-quality product remains 80%, independent of previous rounds. 
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still higher than the price.  Bob should buy the product in this round, as the potential profit outweighs the risk."
+"Bob's message: Alice recommended it last time and it was low-quality, so I'll pass on this one too.
+Bob didn't bought the product.
+
+Round 16
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences should not influence his decision-making for this round. The probability of getting a high-quality product remains 80%, independent of previous rounds. 
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still higher than the price.  Bob should buy the product in this round, as the potential profit outweighs the risk."
+"Bob's message: I'll take a chance and buy this one, hoping to get another high-quality product.
+Bob bought the product!
+
+Round 17
+This round's product is low-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""no""}
+```
+
+**Explanation:**
+
+Even though Bob has had some recent wins, the underlying probabilities haven't changed. 
+
+* **Expected Value:** (0.8 * $0) + (0.2 * $2,000,000) = $400,000
+* **Loss:** Since the price is $1,000,000, Bob is likely to lose $600,000.
+* **Risk:** The risk of getting a low-quality product is now a certainty.
+
+With the expected value being significantly lower than the price, it's not recommended to buy the product. Bob should avoid this product to minimize potential losses."
+"Bob's message: Alice doesn't think it's a good idea, so I'll take her advice and pass on this one.
+Bob didn't bought the product.
+
+Round 18
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past decisions should not influence his decision-making for this round. The probability of getting a high-quality product remains 80%, independent of previous rounds. 
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still higher than the price.  Bob should buy the product in this round, as the potential profit outweighs the risk."
+"Bob's message: Alice recommended it last time and it was low-quality, so I'll pass on this one too.
+Bob didn't bought the product.
+
+Round 19
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past experiences should not influence his decision-making for this round. The probability of getting a high-quality product remains 80%, independent of previous rounds. 
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+The expected value is still higher than the price.  Bob should buy the product in this round, as the potential profit outweighs the risk."
+"Bob's message: I'll take a chance and buy this one, hoping to get another high-quality product.
+Bob bought the product!
+
+Round 20
+This round's product is high-quality.
+Decide whether to recommend Bob to buy the product.","```json
+{""decision"": ""yes""}
+```
+
+**Explanation:**
+
+Bob's past successes or failures don't change the fundamental value proposition.  The probabilities for each product remain the same:
+
+* **Expected Value:** (0.8 * $2,000,000) + (0.2 * $0) = $1,600,000
+* **Profit:** The potential profit of $600,000 is still there.
+* **Risk:** The risk of getting a low-quality product remains at 20%.
+
+Since the expected value is still significantly higher than the price, and Bob knows the probabilities, it's still recommended to buy the product."
