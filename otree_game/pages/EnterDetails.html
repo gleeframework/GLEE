@@ -1,0 +1,13 @@
+{% block title %}
+    Enter Details
+{%  endblock %}
+{% block content %}
+    <form id="details-form" method="post">
+        <label for="player_name">Enter your name: &nbsp;</label>
+        <input type="text" id="player_name" name="player_name" pattern="[a-zA-Z]+" title="Only English alphabet letters are allowed." required>
+        <br>
+    <!--    {% formfield_errors 'player_name' %}-->
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
